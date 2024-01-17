@@ -1,6 +1,6 @@
 {
     "lang": "en-us",
-    "name": "parchApp, you feel boring, let's parchApp",
+    "name": "parchApp",
     "short_name": "parchApp",
     "description": "A basic temperature converter application that can convert to and from Celsius, Kelvin, and Fahrenheit",
     "start_url": "/",

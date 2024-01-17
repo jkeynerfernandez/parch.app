@@ -15,5 +15,13 @@
     <option value="white">Ligth</option>
   </select>
   <img src="./assets/img/exampleImage.png" alt="" srcset="">
+  
+  <!-- Service worker start -->
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js', { scope: '/' });
+    }
+  </script>
+
 </body>
 </html>
