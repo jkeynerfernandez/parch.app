@@ -1,5 +1,6 @@
 const registerServiceWorker = async () => {
   if ("serviceWorker" in navigator) {
+    createElementVerification("Happy work david")
     try {
       const registration = await navigator.serviceWorker.register("/sw.js", {
         scope: "/",
@@ -16,9 +17,16 @@ const registerServiceWorker = async () => {
     }
   } else {
     console.log("no baby")
+    createElementVerification("Service worker no avalible")
   }
 };
 console.log("In a file")
+const createElementVerification = (elementValue) => {
+  const parent = document.getElementById("makingTest");
+  const makeElement = document.createElement("p");
+  makeElement.innerText = elementValue
+  parent.appendChild(makeElement)
+}
 // …
 
 registerServiceWorker();
