@@ -1,0 +1,26 @@
+[
+  {
+    "title" : "Jardin Botanico Medellin",
+    "event_ID" : "200102020301",
+    "owner_name" : "Jose Luis Montero",
+    "owner_ID" : "@joseLuis21",
+    "price" : 50000,
+    "place_map" : "200102020301.pdf",
+    "tag_list" : ["jardin", "escursion"],
+    "event_description" : "Ven a visitar el grandioso jardin Botanico en la ciudad de medellin, donde encontraras actividades para ninos y ninas que les permitira aprender a cuidar el planeta",
+    "category" : "naturaleza",
+    "people_enrolled" : 1300,
+    "event_date" : 
+    {
+      "date" : "21/04/2024",
+      "hour" : "1900"
+    },
+    "direction" : 
+    {
+      "direction" : "undefined",
+      "city" : "Medellin",
+      "reference" : "Cerca de la estacion universidad"
+    }
+
+  }
+]
