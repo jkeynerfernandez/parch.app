@@ -1,12 +1,14 @@
+const GIT_PATH = "/parch.app" 
 const CACHE_NAME = "parchApp_conerter";
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE_NAME);
     cache.addAll([
-      '/',
-      './theme.js',
-      './style.css'
+      `${GIT_PATH}/`,
+      `${GHPATH}/index.html`,
+      `${GHPATH}/theme.js`,
+      `${GHPATH}/style.css`,
     ]);
   })());
 });
