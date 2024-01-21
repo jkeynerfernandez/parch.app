@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="/parch.app/manifest.webmanifest">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./script/theme.js" defer></script>
+  <title>parchApp</title>
+</head>
+<body id="body-html" class="dark-theme">
+  <h1>Parchapp</h1>
+  <select id="change-theme" name="change-theme">
+    <option value="dark" selected>Dark</option>
+    <option value="white">Ligth</option>
+  </select>
+  <img src="./assets/img/exampleImage.png" alt="" srcset="">
+  <div id="makingTest">
+
+  </div>
+  <!-- Service worker start -->
+  <script>
+    if('serviceWorker' in navigator) {
+      console.log("it exist")
+      navigator.serviceWorker.register('/parch.app/sw.js', { scope: '/parch.app/' });
+    }
+  </script>
+
+</body>
+</html>
