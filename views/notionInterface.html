@@ -3,17 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="manifest" href="/parch.app/assets/json/manifest.webmanifest"> -->
+  <title>Documentaion Project</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="./script/theme.js" defer></script>
-  <title>parchApp</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="module" src="../script/editor.js" defer></script>
 </head>
-<body id="body-html" class="dark-theme">
-  <!-- NAVBAR -->
+<body class="bg-dark text-white">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
       <!--  -->
       <a class="navbar-brand" href="#">
         <i class="bi bi-airplane-engines text-primary"></i>
@@ -29,7 +26,7 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./views/login.html">Login page</a>
+            <a class="nav-link" href="#">Link</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,7 +40,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./views/profile.html">Profile</a>
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -53,25 +50,16 @@
       </div>
     </div>
   </nav>
-  <!-- MAIN CONTENT -->
-  <h1>Parchapp</h1>
-  <a href="./views/notionInterface.html">Go to notions</a>
-  <select id="change-theme" name="change-theme">
-    <option value="dark" selected>Dark</option>
-    <option value="white">Ligth</option>
-  </select>
-  <img src="./assets/img/exampleImage.png" alt="" srcset="">
-  <div id="makingTest">
-
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <!-- Service worker start -->
-  <!-- <script>
-    if('serviceWorker' in navigator) {
-      console.log("it exist")
-      navigator.serviceWorker.register('/parch.app/script/sw.js', { scope: '/parch.app/' });
-    }
-  </script> -->
-
+  <!-- MAIN DIV -->
+  <section class="container border">
+    <div id="edit-zone" class="input-text border-0 w-100 bg-dark text-white text-break" 
+      contenteditable="true" data-placeholder="Write something" >
+      <!-- <div id="exampleElement">Write something</div> -->
+    </div>
+    <div id="no-edit-zone" class="border no-edit-zone ">
+      <!-- <input type="text" class="input-text border-0 w-100 bg-dark text-white text-wrap text-break" -->
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
 </body>
 </html>
