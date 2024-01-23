@@ -1,4 +1,4 @@
-class User{
+class UserModel{
     /////////////////////////////////ATTRIBUTES////////////////////////////////////////////////
     static id=0;// se hereda entre clases pero no entre objetos y luego se actualiza con un set
 
@@ -18,7 +18,7 @@ class User{
         this._badges = userBadges;
         this._level = userLevel;
         this._enrolledEvents = userEnrolledEvents;
-        this._numero = ++User.id;
+        this._numero = ++UserModel.id;
     }
 
     //////////////////////////////////METHODS///////////////////////////////
@@ -128,4 +128,4 @@ class User{
 
 }
 
-export {User as Usuario}
+export {UserModel as Usuario}
