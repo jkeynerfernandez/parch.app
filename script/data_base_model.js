@@ -17,31 +17,72 @@ class DataModel {
 
   async addNewUser (userRequest) {
     const {name, nickname, email, password} = userRequest;
-
     const userInfo = {
-    name : name, 
-    nickname : nickname,
-    email : email,
-    password : password,
-    profile_photo : undefined,
-    about : undefined,
-    status : "desparchado",
-    post_counter : 0,
-    parche_counter : 0,
-    credibility : 0,
-    parche_points : 0,
-    follower_counter : 0,
-    following : 0,
-    last_login : null, //function here
-    account_created : null, //function here
-    birthday : undefined,
-    badges : [],
-    level : "Turist", // function here (about option levels)
-    enrolled_events : []
+      name : name, 
+      nickname : nickname,
+      email : email,
+      password : password,
+      profile_photo : null,
+      about : null,
+      status : "desparchado",
+      post_counter : 0,
+      parche_counter : 0,
+      credibility : 0,
+      parche_points : 0,
+      follower_counter : 0,
+      following : 0,
+      last_login : null, //function here
+      account_created : null, //function here
+      birthday : undefined,
+      badges : [],
+      level : "Turist", // function here (about option levels)
+      enrolled_events : []
     }
+
+    const requestURL = `${END_POINT}`
+    const request = await fetch(requestURL,
+    {
+      method: 'POST',
+      headers: {
+      'Content-Type': 'application/json; charset=utf-8'
+      },
+      body: JSON.stringify(userInfo),
+    });
+    const response = await request.json(); 
+    return response
   }
 
-  async updateUser () {}
+  async patchUser (userID, userUpdatedData) {
+    // userUpdatedData should contains the json key, because we can't check witch keys is the user updating 
+    // Should be an object like next one:
+    /*     
+      const userInfo = {
+      name : name, 
+      nickname : nickname,
+      [...]
+    } */
+
+    const requestURL = `${END_POINT}/${userID}`
+    const data = JSON.stringify(userUpdatedData)
+    console.log(data)
+    const request = await fetch(requestURL,
+    {
+      method: 'PATCH',
+      headers: {
+      'Content-Type': 'application/json; charset=utf-8'
+      },
+      body: JSON.stringify(userUpdatedData),
+    });
+    const response = await request.json();
+    return response;
+  }
+
+  async removeUser (userID) {
+    const requestURL = `${END_POINT}/${userID}`;
+    const request = await fetch(requestURL, { method: 'DELETE' });
+    const response = await request.json();
+    return response;
+  }
 }
 // Crear barra busqueda que solo va a tener buscar elementos y no crear
 
