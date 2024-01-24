@@ -20,8 +20,9 @@ const userRequest = {
 // dataModel.addNewUser(userRequest);
 const exampleUser = new User("df4d");
 setTimeout( () => {
-  const user =  exampleUser.name
-  exampleUser.name = "Jose Marulanda"
+  const user =  exampleUser.about
+  exampleUser.about = "Hello, my i hope you have a good day and like pets and cats"
+  exampleUser.status = "Desparchadisimo"
   console.log(user)
 },500)
 // exampleUser.init("df4d")

@@ -27,8 +27,6 @@ import { DataModel } from "./data_base_model.js";
   }
 
   //////////////////////////////////METHODS///////////////////////////////
-  // si continuo referenciando a userData se va a hacer imposible, pero si los dejo como propiedades tambien lo sera, 
-  // asi mismo, solo tengo que heredar unas cuantas cosas de la clase padre
   // Init
   async init (userID) {
     this.userData = await this.getUserByID(userID);
@@ -40,57 +38,61 @@ import { DataModel } from "./data_base_model.js";
   }
   set name(userName){
     const userInfo = {name : userName};
-    // this._name = userName;
-    this.patchUser(this.userID, userInfo);
+    this.userData = this.patchUser(this.userID, userInfo);
     // You have to call again init to update the info, but you have to do it with the controler
   }
 
   // email
   get email(){
-    return this.userData;
+    return this.userData.email;
   }
   set email(userEmail){
-    this._email = userEmail;
+    const userInfo = {email : userEmail};
+    this.userData = this.patchUser(this.userID, userInfo);
   }
 
   // password
   get password(){
-    return this._password;
+    return this.userData.password; 
   }
-  set password(newPassword){
-    this._password = (newPassword)
+  set password(userPassword){
+    const userInfo = {password : userPassword};
+    this.userData = this.patchUser(this.userID, userInfo);
   }
 
   // Profile photo
   get profilePhoto(){
-    return this.profile_photo;
+    return this.userData.profile_photo; 
   }
   set profilePhoto(userProfilePhoto){
-    this._profilePhoto = userProfilePhoto; 
-  }
+    const userInfo = {profile_photo : userProfilePhoto};
+    this.userData = this.patchUser(this.userID, userInfo);}
 
   // about
   get about() {
-    return this._about;
+    return this.userData.about;
   }
   set about(userAbout) {
-    this._about = userAbout;
+    const userInfo = {about : userAbout};
+    this.userData = this.patchUser(this.userID, userInfo);
   }
 
   // status
   get status() {
-    return this._status;
+    return this.userData.status;
   }
   set status(userStatus) {
-    this._status = userStatus;
+    const userInfo = {status : userStatus};
+    this.userData = this.patchUser(this.userID, userInfo);
   }
 
   // parche_points
   get parchePoints() {
-    return this._parchePoints;
+    return this.userData.parch_points;
   }
   set parchePoints(userParchePoints) {
-    this._parchePoints = userParchePoints;
+    const userInfo = {parch_points : userParchePoints};
+    this.userData = this.patchUser(this.userID, userInfo);
   }
 
   // follower_counter
