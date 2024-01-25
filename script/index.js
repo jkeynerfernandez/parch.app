@@ -1,5 +1,5 @@
-import { Usuario as User } from "./user_class.js";
-import { DataModel } from "./data_base_model.js";
+import { UserFecade, EventFecade } from "./fecade_user.js";
+import { ServicesDataModel, UserDataModel } from "./data_base_model.js";
 // const exampleUser = new User("Jose", "jose123@gmail.com", "12345678", "none", 
 // "Buenos dias mexico", "Desparchado", 2100, 510, 10, "20/10/2001", "Olimpiadas", 2, "2");
 // console.log(exampleUser)
@@ -9,7 +9,8 @@ import { DataModel } from "./data_base_model.js";
 // exampleUser.name = "maria"
 // console.log(exampleUser.name)
 
-const dataModel = new DataModel;
+const eventModel = new ServicesDataModel();
+const list = eventModel.getEventInfo("e95b")
 const userRequest = {
   // name : "Keineron Faroun de Rusia",
   // nickname : "KeinerElFaraon",
@@ -18,12 +19,17 @@ const userRequest = {
   // post_counter : 4
 }
 // dataModel.addNewUser(userRequest);
-const exampleUser = new User("df4d");
+const exampleUser = new UserFecade("53cc");
+const fecadeExample = new EventFecade("df4d")
 setTimeout( () => {
-  const user =  exampleUser.about
+  exampleUser.birthday = '21/01/1990k'
+  console.log(fecadeExample.userData)
+  const user = fecadeExample.setName("e95b", "Salida Bogota, Colombia") 
   exampleUser.about = "Hello, my i hope you have a good day and like pets and cats"
   exampleUser.status = "Desparchadisimo"
-  console.log(user)
+  console.log(exampleUser.userData)
+  console.log(fecadeExample.userData)
+  console.log(fecadeExample.userEvents)
 },500)
 // exampleUser.init("df4d")
 // dataModel.patchUser("82aa", userRequest)
