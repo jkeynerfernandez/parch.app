@@ -100,17 +100,18 @@ class ServicesDataModel {
     return response;
   }
 
-  async addNewEvent (userRequest) {
-    const {creatorID, name, description, category, location, day, hour, people_enrolled, price} = userRequest;
+  async addNewEvent (userID, userRequest) {
+    const {name, description, category, location, day, hour, price} = 
+    userRequest;
     const userInfo = {
       name : name, 
-      creatorID : creatorID,
+      creatorID : userID,
       description : description,
       category : category,
       location : location,
       day : day,
       hour : hour,
-      people_enrolled : people_enrolled,
+      people_enrolled : 0, // We have to determinate how many people is enrolled
       price : price,
     }
 
