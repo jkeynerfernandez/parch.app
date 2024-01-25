@@ -22,12 +22,9 @@ const userRequest = {
 const exampleUser = new UserFecade("53cc");
 const fecadeExample = new EventFecade("df4d")
 setTimeout( () => {
-  exampleUser.birthday = '21/01/1990k'
-  console.log(fecadeExample.userData)
-  const user = fecadeExample.setName("e95b", "Salida Bogota, Colombia") 
-  exampleUser.about = "Hello, my i hope you have a good day and like pets and cats"
-  exampleUser.status = "Desparchadisimo"
-  console.log(exampleUser.userData)
+  exampleUser.name = 'lasdlasldalsd'
+
+  console.log(exampleUser.userData, "dasdasd")
   console.log(fecadeExample.userData)
   console.log(fecadeExample.userEvents)
 },500)

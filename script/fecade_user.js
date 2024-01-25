@@ -32,9 +32,11 @@ class UserFecade extends UserDataModel{
     this.userData = await this.getUserByID(this.userID);
   }
 
-  async updateUserData () {
-    
+  async updateUserData (userPromise) {
+    const response = await userPromise;
+    this.userData = response;
   }
+  
   // name
   get name(){
     // return this._name;
@@ -42,7 +44,8 @@ class UserFecade extends UserDataModel{
   }
   set name(userName){
     const userInfo = {name : userName};
-    this.userData = this.patchUser(this.userID, userInfo);
+    const promise =  this.patchUser(this.userID, userInfo);
+    this.updateUserData(promise)
     // You have to call again init to update the info, but you have to do it with the controler
   }
 
