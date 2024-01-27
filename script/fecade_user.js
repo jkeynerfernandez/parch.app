@@ -16,7 +16,6 @@ class UserMediator{
     this.userID = userID
     this.init()
   }
-  //////////////////////////////////METHODS///////////////////////////////
   // Init
   async init () {
     this.userData = await DataModel.getUserByID(this.userID);
