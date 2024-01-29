@@ -1,6 +1,6 @@
 const theme = document.getElementById("change-theme");
 const body = document.getElementById("body-html");
-
+cons
 console.log(theme);
 theme.addEventListener('change', () => {
   const themeChange = theme.value;

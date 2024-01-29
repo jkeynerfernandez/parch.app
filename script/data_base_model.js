@@ -17,6 +17,13 @@ class UserDataModel {
     return user
   }
 
+  async getUserByNickname (userNickname) {
+    const requestURL = `${USERS_END_POINT}?nickname=${userNickname}`
+    const response = await fetch(requestURL);
+    const user = await response.json(); 
+    return user
+  }
+
   async addNewUser (userRequest) {
     const {name, nickname, email, password} = userRequest;
     const userInfo = {
@@ -27,15 +34,16 @@ class UserDataModel {
       profile_photo : null,
       about : null,
       status : "desparchado",
+      credibility : 0,
       post_counter : 0,
       parche_counter : 0,
-      credibility : 0,
       parche_points : 0,
+      level_points : 0,
       follower_counter : 0,
       following : 0,
       last_login : null, //function here
       account_created : null, //function here
-      birthday : undefined,
+      birthday : null,
       badges : [],
       level : "Turist", // function here (about option levels)
       enrolled_events : []
