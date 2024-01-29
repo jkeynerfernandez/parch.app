@@ -12,7 +12,6 @@ const validateChain = {
     let message;
     if (isValidEmail) {
       message = await this.validateInDataBase(userEmailAddress) 
-      console.log(message)
       return message;
     }
     else {

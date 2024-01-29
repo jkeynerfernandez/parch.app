@@ -1,9 +1,5 @@
-// import { UserMediator, EventFecade } from "./fecade_user.js";
-// import { ServicesDataModel, UserDataModel } from "./data_base_model.js";
-import { setLocalStorage, getLocalStorage } from "./local_storage.js"
-import { Controler } from "./controler.js";
+import { Controler } from "./profile_controler.js";
 document.addEventListener("DOMContentLoaded", Controler.init());
-// progress var calculator, level type calculator, points to next level calculator
 const ProfileView = {
   init () {
     this.parcheCounter = document.getElementById("parche_counter");
