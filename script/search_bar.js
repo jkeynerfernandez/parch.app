@@ -1,4 +1,5 @@
 import { UserDataModel } from "./data_base_model.js";
+import { setLocalStorage } from "./local_storage.js";
 const UserData = new UserDataModel()
 /*----------  CONTROLER -----------*/
 const SeachBarControler = {
@@ -15,10 +16,16 @@ const SeachBarControler = {
   addSuggestionToTable (userSugestions) {
     const searchSuggesntiosTable = SearchBarViews.suggestionsResult
     userSugestions.forEach(element => {
-      console.log(searchSuggesntiosTable, 'helo')
-      const item =  newSearchItem(element.name)
+      console.log(searchSuggesntiosTable, 'helsso')
+      console.log(element.name)
+      const item =  SearchBarViews.newSearchItem(element.name)
       searchSuggesntiosTable.appendChild(item)
     });
+  },
+
+  goToSearchSuggestion (userName) {
+    setLocalStorage("suggestionProfile", userName);
+    window.location.href = "./views/suggestion.html";
   }
 }
 
@@ -41,23 +48,25 @@ const SearchBarViews = {
     })
   },
 
-  newSearchItem () {
-    // Make div element
-    const elementType = document.createElement('div');
-    elementType.classList.add('list-group')
-
+  newSearchItem (userName) {
     // Make content parent
     const parentDiv = document.createElement('a');
     parentDiv.classList.add('list-group-item', 'list-group-item-action')
+    parentDiv.setAttribute("type", "button")
 
-    const nicknameElement = document.createElement('p');
-    nicknameElement.classList.add('mb-0', 'fw-bold');
+    const nicknameElement = document.createElement('button');
+    nicknameElement.classList.add('mb-0', 'fw-bold', 'btn');
     nicknameElement.innerText = userName;
+    nicknameElement.setAttribute("type", "button")
+
+    nicknameElement.addEventListener('click', () => {
+      SeachBarControler.goToSearchSuggestion(userName)
+    })
 
     // Join elements
     parentDiv.appendChild(nicknameElement);
     console.log(parentDiv)
-    return parentDiv
+    return nicknameElement
   }
 }
 
