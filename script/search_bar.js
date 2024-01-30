@@ -9,11 +9,14 @@ const SeachBarControler = {
   async searchBarSuggestions (userSearchSuggestion) {
     const userInfo = await UserData.getUserByNickname(userSearchSuggestion)
     console.log(userInfo)
+    this.addSuggestionToTable(userInfo)
   },
 
   addSuggestionToTable (userSugestions) {
+    const searchSuggesntiosTable = SearchBarViews.suggestionsResult
     userSugestions.forEach(element => {
-      const item =  newSearchItem(element.name, element.email)
+      console.log(searchSuggesntiosTable, 'helo')
+      const item =  newSearchItem(element.name)
       searchSuggesntiosTable.appendChild(item)
     });
   }
@@ -23,6 +26,7 @@ const SeachBarControler = {
 const SearchBarViews = {
   init () {
     this.searchBar = document.getElementById("searchBar")
+    this.suggestionsResult = document.getElementById("sugestions_results")
     this.waitToSearch()
   },
 
@@ -52,7 +56,7 @@ const SearchBarViews = {
 
     // Join elements
     parentDiv.appendChild(nicknameElement);
-    parentDiv.appendChild(emailElement);
+    console.log(parentDiv)
     return parentDiv
   }
 }
