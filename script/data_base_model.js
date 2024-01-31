@@ -39,8 +39,8 @@ class UserDataModel {
       parche_counter : 0,
       parche_points : 0,
       level_points : 0,
-      follower_counter : 0,
-      following : 0,
+      followers : [],
+      following : [],
       last_login : null, //function here
       account_created : null, //function here
       birthday : null,

@@ -1,12 +1,22 @@
 import { UserDataModel } from "./data_base_model.js";
 import { setLocalStorage } from "./local_storage.js";
-import { validateChain } from "./validateEmail.js";
+import { validateChain } from "./validate_email.js";
 /*---------- CONTROLER ----------*/
 const UserData = new UserDataModel;
 const ControlerSignup = {
   init () {
     this.validForm = {}
     SignupViews.init()
+  },
+
+  checkFormValues () {
+    const isValidEmail = this.validForm.email.valid;
+    const isValidNickname = this.validForm.nickname.valid;
+    if (isValidEmail && isValidNickname) {
+      this.addNewUserDataBase()
+    } else {
+      SignupViews.render()
+    }
   },
 
   async addNewUserDataBase () {
@@ -20,16 +30,6 @@ const ControlerSignup = {
     const userID = newUser.id;
     setLocalStorage('userToken', userID);
     window.location.href = "/index.html";
-  },
-
-  checkFormValues () {
-    const isValidEmail = this.validForm.email.valid;
-    const isValidNickname = this.validForm.nickname.valid;
-    if (isValidEmail && isValidNickname) {
-      this.addNewUserDataBase()
-    } else {
-      SignupViews.render()
-    }
   },
 
   async checkEmailAddress (userEmailAddress) {
