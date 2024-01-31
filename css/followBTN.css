@@ -1,0 +1,9 @@
+.followBTN {
+  padding: 0px 10px;
+  background-color: rgb(6, 81, 6);
+}
+
+.unfollowBTN {
+  padding: 0px 10px;
+  background-color: rgb(160, 50, 50);
+}
