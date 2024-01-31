@@ -172,5 +172,13 @@
       ],
       "id": "8de2"
     }
+  ],
+  "follwers":[
+    {
+      "id":"1e14as",
+      "id_usuario_al_que_sigue":"53cc",
+      "id_Seguidor":"3e01",
+      "status":true
+    }
   ]
 }
