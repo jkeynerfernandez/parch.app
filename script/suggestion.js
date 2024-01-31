@@ -8,7 +8,6 @@ const Controler = {
   async init (userToken) {
     this.userToken = userToken;
     this.userData = await DataModel.getUserByNickname(this.userToken);
-    console.log(this.userData)
     // get user data from array
     this.userData = this.userData[0]
     const rolData = this.estadisticCalculation() 
@@ -44,7 +43,6 @@ const ProfileView = {
     this.parcheCounter = document.getElementById("parche_counter");
     this.postCounter = document.getElementById("post_counter");
     this.credibilityCounter = document.getElementById("credibility_counter");
-    console.log(this.nickName)
     // this.level = document.getElementById("levelHTML"); // Should change to roltype
     // this.parchePoints = document.getElementById("parche_points");
     // this.progressBar = document.getElementById("progress_bar");

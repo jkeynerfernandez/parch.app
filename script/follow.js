@@ -1,46 +1,45 @@
-
 import { ServicesDataModel, UserDataModel } from "./data_base_model.js";
 import { setLocalStorage, getLocalStorage } from "./local_storage.js"
+import { removeUserByNameList, removeListDuplicates } from "./utilities.js"; 
 const UserModel = new UserDataModel()
 
-const FollowChain = {
-  init (userCurrentData, userSuggestionData) {
-    this.userData = userCurrentData;
-    this.suggestionData = userSuggestionData;
-    const data = this.getFollowing(this.userData)
-    this.suggestionData.following = this.addFollower('danny', data)
-    console.log(this.suggestionData,"hey")
-  },
+class FollowUtilities {
+  constructor (userData) {
+    this.userData = userData
+    // remove duplicate data
+    this.userData.followers = removeListDuplicates(this.userData.followers)
+    this.userData.following = removeListDuplicates(this.userData.following)
+  }
 
-  removeListDuplicates (userList) {
-    const removeDuplicates = new Set(userList)
-    const parseToList = Array.from(removeDuplicates)
-    return parseToList
-  },
+  addFollower (userPersonName) {
+    this.userData.followers.push(userPersonName);
+  }
 
-  getFollowing (userObject) {
-    const followingData = userObject.following;
-    const removeDuplicates = this.removeListDuplicates(followingData) 
-    return removeDuplicates
-  },
-  
-  getFollowers (userObject) {
-    const followersData = userObject.followers;
-    const removeDuplicates = this.removeListDuplicates(followingData) 
-    return removeDuplicates
-  },
+  addFollowing (userPersonName) {
+    this.userData.following.push(userPersonName);
+  }
 
-  addFollower (userNewFollower, userFollowers) {
-    const updateData = userFollowers.push(userNewFollower);
-    return updateData
-  },
+  removeFollower (userPersonName) {
+    const followerList = this.userData.followers;
+    this.userData.followers = removeUserByNameList(userPersonName, followerList)
+  }
 
-  addFollowing (userNewFollowing, userFollowing) {
-    const updateData = userFollowing.push(userNewFollowing)
-    return updateData
-  },
+  removeFollowing (userPersonName) {
+    const followingList = this.userData.following
+    this.userData.following = removeUserByNameList(userPersonName, followingList)
+  }
 
+  async updateFollowingDB () {
+    const {id : userID, following} = this.userData;
+    const response = await UserModel.patchUser(userID, following)
+    this.userData = response
+  }
 
+  async updateFollowersDB () {
+    const {id : userID, followers} = this.userData;
+    const response = await UserModel.patchUser(userID, followers)
+    this.userData = response
+  }
 }
 /*---------- CONTROLER ----------*/
 const FollowControler = {
@@ -53,34 +52,55 @@ const FollowControler = {
     this.suggestionProfileData = await UserModel.getUserByNickname(suggestionProfileToken);
     this.suggestionProfileData = this.suggestionProfileData[0];
 
-    FollowChain.init(this.currentUserData, this.suggestionProfileData)
-    console.log(this.currentUserData, this.suggestionProfileData)
     // check if following
     const userFollowingData = this.currentUserData.following 
     const suggestionName = this.suggestionProfileData.name
-    console.log(userFollowingData)
-    this.checkIfFollowing(suggestionName, userFollowingData)
+    const isFollowing = this.checkIfFollowing(suggestionName, userFollowingData)
+    this.followBTNRender(isFollowing)
+  },
 
-    // follow functionality
-    this.followUser(suggestionName, userFollowingData)
+  followControl () {
+    const userData = new FollowUtilities(this.currentUserData)
+    const suggestionProfileData = new FollowUtilities(this.suggestionProfileData)
+    // get data from users
+    const {name : suggestionName, followers : followersList} = suggestionProfileData.userData;
+    const {name : userName, following : followingList} = userData.userData;
+
+    // check control
+    const isFollowing = this.checkIfFollowing(suggestionName, followingList)
+    if (!isFollowing) {
+      userData.addFollowing(suggestionName)
+      suggestionProfileData.addFollower(userName)
+    } else {
+      userData.removeFollowing(suggestionName)
+      suggestionProfileData.removeFollower(userName)
+    }
+    // change button after if else stament because data internally change
+    this.followBTNRender(!isFollowing)
+  },
+
+  followDataBase () {
+    const userData = new FollowUtilities(this.currentUserData)
+    const suggestionProfileData = new FollowUtilities(this.suggestionProfileData)
+
+    waitToUpdateDB = setTimeout(() => {
+      userData.updateFollowingDB()
+      suggestionProfileData.updateFollowersDB()
+    },10000)
+
   },
 
   checkIfFollowing (userFollowingSuggestion, userFollowingData) {
     const isFollowing = userFollowingData.includes(userFollowingSuggestion)
+    return isFollowing;
+  },
 
-    if (isFollowing) {
+  followBTNRender (userIsFollowing) {
+    if (userIsFollowing) {
       FollowViews.following()
     } else {
       FollowViews.unFollowing()
     }
-    console.log(isFollowing, "hello")
-    // array.includes("hello")
-  },
-
-  followUser (currentUserData, userFollowingData) {
-    currentUserData.following
-    const mySet = new Set([userFollowingData])
-    console.log(typeof(mySet), mySet)
   }
 }
 
@@ -88,7 +108,10 @@ const FollowControler = {
 const FollowViews = {
   init () {
     this.followBTN = document.getElementById("follow_button")
-    console.log(this.followBTN)
+    const data = document.getElementById('follow_button')
+    data.addEventListener('click', () => {
+      FollowControler.followControl()
+    })
   },
 
   following () {
