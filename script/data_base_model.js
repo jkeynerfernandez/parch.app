@@ -1,6 +1,7 @@
 const END_POINT = "http://localhost:3000"
 const USERS_END_POINT = `${END_POINT}/users`;
 const SERVICES_END_POINT = `${END_POINT}/services`;
+const FOLLOW_END_POINT = `${END_POINT}/follow`;
 
 class UserDataModel {
   async getUserByID (userID) {
@@ -158,5 +159,72 @@ class ServicesDataModel {
   }
 }
 
-// 
-export {UserDataModel, ServicesDataModel}
+// Follow model 
+class FollowDataModel {
+  async getListFollowers (userID) {
+    const requestURL = `${FOLLOW_END_POINT}?famous_id=${userID}`
+    const response = await fetch(requestURL);
+    const user = await response.json(); 
+    return user
+  }
+
+  async getListFollowing (userID) {
+    const requestURL = `${FOLLOW_END_POINT}?fan_id=${userID}`
+    const response = await fetch(requestURL);
+    const user = await response.json(); 
+    return user
+  }
+
+  async addFollower (userFanID, userFamousID) {
+    const isFollowing = await this.checkIfFollowing(userFanID, userFamousID)
+    debugger
+    if (isFollowing) {
+      const response = this.changeFollowingStatus(userFanID, userFamousID, true)
+      return response
+    } else {
+    const userInfo = {
+      famous_id : userFamousID, 
+      fan_id : userFanID,
+      status : true
+    }
+    debugger
+    const requestURL = `${FOLLOW_END_POINT}`
+    const request = await fetch(requestURL,
+    {
+      method: 'POST',
+      headers: {
+      'Content-Type': 'application/json; charset=utf-8'
+      },
+      body: JSON.stringify(userInfo),
+    });
+    const response = await request.json(); 
+    return response
+    }
+  }
+
+  // used to add or remove following
+  async changeFollowingStatus (userFanID, userFamousID,userStatus) {
+    const userInfo = { status : userStatus }
+    const requestURL = `${FOLLOW_END_POINT}?fan_id=${userFanID}&famous_id=${userFamousID}`
+    debugger
+    const request = await fetch(requestURL,
+    {
+      method: 'PATCH',
+      headers: {
+      'Content-Type': 'application/json; charset=utf-8'
+      },
+      body: JSON.stringify(userInfo),
+    });
+    const response = await request.json(); 
+    return response
+  }
+
+
+  async checkIfFollowing (userFanID, userFamousID) {
+    const requestURL = `${FOLLOW_END_POINT}?fan_id=${userFanID}&famous_id=${userFamousID}`
+    const request = await fetch(requestURL);
+    const response = await request.json(); 
+    return response[0]
+  }
+}
+export {UserDataModel, ServicesDataModel, FollowDataModel}

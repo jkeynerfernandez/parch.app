@@ -45,7 +45,10 @@
       "parche_points": 0,
       "level_points": 0,
       "followers": [],
-      "following": ["cancerbero", "gaboGarcia"],
+      "following": [
+        "cancerbero",
+        "gaboGarcia"
+      ],
       "last_login": null,
       "account_created": null,
       "birthday": null,
@@ -173,12 +176,22 @@
       "id": "8de2"
     }
   ],
-  "follwers":[
+  "follow": [
     {
-      "id":"1e14as",
-      "id_usuario_al_que_sigue":"53cc",
-      "id_Seguidor":"3e01",
-      "status":true
+      "id": "1e14as",
+      "famous_id": "3e01",
+      "fan_id": "53cc",
+      "status": true
+    },
+    {
+      "id": "e123",
+      "famous_id": "3e01",
+      "fan_id": "53c1",
+      "status": true
+    },
+    {
+      "id": "e244",
+      "status": true
     }
   ]
 }
