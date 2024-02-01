@@ -19,6 +19,7 @@ test('Add following - user with status false', async () => {
   let getDataServer = await FollowData.addFollower("1234e", "6789")
   expect(getDataServer).toMatchObject({"fan_id": "1234e", "famous_id": "6789", "status": true});
 });
+
 // Defenilly remove following
 test('remove following', async () => {
   // used to add temp data to check
@@ -26,16 +27,25 @@ test('remove following', async () => {
   let removeResponse = await FollowData.definellyDeleteFollow(getDataServer.id)
   expect(removeResponse).toMatchObject(getDataServer);
 });
-
-// Check if following
-test('Check if following', async () => {
-  let getDataServer = await FollowData.checkIfFollowing("53c1", "3e01")
+// Check if created
+test('Check if created', async () => {
+  let getDataServer = await FollowData.checkIfCreated("53c1", "3e01")
   expect(getDataServer).toBe(true)
 });
 
-test('Check if is not following', async () => {
-  let getDataServer = await FollowData.checkIfFollowing("1234a", "5678e")
+test('Check if is not created', async () => {
+  let getDataServer = await FollowData.checkIfCreated("1234a", "5678e")
   expect(getDataServer).toBe(false);
+});
+// Check if following
+test('Check if following is not in database - error', async () => {
+  let getDataServer = await FollowData.checkIfFollowing("a53c1", "3e01")
+  expect(getDataServer).toBe(false)
+});
+
+test('Check if valid following', async () => {
+  let getDataServer = await FollowData.checkIfFollowing("1234", "5678")
+  expect(getDataServer).toBe(true)
 });
 
 // Change status

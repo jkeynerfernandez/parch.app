@@ -176,7 +176,7 @@ class FollowDataModel {
   }
 
   async addFollower (userFanID, userFamousID) {
-    const isFollowing = await this.checkIfFollowing(userFanID, userFamousID)
+    const isFollowing = await this.checkIfCreated(userFanID, userFamousID)
     if (isFollowing) {
       const followID = await this.getFollowID(userFanID, userFamousID);
       const response = await this.changeFollowingStatus(followID, true);
@@ -226,11 +226,25 @@ class FollowDataModel {
     return followID
   }
 
-  async checkIfFollowing (userFanID, userFamousID) {
+  async checkIfCreated (userFanID, userFamousID) {
     const requestURL = `${FOLLOW_END_POINT}?fan_id=${userFanID}&famous_id=${userFamousID}`
     const request = await fetch(requestURL);
     const response = await request.json(); 
     return Boolean(response[0]) 
+  }
+
+  async checkIfFollowing (userFanID, userFamousID) {
+    try {
+      const requestURL = `${FOLLOW_END_POINT}?fan_id=${userFanID}&famous_id=${userFamousID}`
+      const request = await fetch(requestURL);
+      const response = await request.json(); 
+      const isFollowing = response[0].status
+      // If throw an erron this line will not be executed
+      return isFollowing 
+    }
+    catch (e) {
+      return false
+    }
   }
   
   // DON'T USE IT IN FRON END, IT IS JUST FOR TESTING ADD USER FUNCTIONALITY
