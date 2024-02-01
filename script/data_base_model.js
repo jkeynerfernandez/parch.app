@@ -177,36 +177,35 @@ class FollowDataModel {
 
   async addFollower (userFanID, userFamousID) {
     const isFollowing = await this.checkIfFollowing(userFanID, userFamousID)
-    debugger
     if (isFollowing) {
-      const response = this.changeFollowingStatus(userFanID, userFamousID, true)
+      const followID = await this.getFollowID(userFanID, userFamousID);
+      const response = await this.changeFollowingStatus(followID, true);
       return response
     } else {
-    const userInfo = {
-      famous_id : userFamousID, 
-      fan_id : userFanID,
-      status : true
-    }
-    debugger
-    const requestURL = `${FOLLOW_END_POINT}`
-    const request = await fetch(requestURL,
-    {
-      method: 'POST',
-      headers: {
-      'Content-Type': 'application/json; charset=utf-8'
-      },
-      body: JSON.stringify(userInfo),
-    });
-    const response = await request.json(); 
-    return response
+      const userInfo = {
+        famous_id : userFamousID, 
+        fan_id : userFanID,
+        status : true
+      }
+      debugger
+      const requestURL = `${FOLLOW_END_POINT}`
+      const request = await fetch(requestURL,
+      {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json; charset=utf-8'
+        },
+        body: JSON.stringify(userInfo),
+      });
+      const response = await request.json(); 
+      return response
     }
   }
 
   // used to add or remove following
-  async changeFollowingStatus (userFanID, userFamousID,userStatus) {
+  async changeFollowingStatus (userFollowID ,userStatus) {
     const userInfo = { status : userStatus }
-    const requestURL = `${FOLLOW_END_POINT}?fan_id=${userFanID}&famous_id=${userFamousID}`
-    debugger
+    const requestURL = `${FOLLOW_END_POINT}/${userFollowID}`
     const request = await fetch(requestURL,
     {
       method: 'PATCH',
@@ -219,13 +218,28 @@ class FollowDataModel {
     return response
   }
 
+  async getFollowID (userFanID, userFamousID) {
+    const requestURL = `${FOLLOW_END_POINT}?fan_id=${userFanID}&famous_id=${userFamousID}`
+    const request = await fetch(requestURL);
+    const response = await request.json(); 
+    const followID = response[0].id
+    return followID
+  }
 
   async checkIfFollowing (userFanID, userFamousID) {
     const requestURL = `${FOLLOW_END_POINT}?fan_id=${userFanID}&famous_id=${userFamousID}`
     const request = await fetch(requestURL);
     const response = await request.json(); 
-    return response[0]
+    return Boolean(response[0]) 
+  }
+  
+  // DON'T USE IT IN FRON END, IT IS JUST FOR TESTING ADD USER FUNCTIONALITY
+  async definellyDeleteFollow (followID) {
+    const requestURL = `${FOLLOW_END_POINT}/${followID}`;
+    const request = await fetch(requestURL, { method: 'DELETE' });
+    const response = await request.json();
+    return response;
   }
 }
-module.exports = {UserDataModel, ServicesDataModel, FollowDataModel};
-// export {UserDataModel, ServicesDataModel, FollowDataModel}
+// module.exports = {UserDataModel, ServicesDataModel, FollowDataModel};
+export {UserDataModel, ServicesDataModel, FollowDataModel}

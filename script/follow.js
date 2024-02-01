@@ -27,9 +27,13 @@ const FollowControler = {
     waitToUpdateDB = setTimeout(() => {
       const isFollowing =  this.followStatus;
       if (!isFollowing) {
-        this.addFollowing()
+        this.addFollowing(this.userID, this.suggestionID)
       } else {
-        this.removeFollowing(this.userID, this.suggestionID)
+        try {
+          this.removeFollowing(this.userID, this.suggestionID)
+        } catch {
+          console.log("User doesn't exit")
+        }
       }
     },0)
     // change button after if else stament because data internally change
@@ -43,7 +47,8 @@ const FollowControler = {
   },
 
   removeFollowing (userID, suggestionID) {
-    FollowModel.changeFollowingStatus(userID, suggestionID, false);
+    FollowModel.changeFollowingStatus("53c1", "3e01", false);
+    // FollowModel.changeFollowingStatus(userID, suggestionID, false);
   },
 
   async getFollowData (userID, suggestionID) {
@@ -92,5 +97,5 @@ const FollowViews = {
     this.followBTN.classList.remove("followBTN");
   }
 }
-
+FollowModel.getFollowID()
 FollowControler.init()
