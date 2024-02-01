@@ -227,4 +227,5 @@ class FollowDataModel {
     return response[0]
   }
 }
-export {UserDataModel, ServicesDataModel, FollowDataModel}
+module.exports = {UserDataModel, ServicesDataModel, FollowDataModel};
+// export {UserDataModel, ServicesDataModel, FollowDataModel}

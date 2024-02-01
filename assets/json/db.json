@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "53cc",
-      "name": "lasdlasldalsd",
+      "name": "hola mundo",
       "nickname": "joseLuis21",
       "email": "jesusRamiroLondono@gmail.com",
       "password": "mySecurePassword",
@@ -191,6 +191,14 @@
     },
     {
       "id": "e244",
+      "status": true
+    },
+    {
+      "id": "f762",
+      "status": true
+    },
+    {
+      "id": "84e8",
       "status": true
     }
   ]
