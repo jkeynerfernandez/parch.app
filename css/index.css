@@ -20,7 +20,6 @@ button {
   padding: 0;
   width: auto;
   overflow: visible;
-
   background: transparent;
   color: inherit;
   font: inherit;
@@ -31,6 +30,13 @@ button {
 
 :root {
   --main-pink-color: #ff0984;
+  --red-pink-color:#e50d5a;
+  --green-pastel:#31e061;
+  --green-flour:#0bf21c;
+  --blue-pastel:#1c73e7;
+  --blue-dark:#143da8;
+  --yelow-fluo:#f7e336;
+  --yellow-pastel:#ffde59;
   --main-bg-color: white;
   --color-navs-bar: #f8f2f2;
   --desparchado-status: rgb(3, 168, 66);
@@ -65,6 +71,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 999;
+
 }
 
 .box-logo {
@@ -334,18 +341,45 @@ header {
 
 .container-arrows-carrousel {
   width: 100%;
-  height: 150px;
-  background-color: aquamarine;
+  height: 110px;
   position: absolute;
   z-index: 1;
   display: flex;
   justify-content: space-between;
+
 }
 
 .container-arrows-carrousel button {
   width: 10%;
-  font-size: 45px;
+  height: 90%;
+  background-position-x: center;
 }
+
+.container-arrows-carrousel button:hover {
+  cursor: pointer;
+  height: 100%;
+  transition:cubic-bezier(0.215, 0.610, 0.355, 1);
+  transition-duration: 0.1s;
+}
+
+
+
+#left-arrow-index{
+  background-image: url(../assets/img/orange-arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#right-arrow-index{
+  background-image: url(../assets/img/orange-arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+}
+
+
+
+
 
 /*end ARROWS*/
 
