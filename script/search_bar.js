@@ -33,6 +33,7 @@ const SearchBarViews = {
     this.searchBar = document.getElementById("input-buscar")
     this.suggestionsResult = document.querySelector(".box-inputbuscar-suggestions")
     this.waitToSearch()
+    this.showHideSuggestions()
   },
 
   waitToSearch () {
@@ -57,10 +58,20 @@ const SearchBarViews = {
   },
 
   clearSearchSuggestions (userParent) {
-    console.log(userParent)
     while (userParent.lastChild) {
       userParent.removeChild(userParent.lastChild);
     }
+  },
+
+  showHideSuggestions () {
+    this.searchBar.addEventListener('focus', () => {
+      this.suggestionsResult.style.display = "flex";
+    })
+    this.searchBar.addEventListener('blur', () => {
+      setTimeout(() => {
+        this.suggestionsResult.style.display = "none";
+      }, 200)
+    })
   }
 }
 
