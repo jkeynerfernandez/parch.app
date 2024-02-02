@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />  
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OparcH! MAIN</title>
     <!-- <script src="./script/active_session.js"></script> -->
@@ -22,7 +22,9 @@
     <!--Los containers son los contedores de los boxes-->
     <!-- Las cajas son las contenedores de los elementos-->
 <section id="ohparch-app">
-  <header>
+
+  <!-- Header con sesiòn logeada -->
+  <!-- <header>
     <div class="box-logo">
       <img src="./assets/img/logo-sin-slogan.png" alt="Logo OparcH!" />
     </div>
@@ -40,7 +42,21 @@
         <img src="./assets/img/profile_example1" alt="profile image" />
       </div>
     </div>
+  </header> -->
+
+    <!-- Header con sin sesiòn logeada -->
+  <header>
+    <div class="box-logo">
+      <img src="./assets/img/logo-sin-slogan.png" alt="Logo OparcH!" />
+    </div>
+
+    <nav class="box-profile">
+      <a href="./views/login.html">join or log in</a>
+    </nav>
+
+
   </header>
+
 
   <section id="section-container-top-sections">
     <div class="container-box-left-top-sections">
@@ -57,7 +73,7 @@
           <!-- <div class="box-btn-img-searcher"> -->
 
               <i class="fa-solid fa-magnifying-glass i-lupa-img"></i>
-            <input type="text" placeholder="get into the parch..." class="input-buscar"/>
+            <input id="input-buscar" type="text" placeholder="get into the parch..." class="input-buscar"/>
       <!-- </div> -->
     </div>
 
@@ -71,6 +87,7 @@
     </div>
     
   </section>
+
   <main id="main-content">
 
     <section id="section-container-content">
