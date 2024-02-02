@@ -60,6 +60,8 @@ body {
   position: relative;
 }
 
+/*Header con sesiòn logeada */
+
 header {
   width: 100%;
   display: flex;
@@ -73,6 +75,7 @@ header {
   z-index: 999;
 
 }
+
 
 .box-logo {
   width: 30%;
@@ -120,7 +123,64 @@ header {
   border-radius: 50%;
 }
 
-/*END HEADER NAV*/
+/*END Header sin sesiòn logeada  NAV*/
+
+
+
+
+/*START Header sin sesiòn logeada  NAV*/
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--main-pink-color);
+  border-bottom: black 2px solid;
+  padding: 10px;
+  border-radius: 15% 15% 0% 0%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+}
+
+
+.box-logo {
+  width: 40%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.box-logo img {
+  width: 80%;
+}
+
+.box-profile {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-profile a{
+  background-color: var(--yellow-pastel);
+  padding: 10px;
+  border-radius: 10px;
+  color: blue;
+  border: var(--green-flour) 1px solid;
+}
+
+
+
+
+
+/*END Header sin sesiòn logeada  NAV*/
+
+
+
+
+
 
 /*START OPTIONS TOP*/
 
@@ -329,7 +389,13 @@ header {
 #section-container-content {
   padding: 8px;
   width: 100%;
+  background-image: url(../assets/img/mountain-graphic-top.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: center;
 }
+
+
 
 .box-principal-title {
   margin-top: 10px;
@@ -834,6 +900,10 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  background-image: url(../assets/img/mountain-graphic-5-double-mountain.png);
+  background-size: 100% 15%;
+  background-repeat: repeat-y;
+  background-position-y: center;
 }
 
 .boxes-free-events {
