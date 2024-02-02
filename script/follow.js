@@ -18,20 +18,26 @@ const FollowControler = {
     this.userID = currentUserData.id;
     this.suggestionID = suggestionProfileData.id;
     this.followStatus = await this.checkIfFollowing(this.userID, this.suggestionID);
+    this.followID = await FollowModel.getFollowID(this.userID, this.suggestionID);
     this.followBTNRender(this.followStatus)
   },
 
   followControl () {
     // check control
+    const currentStatus = this.followStatus;
     clearTimeout(waitToUpdateDB)
     waitToUpdateDB = setTimeout(() => {
-      const isFollowing =  this.followStatus;
+      const isFollowing =  currentStatus;
       if (!isFollowing) {
-        this.addFollowing()
+        this.addFollowing(this.userID, this.suggestionID)
       } else {
-        this.removeFollowing(this.userID, this.suggestionID)
+        try {
+          this.removeFollowing(this.userID, this.suggestionID)
+        } catch {
+          console.log("User doesn't exit")
+        }
       }
-    },0)
+    },1500)
     // change button after if else stament because data internally change
     this.followStatus = !this.followStatus
     this.followBTNRender(this.followStatus)
@@ -42,25 +48,20 @@ const FollowControler = {
     FollowModel.addFollower(userID, suggestionID);
   },
 
-  removeFollowing (userID, suggestionID) {
-    FollowModel.changeFollowingStatus(userID, suggestionID, false);
-  },
-
-  async getFollowData (userID, suggestionID) {
-    const followingData = await FollowModel.checkIfFollowing(userID, suggestionID)
-    return followingData;
+  removeFollowing () {
+    FollowModel.changeFollowingStatus(this.followID, false);
+    // FollowModel.changeFollowingStatus(userID, suggestionID, false);
   },
 
   async checkIfFollowing (userID, suggestionID) {
-    const followingData = await this.getFollowData(userID, suggestionID)
-    const isUndefined = !Boolean(followingData) 
-    let isFollowing;
-    if (isUndefined){
-      isFollowing = false
-    } else {
-      isFollowing = followingData.status;
-    }
+    let isFollowing = await FollowModel.checkIfFollowing(userID, suggestionID) 
     return isFollowing;
+  },
+
+  async getFollowData (userID, suggestionID) {
+    // line not working
+    // const followingData = await FollowModel.checkIfFollowing(userID, suggestionID)
+    return followingData;
   },
 
   followBTNRender (userIsFollowing) {
@@ -92,5 +93,4 @@ const FollowViews = {
     this.followBTN.classList.remove("followBTN");
   }
 }
-
 FollowControler.init()

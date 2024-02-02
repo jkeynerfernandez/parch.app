@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "53cc",
-      "name": "lasdlasldalsd",
+      "name": "hola mundo",
       "nickname": "joseLuis21",
       "email": "jesusRamiroLondono@gmail.com",
       "password": "mySecurePassword",
@@ -187,10 +187,64 @@
       "id": "e123",
       "famous_id": "3e01",
       "fan_id": "53c1",
+      "status": false
+    },
+    {
+      "id": "d764",
+      "famous_id": "5678",
+      "fan_id": "1234",
       "status": true
     },
     {
-      "id": "e244",
+      "id": "7905",
+      "status": true
+    },
+    {
+      "id": "85c6",
+      "famous_id": "5678",
+      "fan_id": "1234",
+      "status": true
+    },
+    {
+      "id": "01da",
+      "famous_id": "3e15",
+      "fan_id": "3e01",
+      "status": true
+    },
+    {
+      "id": "87c8",
+      "famous_id": "lest work",
+      "fan_id": "friend",
+      "status": true
+    },
+    {
+      "id": "4d23",
+      "famous_id": "5678e",
+      "fan_id": "1234e",
+      "status": true
+    },
+    {
+      "id": "87bb",
+      "famous_id": "15678e",
+      "fan_id": "1234e",
+      "status": true
+    },
+    {
+      "id": "aeb2",
+      "famous_id": "125678e",
+      "fan_id": "1234e",
+      "status": true
+    },
+    {
+      "id": "ace1",
+      "famous_id": "6789",
+      "fan_id": "1234e",
+      "status": true
+    },
+    {
+      "id": "7a5e",
+      "famous_id": "6789",
+      "fan_id": "a12345",
       "status": true
     }
   ]
