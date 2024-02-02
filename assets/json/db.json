@@ -6,7 +6,7 @@
       "nickname": "holamundo",
       "email": "jesusRamiroLondono@gmail.com",
       "password": "mySecurePassword",
-      "profile_photo": "joseLuis21_image.jpg",
+      "profile_photo": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
       "about": "changing user About",
       "status": "Desparchadisimo",
       "post_counter": 3,
@@ -36,7 +36,7 @@
       "nickname": "dannyKentala",
       "email": "dannykentala23@gmail.com",
       "password": "andresdaviP8*",
-      "profile_photo": null,
+      "profile_photo": "https://cdn-icons-png.flaticon.com/512/3135/3135823.png",
       "about": null,
       "status": "desparchado",
       "credibility": 0,
@@ -62,7 +62,7 @@
       "nickname": "mariaAlejandra",
       "email": "mariaalejandra22@gmail.com",
       "password": "andresdaviP8*",
-      "profile_photo": null,
+      "profile_photo": "https://cdn-icons-png.flaticon.com/512/3135/3135823.png",
       "about": null,
       "status": "desparchado",
       "credibility": 0,
@@ -91,7 +91,9 @@
       "day": "21/04/2024",
       "hour": "1430",
       "people_enrolled": "1299",
-      "price": "free"
+      "price": "free",
+      "likes":0,
+      "comments":0
     },
     {
       "id": "ecae",
@@ -103,7 +105,9 @@
       "day": "22/10/2001",
       "hour": "2100",
       "people_enrolled": 0,
-      "price": "cerveza por persona"
+      "price": "cerveza por persona",
+      "likes":0,
+      "comments":0
     },
     {
       "id": "4fed",
@@ -115,7 +119,9 @@
       "day": "22/10/2001",
       "hour": "2100",
       "people_enrolled": 0,
-      "price": "cerveza por persona"
+      "price": "cerveza por persona",
+      "likes":0,
+      "comments":0
     },
     {
       "id": "4da7",
@@ -127,7 +133,9 @@
       "day": "22/10/2001",
       "hour": "2100",
       "people_enrolled": 0,
-      "price": "cerveza por persona"
+      "price": "cerveza por persona",
+      "likes":0,
+      "comments":0
     },
     {
       "id": "c82c",
@@ -139,31 +147,9 @@
       "day": "22/10/2001",
       "hour": "2100",
       "people_enrolled": 0,
-      "price": "cerveza por persona"
-    },
-    {
-      "id": "1e14",
-      "name": "Salida Moscu en Roma",
-      "creatorID": "df4d",
-      "description": "Comida callejeta y salida pa Manrique",
-      "category": "Traveling in the city",
-      "location": "medellin",
-      "day": "22/10/2001",
-      "hour": "2100",
-      "people_enrolled": 0,
-      "price": "cerveza por persona"
-    },
-    {
-      "id": "d486",
-      "name": "Salida Moscu en Roma",
-      "creatorID": "df4d",
-      "description": "Comida callejeta y salida pa Manrique",
-      "category": "Traveling in the city",
-      "location": "medellin",
-      "day": "22/10/2001",
-      "hour": "2100",
-      "people_enrolled": 0,
-      "price": "cerveza por persona"
+      "price": "cerveza por persona",
+      "likes":0,
+      "comments":0
     }
   ],
   "associates": [
@@ -193,10 +179,6 @@
       "id": "d764",
       "famous_id": "5678",
       "fan_id": "1234",
-      "status": true
-    },
-    {
-      "id": "7905",
       "status": true
     },
     {
