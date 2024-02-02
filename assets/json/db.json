@@ -2,8 +2,8 @@
   "users": [
     {
       "id": "53cc",
-      "name": "hola mundo",
-      "nickname": "joseLuis21",
+      "name": "holamundo",
+      "nickname": "holamundo",
       "email": "jesusRamiroLondono@gmail.com",
       "password": "mySecurePassword",
       "profile_photo": "joseLuis21_image.jpg",
@@ -245,6 +245,22 @@
       "id": "7a5e",
       "famous_id": "6789",
       "fan_id": "a12345",
+      "status": true
+    },
+    {
+      "id": "7e62",
+      "fan_id": "3e01",
+      "status": true
+    },
+    {
+      "id": "7da8",
+      "fan_id": "3e01",
+      "status": true
+    },
+    {
+      "id": "9b8c",
+      "famous_id": "53cc",
+      "fan_id": "3e01",
       "status": true
     }
   ]

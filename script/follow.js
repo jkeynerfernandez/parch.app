@@ -37,7 +37,7 @@ const FollowControler = {
           console.log("User doesn't exit")
         }
       }
-    },1500)
+    },1000)
     // change button after if else stament because data internally change
     this.followStatus = !this.followStatus
     this.followBTNRender(this.followStatus)
