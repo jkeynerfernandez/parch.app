@@ -14,10 +14,8 @@ const SeachBarControler = {
   },
 
   addSuggestionToTable (userSugestions) {
-    const searchSuggesntiosTable = SearchBarViews.suggestionsResult
+    const searchSuggesntiosTable = SearchBarViews.suggestionsResult;
     userSugestions.forEach(element => {
-      console.log(searchSuggesntiosTable, 'helsso')
-      console.log(element.name)
       const item =  SearchBarViews.newSearchItem(element.name)
       searchSuggesntiosTable.appendChild(item)
     });
@@ -32,8 +30,8 @@ const SeachBarControler = {
 /*----------  VIEWS -----------*/
 const SearchBarViews = {
   init () {
-    this.searchBar = document.getElementById("searchBar")
-    this.suggestionsResult = document.getElementById("sugestions_results")
+    this.searchBar = document.getElementById("input-buscar")
+    this.suggestionsResult = document.querySelector(".box-inputbuscar-suggestions")
     this.waitToSearch()
   },
 
@@ -42,6 +40,7 @@ const SearchBarViews = {
     this.searchBar.addEventListener('keyup', (e) => {
       clearTimeout(waitSearch)
       waitSearch = setTimeout(() => {
+        this.clearSearchSuggestions(this.suggestionsResult)
         const searchBarValue = this.searchBar.value
         SeachBarControler.searchBarSuggestions(searchBarValue)
       },500)
@@ -49,24 +48,19 @@ const SearchBarViews = {
   },
 
   newSearchItem (userName) {
-    // Make content parent
-    const parentDiv = document.createElement('a');
-    parentDiv.classList.add('list-group-item', 'list-group-item-action')
-    parentDiv.setAttribute("type", "button")
-
-    const nicknameElement = document.createElement('button');
-    nicknameElement.classList.add('mb-0', 'fw-bold', 'btn');
+    const nicknameElement = document.createElement('li');
     nicknameElement.innerText = userName;
-    nicknameElement.setAttribute("type", "button")
-
     nicknameElement.addEventListener('click', () => {
       SeachBarControler.goToSearchSuggestion(userName)
     })
-
-    // Join elements
-    parentDiv.appendChild(nicknameElement);
-    console.log(parentDiv)
     return nicknameElement
+  },
+
+  clearSearchSuggestions (userParent) {
+    console.log(userParent)
+    while (userParent.lastChild) {
+      userParent.removeChild(userParent.lastChild);
+    }
   }
 }
 
