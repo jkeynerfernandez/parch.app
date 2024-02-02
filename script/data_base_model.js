@@ -187,7 +187,6 @@ class FollowDataModel {
         fan_id : userFanID,
         status : true
       }
-      debugger
       const requestURL = `${FOLLOW_END_POINT}`
       const request = await fetch(requestURL,
       {
