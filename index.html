@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OparcH! MAIN</title>
-  <script src="./script/active_session.js"></script>
-  <link rel="stylesheet" href="styles/index.css">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <script type="module" src="./script/search_bar.js" defer></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OparcH! MAIN</title>
+    <script src="./script/active_session.js"></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script type="module" src="./script/search_bar.js" defer></script>
+  </head>
+  <body>
     <!--Los containers son los contedores de los boxes-->
     <!-- Las cajas son las contenedores de los elementos-->
-  <section id="ohparch-app">
+<section id="ohparch-app">
 
   <header>
     <div class="box-logo">
-      <img src="imgs/LOGO.png" alt="Logo OparcH!" />
+      <img src="./imgs/LOGO.png" alt="Logo OparcH!" />
     </div>
 
     <div class="box-profile">
       <div class="box-nickname">
-        <h4 id="profileHTML">@KevinDazaR</h4>
+        <h4>@KevinDazaR</h4>
         <p>
           <i class="fa-solid fa-circle"></i>
           desparchado
-        </p>
+      </p>
       </div>
 
       <div class="box-profile-img">
@@ -42,6 +42,8 @@
       </div>
     </div>
   </header>
+
+
 
   <section id="section-container-top-sections">
 
@@ -57,23 +59,30 @@
 
       <div class="box-searcher">
           <!-- <div class="box-btn-img-searcher"> -->
-            <i class="fa-solid fa-magnifying-glass i-lupa-img"></i>
-            <input id="searchBar" type="text" placeholder="get into the parch..." class="input-buscar"/>
-            <div id="sugestions_results"></div>
+
+              <i class="fa-solid fa-magnifying-glass i-lupa-img"></i>
+            <input type="text" placeholder="get into the parch..." class="input-buscar"/>
       <!-- </div> -->
     </div>
 
   </section>
-
+  
+  <section id="user-actual-location">
+    <i class="fa-solid fa-location-dot"></i><p>You are located in Riwi, Medellín</p>
+  </section>
   <main id="main-content">
 
     <section id="section-container-content">
+
       <div class="box-principal-title">
         <h2>It's happening right now</h2>
       </div>
 
       <div class="container-box-post-happening">
-
+        <div class="container-arrows-carrousel">
+          <button><</button>
+          <button>></button>
+        </div>
         <div class="box-post-happening-example">
           <img src="imgs/peñol" alt="" />
 
@@ -116,7 +125,10 @@
             <a href="#">8 comments</a>
           </div>
         </div>
+
       </div>
+
+
     </section>
 
     <section id="section-almost-happening">
@@ -194,39 +206,893 @@
            </div>
           </div>
         </div>
+      </div>
+      
+    </section>
 
-        <!-- CON DESCRIPCIÒN Y INCLUDE -->
-        <!-- <div class="box-carrousel-event">
-          <img src="imgs/peñol" alt="img-event">
-          <div class="box-description-event-carrousel">
-            <h4>Entrance to <span>Confama Rionegro</span></h4>
-          </div>
-          <div class="box-mid-description">
-           
-            <div class="disantance-box">
-              <i class="fa-solid fa-location-dot"></i>
-              <p class="distance-from-event"> 1h 25 from you</p>
-            </div>
-            <div class="info-event">
-              <p class="date-event">january 31th</p>
-              <p class="hour-event">
-                7:00 a.m to 6:00 pm.
-              </p>
-            </div>
-           
-          </div>
+    <section id="section-more-recomendations">
+      <h3>Free</h3>
+      <div class="box-container-free">
+
+        
+        <div class="boxes-free-events">
           
-          <div class="bot-description-event">
-            <p> Free entrance to Confama Rionegro adventure park. Enojy with animals, pools, atractions and nature.</p>
-           
+          <div class="top-boxes-free">  
+
+            <div class="top-boxes-left">
+              <img src="imgs/peñol" alt="evente image">
+
+              <div class="box-insignes-event">
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia1.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>1attend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia2.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>2 attend to 6 events in the same month</p>
+                  </div>
+                </a>
+                
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia3.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>3ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia4.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>4ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia5.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>5ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="top-boxes-right">
+
+              <div class="box-logo-top-boxes">
+                <img src="imgs/LOGO.png" alt="logo of the event creator">
+                <a href="#UrlCuentaCreadoraEvento">@Confama</a>
+              </div>
+
+              <div class="box-places-top-boxes">
+                <h6>places</h6>
+                <p>45 left to 700</p>
+              </div>
+
+              <div class="box-repute-top-boxes">
+                <h6>reputation</h6>
+                <p>9.6/10</p>
+              </div>
+
+              <div class="box-price-top-boxes">
+                <h6>price</h6>
+                <p>free</p>
+              </div>
+              
+
+            </div>
           </div>
-          <div class="box-include">
-            <h5>Include:<span>Entrance</span>
-            </h5>
+
+          <div class="bot-boxes-free">
+            <h4>Entrance to <span class="place-event">Confama Rionegro</span></h4>
+            
+            <div class="box-location-boxes-free">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>1h 25 from you</p>
+              <p class="date-event">january 31th</p>
+              <p>6:00 a.m to 5:00 p.m</p>
+            </div>
+
+              <p class="description-event-more-options">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat error eum dolores aperiam architecto, commodi, neque earum animi consequatur est odit temporibus, optio quo omnis eligendi</p> 
+
+            <div class="box-description-event-more">
+              <b>Include:</b><span>Entrance</span>
+              <div class="box-container-actions-event">
+                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa-solid fa-share"></i>
+        
+              </div>
+              <div class="box-btn-parch-more-recemendations">
+
+                <button class="parch-btn">parch            </button>
+                <span class="parch-btn-background">
+                </span>
+
+              </div>
+      
+  
+         
+            </div>
+
+
           </div>
-        </div> -->
+ 
+        </div>
+        
+        <div class="boxes-free-events">
+          
+          <div class="top-boxes-free">
+
+            <div class="top-boxes-left">
+              <img src="imgs/peñol" alt="evente image">
+
+              <div class="box-insignes-event">
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia1.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>1attend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia2.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>2 attend to 6 events in the same month</p>
+                  </div>
+                </a>
+                
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia3.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>3ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia4.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>4ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia5.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>5ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="top-boxes-right">
+
+              <div class="box-logo-top-boxes">
+                <img src="imgs/LOGO.png" alt="logo of the event creator">
+                <a href="#UrlCuentaCreadoraEvento">@Confama</a>
+              </div>
+
+              <div class="box-places-top-boxes">
+                <h6>places</h6>
+                <p>45 left to 700</p>
+              </div>
+
+              <div class="box-repute-top-boxes">
+                <h6>reputation</h6>
+                <p>9.6/10</p>
+              </div>
+
+              <div class="box-price-top-boxes">
+                <h6>price</h6>
+                <p>free</p>
+              </div>
+              
+
+            </div>
+          </div>
+
+          <div class="bot-boxes-free">
+            <h4>Entrance to <span class="place-event">Confama Rionegro</span></h4>
+            
+            <div class="box-location-boxes-free">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>1h 25 from you</p>
+              <p class="date-event">january 31th</p>
+              <p>6:00 a.m to 5:00 p.m</p>
+            </div>
+
+              <p class="description-event-more-options">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat error eum dolores aperiam architecto, commodi, neque earum animi consequatur est odit temporibus, optio quo omnis eligendi</p> 
+
+            <div class="box-description-event-more">
+              <b>Include:</b><span>Entrance</span>
+              <div class="box-container-actions-event">
+                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa-solid fa-share"></i>
+        
+              </div>
+              <div class="box-btn-parch-more-recemendations">
+
+                <button class="parch-btn">parch            </button>
+                <span class="parch-btn-background">
+                </span>
+
+              </div>
+      
+  
+         
+            </div>
+
+
+          </div>
+ 
+        </div>
+        
+        <div class="boxes-free-events">
+          
+          <div class="top-boxes-free">
+
+            <div class="top-boxes-left">
+              <img src="imgs/peñol" alt="evente image">
+
+              <div class="box-insignes-event">
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia1.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>1attend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia2.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>2 attend to 6 events in the same month</p>
+                  </div>
+                </a>
+                
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia3.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>3ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia4.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>4ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia5.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>5ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="top-boxes-right">
+
+              <div class="box-logo-top-boxes">
+                <img src="imgs/LOGO.png" alt="logo of the event creator">
+                <a href="#UrlCuentaCreadoraEvento">@Confama</a>
+              </div>
+
+              <div class="box-places-top-boxes">
+                <h6>places</h6>
+                <p>45 left to 700</p>
+              </div>
+
+              <div class="box-repute-top-boxes">
+                <h6>reputation</h6>
+                <p>9.6/10</p>
+              </div>
+
+              <div class="box-price-top-boxes">
+                <h6>price</h6>
+                <p>free</p>
+              </div>
+              
+
+            </div>
+          </div>
+
+          <div class="bot-boxes-free">
+            <h4>Entrance to <span class="place-event">Confama Rionegro</span></h4>
+            
+            <div class="box-location-boxes-free">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>1h 25 from you</p>
+              <p class="date-event">january 31th</p>
+              <p>6:00 a.m to 5:00 p.m</p>
+            </div>
+
+              <p class="description-event-more-options">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat error eum dolores aperiam architecto, commodi, neque earum animi consequatur est odit temporibus, optio quo omnis eligendi</p> 
+
+            <div class="box-description-event-more">
+              <b>Include:</b><span>Entrance</span>
+              <div class="box-container-actions-event">
+                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa-solid fa-share"></i>
+        
+              </div>
+              <div class="box-btn-parch-more-recemendations">
+
+                <button class="parch-btn">parch            </button>
+                <span class="parch-btn-background">
+                </span>
+
+              </div>
+      
+  
+         
+            </div>
+
+
+          </div>
+ 
+        </div>
+        
+        <div class="boxes-free-events">
+          
+          <div class="top-boxes-free">
+
+            <div class="top-boxes-left">
+              <img src="imgs/peñol" alt="evente image">
+
+              <div class="box-insignes-event">
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia1.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>1attend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia2.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>2 attend to 6 events in the same month</p>
+                  </div>
+                </a>
+                
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia3.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>3ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia4.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>4ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia5.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>5ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="top-boxes-right">
+
+              <div class="box-logo-top-boxes">
+                <img src="imgs/LOGO.png" alt="logo of the event creator">
+                <a href="#UrlCuentaCreadoraEvento">@Confama</a>
+              </div>
+
+              <div class="box-places-top-boxes">
+                <h6>places</h6>
+                <p>45 left to 700</p>
+              </div>
+
+              <div class="box-repute-top-boxes">
+                <h6>reputation</h6>
+                <p>9.6/10</p>
+              </div>
+
+              <div class="box-price-top-boxes">
+                <h6>price</h6>
+                <p>free</p>
+              </div>
+              
+
+            </div>
+          </div>
+
+          <div class="bot-boxes-free">
+            <h4>Entrance to <span class="place-event">Confama Rionegro</span></h4>
+            
+            <div class="box-location-boxes-free">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>1h 25 from you</p>
+              <p class="date-event">january 31th</p>
+              <p>6:00 a.m to 5:00 p.m</p>
+            </div>
+
+              <p class="description-event-more-options">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat error eum dolores aperiam architecto, commodi, neque earum animi consequatur est odit temporibus, optio quo omnis eligendi</p> 
+
+            <div class="box-description-event-more">
+              <b>Include:</b><span>Entrance</span>
+              <div class="box-container-actions-event">
+                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa-solid fa-share"></i>
+        
+              </div>
+              <div class="box-btn-parch-more-recemendations">
+
+                <button class="parch-btn">parch            </button>
+                <span class="parch-btn-background">
+                </span>
+
+              </div>
+      
+  
+         
+            </div>
+
+
+          </div>
+ 
+        </div>
+        
+        <div class="boxes-free-events">
+          
+          <div class="top-boxes-free">
+
+            <div class="top-boxes-left">
+              <img src="imgs/peñol" alt="evente image">
+
+              <div class="box-insignes-event">
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia1.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>1attend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia2.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>2 attend to 6 events in the same month</p>
+                  </div>
+                </a>
+                
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia3.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>3ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia4.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>4ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia5.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>5ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="top-boxes-right">
+
+              <div class="box-logo-top-boxes">
+                <img src="imgs/LOGO.png" alt="logo of the event creator">
+                <a href="#UrlCuentaCreadoraEvento">@Confama</a>
+              </div>
+
+              <div class="box-places-top-boxes">
+                <h6>places</h6>
+                <p>45 left to 700</p>
+              </div>
+
+              <div class="box-repute-top-boxes">
+                <h6>reputation</h6>
+                <p>9.6/10</p>
+              </div>
+
+              <div class="box-price-top-boxes">
+                <h6>price</h6>
+                <p>free</p>
+              </div>
+              
+
+            </div>
+          </div>
+
+          <div class="bot-boxes-free">
+            <h4>Entrance to <span class="place-event">Confama Rionegro</span></h4>
+            
+            <div class="box-location-boxes-free">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>1h 25 from you</p>
+              <p class="date-event">january 31th</p>
+              <p>6:00 a.m to 5:00 p.m</p>
+            </div>
+
+              <p class="description-event-more-options">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat error eum dolores aperiam architecto, commodi, neque earum animi consequatur est odit temporibus, optio quo omnis eligendi</p> 
+
+            <div class="box-description-event-more">
+              <b>Include:</b><span>Entrance</span>
+              <div class="box-container-actions-event">
+                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa-solid fa-share"></i>
+        
+              </div>
+              <div class="box-btn-parch-more-recemendations">
+
+                <button class="parch-btn">parch            </button>
+                <span class="parch-btn-background">
+                </span>
+
+              </div>
+      
+  
+         
+            </div>
+
+
+          </div>
+ 
+        </div>
+        
+
+        <div class="boxes-free-events">
+          
+          <div class="top-boxes-free">
+
+            <div class="top-boxes-left">
+              <img src="imgs/peñol" alt="evente image">
+
+              <div class="box-insignes-event">
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia1.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>1attend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia2.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>2 attend to 6 events in the same month</p>
+                  </div>
+                </a>
+                
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia3.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>3ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia4.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>4ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia5.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>5ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="top-boxes-right">
+
+              <div class="box-logo-top-boxes">
+                <img src="imgs/LOGO.png" alt="logo of the event creator">
+                <a href="#UrlCuentaCreadoraEvento">@Confama</a>
+              </div>
+
+              <div class="box-places-top-boxes">
+                <h6>places</h6>
+                <p>45 left to 700</p>
+              </div>
+
+              <div class="box-repute-top-boxes">
+                <h6>reputation</h6>
+                <p>9.6/10</p>
+              </div>
+
+              <div class="box-price-top-boxes">
+                <h6>price</h6>
+                <p>free</p>
+              </div>
+              
+
+            </div>
+          </div>
+
+          <div class="bot-boxes-free">
+            <h4>Entrance to <span class="place-event">Confama Rionegro</span></h4>
+            
+            <div class="box-location-boxes-free">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>1h 25 from you</p>
+              <p class="date-event">january 31th</p>
+              <p>6:00 a.m to 5:00 p.m</p>
+            </div>
+
+              <p class="description-event-more-options">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat error eum dolores aperiam architecto, commodi, neque earum animi consequatur est odit temporibus, optio quo omnis eligendi</p> 
+
+            <div class="box-description-event-more">
+              <b>Include:</b><span>Entrance</span>
+              <div class="box-container-actions-event">
+                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa-solid fa-share"></i>
+        
+              </div>
+              <div class="box-btn-parch-more-recemendations">
+
+                <button class="parch-btn">parch            </button>
+                <span class="parch-btn-background">
+                </span>
+
+              </div>
+      
+  
+         
+            </div>
+
+
+          </div>
+ 
+        </div>
+        
+        <div class="boxes-free-events">
+          
+          <div class="top-boxes-free">
+
+            <div class="top-boxes-left">
+              <img src="imgs/peñol" alt="evente image">
+
+              <div class="box-insignes-event">
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia1.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>1attend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia2.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>2 attend to 6 events in the same month</p>
+                  </div>
+                </a>
+                
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia3.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>3ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia4.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>4ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia5.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>5ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="top-boxes-right">
+
+              <div class="box-logo-top-boxes">
+                <img src="imgs/LOGO.png" alt="logo of the event creator">
+                <a href="#UrlCuentaCreadoraEvento">@Confama</a>
+              </div>
+
+              <div class="box-places-top-boxes">
+                <h6>places</h6>
+                <p>45 left to 700</p>
+              </div>
+
+              <div class="box-repute-top-boxes">
+                <h6>reputation</h6>
+                <p>9.6/10</p>
+              </div>
+
+              <div class="box-price-top-boxes">
+                <h6>price</h6>
+                <p>free</p>
+              </div>
+              
+
+            </div>
+          </div>
+
+          <div class="bot-boxes-free">
+            <h4>Entrance to <span class="place-event">Confama Rionegro</span></h4>
+            
+            <div class="box-location-boxes-free">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>1h 25 from you</p>
+              <p class="date-event">january 31th</p>
+              <p>6:00 a.m to 5:00 p.m</p>
+            </div>
+
+              <p class="description-event-more-options">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat error eum dolores aperiam architecto, commodi, neque earum animi consequatur est odit temporibus, optio quo omnis eligendi</p> 
+
+            <div class="box-description-event-more">
+              <b>Include:</b><span>Entrance</span>
+              <div class="box-container-actions-event">
+                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa-solid fa-share"></i>
+        
+              </div>
+              <div class="box-btn-parch-more-recemendations">
+
+                <button class="parch-btn">parch            </button>
+                <span class="parch-btn-background">
+                </span>
+
+              </div>
+      
+  
+         
+            </div>
+
+
+          </div>
+ 
+        </div>
+        
+        <div class="boxes-free-events">
+          
+          <div class="top-boxes-free">
+
+            <div class="top-boxes-left">
+              <img src="imgs/peñol" alt="evente image">
+
+              <div class="box-insignes-event">
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia1.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>1attend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia2.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>2 attend to 6 events in the same month</p>
+                  </div>
+                </a>
+                
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia3.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>3ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia4.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>4ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+                <a class="boxes-insigne">
+                  <img src="imgs/insignia5.png" alt="insigne event">
+                  <div class="boxes-insigne-description">
+                    <p>5ttend to 6 events in the same month</p>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="top-boxes-right">
+
+              <div class="box-logo-top-boxes">
+                <img src="imgs/LOGO.png" alt="logo of the event creator">
+                <a href="#UrlCuentaCreadoraEvento">@Confama</a>
+              </div>
+
+              <div class="box-places-top-boxes">
+                <h6>places</h6>
+                <p>45 left to 700</p>
+              </div>
+
+              <div class="box-repute-top-boxes">
+                <h6>reputation</h6>
+                <p>9.6/10</p>
+              </div>
+
+              <div class="box-price-top-boxes">
+                <h6>price</h6>
+                <p>free</p>
+              </div>
+              
+
+            </div>
+          </div>
+
+          <div class="bot-boxes-free">
+            <h4>Entrance to <span class="place-event">Confama Rionegro</span></h4>
+            
+            <div class="box-location-boxes-free">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>1h 25 from you</p>
+              <p class="date-event">january 31th</p>
+              <p>6:00 a.m to 5:00 p.m</p>
+            </div>
+
+              <p class="description-event-more-options">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat error eum dolores aperiam architecto, commodi, neque earum animi consequatur est odit temporibus, optio quo omnis eligendi</p> 
+
+            <div class="box-description-event-more">
+              <b>Include:</b><span>Entrance</span>
+              <div class="box-container-actions-event">
+                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa-solid fa-share"></i>
+        
+              </div>
+              <div class="box-btn-parch-more-recemendations">
+
+                <button class="parch-btn">parch            </button>
+                <span class="parch-btn-background">
+                </span>
+
+              </div>
+      
+  
+         
+            </div>
+
+
+          </div>
+ 
+        </div>
+        
+
+        
       </div>
     </section>
+
 
     <section id="about-us">
 
@@ -287,30 +1153,37 @@
 
   </main>
 
-    <nav id="menu-bot">
+  <nav id="menu-bot">
 
-      <a href="index.html" class="boxes-menu-bot box-home">
-        <i class="fa-solid fa-house"></i>
-        <span>home</span>
-      </div>
+    <a href="index.html" class="boxes-menu-bot box-home">
+      <i class="fa-solid fa-house"></i>
+      <span>home</span>
+    </a>
 
-      <a href="#" class="boxes-menu-bot box-explore">
-        <i class="fa-solid fa-house"></i>
-        <span>explore</span>
-      </div>
+    <a href="html/explore.html" class="boxes-menu-bot box-explore">
+      <i class="fa-solid fa-house"></i>
+      <span>explore</span>
+    </a>
 
-      <a href="#" class="boxes-menu-bot box-post">
-        <i class="fa-solid fa-house"></i>
-        <span>post</span>
-      </div>
+    <a href="html/post.html" class="boxes-menu-bot box-publicar">
+      <i class="fa-solid fa-house"> <span>POST</span></i>
+     
+    </a>
 
-      <a href="html/me.html" class="boxes-menu-bot box-me">
-        <i class="fa-solid fa-user"></i>
-        <span>me</span>
 
-    </nav>
+    <a href="html/mesages.html" class="boxes-menu-bot box-post">
+      <i class="fa-solid fa-house"></i>
+      <span>notifications</span>
+    </a>
 
-  </section>
+    <a href="html/me.html" class="boxes-menu-bot box-me">
+      <i class="fa-solid fa-user"></i>
+      <span>me</span>
+    </a>
 
-</body>
+  </nav>
+
+</section>
+
+  </body>
 </html>
