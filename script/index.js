@@ -193,7 +193,7 @@ let promesa = fetch("http://localhost:3000/services")
     }else if (year>=systemYear){
       if(mounth>=systemMounth){
         if (day>=systemDay){
-          if (hour>systemHour) {
+          if (hour>=systemHour) {
             //almost happening////
                 // Crear el elemento div principal
             const boxCarrouselEvent = document.createElement('div');
