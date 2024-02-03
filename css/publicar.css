@@ -28,6 +28,13 @@
   
   :root {
     --main-pink-color: #ff0984;
+    --red-pink-color:#e50d5a;
+    --green-pastel:#31e061;
+    --green-flour:#0bf21c;
+    --blue-pastel:#1c73e7;
+    --blue-dark:#143da8;
+    --yelow-fluo:#f7e336;
+    --yellow-pastel:#ffde59;
     --main-bg-color: white;
     --color-navs-bar: #f8f2f2;
     --desparchado-status: rgb(3, 168, 66);
@@ -135,13 +142,15 @@
 }
 
 .container-create-post{
-    width: 100%;
-    height: auto;
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
 }
 
 .box-top-create{
     width: 100%;
     display: flex;
+    position: relative;
 }
 
 .box-top-create img{
@@ -158,22 +167,156 @@
 }
 
 .box-mid-top-bot{
-    width: auto;
+  display: flex;
+  justify-content: stretch;
+  gap: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 45px;
+  width: 60%;
+  height: 24px;
+}
+
+.btn-publicar-options
+{
+  background-color: rgb(122, 175, 255);
+  color: blue;
+  padding: 4px;
+  font-size: 10px;
+  border-radius: 5px;
+  height: 100%;
+  width: 85px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+#btn-share-whith-publicar:hover, #btn-share-type-publicar:hover, .btn-share-type-publicar:hover, #btn-share-tag-publicar:hover{
+    background-color: rgb(78, 149, 255);
+    color: rgb(55, 0, 255);
+    padding: 5px;
+    cursor: pointer;
+}
+    
+.box-mid-publicar{
+    width: 90%;
+    padding: 10px;
+    border:black 1px solid;
+    margin: 10px auto;
+    border-radius: 4px;
+}    
+
+.boxes-publicar{
+    width: 100%;
     display: flex;
-    justify-content: stretch;
-    gap: 5px;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
-.box-mid-top-bot button{
-background-color: rgb(122, 175, 255);
-color: blue;
-padding: 5px;
-font-size: 10px;
-border-radius: 5px;
+.box-mid-publicar label {
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.box-mid-publicar span, .box-mid-publicar a{
+    font-size: 11px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--blue-pastel);
+}
+
+.box-mid-publicar a{
+    text-decoration: underline;
+    color: blueviolet;
+}
+
+.box-mid-publicar input{
+    width: 100%;
+    margin: 5px 0px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.boxes-publicar textarea{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    max-height: 150px;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.box-cost-publicar h3{
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.box-container-cost-inputs{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 
+#vol{
+    margin-top: 0px !important;
+    padding: 0 !important;
+    width: 60%;
+}
 
+#outvol{
+    width: 10%;
+    float: right;
+    margin-left: 10px;
+}
+
+.box-container-cost-inputs select{
+    width: 20%;
+}
+
+#label-free-checkbox-cost{
+    width: auto !important;
+}
+
+#free-checkbox-input{
+    width: auto;
+    margin-left: 5px;
+}
+
+#btn-post-publicar{
+    width: 30%;
+    margin: auto;
+    background-color: var(--blue-pastel);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+#btn-post-publicar:hover{
+    cursor: pointer;
+    color: var(--blue-dark);
+    background-color: white;
+    border: var(--blue-dark) 2px solid;
+}
+
+
+#btn-post-publicar:active{
+    width: 80%;
+    height: 40px;
+    background-color: var(--blue-dark);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
 
 

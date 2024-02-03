@@ -41,135 +41,84 @@
           </div>
         </header>
 
-        <section id="section-container-top-sections">
-            <div class="container-box-left-top-sections">
-              <nav class="box-hamburger-menu">
-                <i class="fa-solid fa-bars"></i>
-              </nav>
-        
-              <h4 class="text-hamburger-menu">Explore and know...</h4>
-            </div>
-        
-            <div class="container-box-right-top-sections">
-        
-              <div class="box-searcher">
-                  <!-- <div class="box-btn-img-searcher"> -->
-                  <i class="fa-solid fa-magnifying-glass i-lupa-img"></i>
-                  <input id="input-buscar" maxlength="20" type="text" placeholder="get into the parch..." class="input-buscar"/>
-                  
-                  <div class="box-search-for">
-        
-                    <label for="for-account">account</label>
-                    <input id="for-account" type="checkbox" name="search-for" value="account">
-            
-                    <label for="for-place">place</label>
-                    <input id="for-place" type="checkbox" name="search-for" value="place">
-            
-                    <label for="for-post">post</label>
-                    <input id="for-post" type="checkbox" name="search-for" value="post">
-            
-                </div>
-        
-                <div class="box-inputbuscar-suggestions">
-                  <!-- <li>@KevinDazaRsadas</li>
-                  <li>@KevinDazaRsadas</li>
-                  <li>@KevinDazaRsadas</li>
-                  <li>@KevinDazaRsadas</li>
-                  <li>@KevinDazaRsadas</li>
-                  <li>@KevinDazaRsadas</li>
-                  <li>@KevinDazaRsadas</li>
-                  <li>@KevinDazaRsadas</li>
-                  <li>@KevinDazaRsadas</li>
-                  <li>@KevinDazaRsadas</li> -->
-                </div>
-              <!-- </div> -->
-              </div>
-            </div>
-        
-          </section>
-        
            <section id="section-publicar">
                 <h3 id="create-post-title">create Post</h3>
                 
                 <div class="container-create-post">
 
-                  <div class="box-top-create">
-                    <img src="../assets/img/profile_example1" alt="photo profile">
-                    <b id="user-nickname">Kevin Daza Ramìrez</b>
-                  </div>  
+                    <div class="box-top-create">
+                        <img src="../assets/img/profile_example1" alt="photo profile">
+                        <b id="user-nickname">Kevin Daza Ramìrez</b>
 
-                  <div class="box-mid-top-bot">
+                       <div class="box-mid-top-bot">
+                            <button id="btn-share-whith-publicar" class="btn-publicar-options">
+                                <i class="fa-solid fa-user-group"></i> 
+                                Friends
+                                <i class="fa-solid fa-caret-down"></i>
 
-                    <button id="btn-share-whith-publicar" class="btn-publicar-options">
-                        <i class="fa-solid fa-user-group"></i> 
-                        Friends
-                        <i class="fa-solid fa-caret-down"></i>
+                            </button>
 
-                    </button>
+                            <button id="btn-share-type-publicar" class="btn-publicar-options">
+                                <i class="fa-solid fa-plus"></i>
+                                Type
+                                <i class="fa-solid fa-caret-down"></i>
+                            </button>
 
-                    <button id="btn-share-whith-publicar" class="btn-publicar-options">
-                        <i class="fa-solid fa-plus"></i>
-                        Type
-                        <i class="fa-solid fa-caret-down"></i>
-                    </button>
-
-                    <button id="btn-share-whith-publicar" class="btn-publicar-options">
-                        <i class="fa-solid fa-plus"></i>
-                        Type
-                        <i class="fa-solid fa-caret-down"></i>
-                    </button>
-
-
-                    <select name="tag-post" id="btn-share-tag-publicar" class="btn-publicar-options">
-                        <option value="music" selected>Music </option>
-                        <option value="value2">  Music </option>
-                        <option value="value3">Music</option>
-                      </select>
-
-                  </div>
+                            <select name="tag-post" id="btn-share-tag-publicar" class="btn-publicar-options">
+                                <option value="music" selected>Music </option>
+                                <option value="value2">  Music </option>
+                                <option value="value3">Music</option>
+                              </select>
+                       </div>
+                    </div>
+        
+                </div>
+                   
                   
                   <div class="box-mid-publicar">
 
-                    <div class="box-title-publicar">
+                    <div class="boxes-publicar box-title-publicar">
                         <label for="tittle-publicar">Title:</label>
-                        <p>add a 
+                        <span>add a 
                             <a href="https://www.indeed.com/career-advice/career-development/catchy-title">catchy title</a>
-                        </p>
+                        </span>
                         <input id="title-publicar-input" type="text" max="38" min="10" placeholder="Ejm: FREE| Coffe talk in poblado" required>  
                         <span>max 38 characteres</span>
                     </div>
 
-                    <div class="box-place-publicar">
+                    <div class="boxes-publicar box-place-publicar">
                         <label for="place-input">Place:</label>
-                        <p>choose a place for the post</p>
+                        <span>choose a place for the post</span>
                         <input type="text" max="30" min="1" placeholder="Ejm: Jardìn Botànico">
                     </div>
 
-                    <div class="box-day-hour-publicar">
+                    <div class="boxes-publicar box-day-hour-publicar">
                         <label for="time-post-input">Day and hour</label>
                         <span>Choose a day and an hour for the post</span>
                         <input type="datetime-local" id="time-post-input" required>
                     </div>
 
-                    <div class="box-img-publicar">
+                    <div class="boxes-publicar box-img-publicar">
                         <label for="">Select an image</label>
                         <span>max 6 images for each post</span>
                         <input type="file" accept="image/png, .jpeg, .jpg, image/gif" required>
                     </div>
 
-                    <div class="box-description-publicar">
+                    <div class="boxes-publicar box-description-publicar">
                         <label for="description-text-input"> Write the post description</label>
                        
-                        <textarea name="" id="description-text-inpyt" cols="30" rows="10" required minlength="30" maxlength="120" required placeholder="Ejm: Get ready to fly over and exuberant landscape sorrunded by waterfalls and nature, acomanied by an expert pilot who will give you the securty to explore the entire environment wihout breaking a sweat. ">
+                        <textarea name="" id="description-text-inpyt" cols="30" rows="10" required minlength="30" maxlength="330" required placeholder="Ejm: Get ready to fly over and exuberant landscape sorrunded by waterfalls and nature, acomanied by an expert pilot who will give you the securty to explore the entire environment wihout breaking a sweat. ">
                 
                         </textarea>
                     </div>
 
-                    <div class="box-cost-publicar">
+                    <div class="boxes-publicar box-cost-publicar">
                         
                         <h3>Dos it have cost?</h3>
                         <label for="cost-input">How much?:</label>
-                        <input type="range" id="vol" name="vol" min="1" max="120" step="0.5" value="25 usd" onchange="document.getElementById('outvol').value=value">
+                        
+                        <div class="box-container-cost-inputs">
+                            <input type="range" id="vol" name="vol" min="1" max="120" step="0.5" value="25 usd" onchange="document.getElementById('outvol').value=value">
                         <output id="outvol" name="outvol" for="vol">25</output>
                         
                         <select name="coin" id="select-coin-publicar">
@@ -177,16 +126,18 @@
                             <option value="cop">cop</option>
                         </select>
 
-                        <label for="free-checkbox-input">It's free</label>
+                        <label for="free-checkbox-input" id="label-free-checkbox-cost">It's free</label>
                         <input id="free-checkbox-input" type="checkbox">
+                        </div>
+                        
                         
                     </div>
 
-                    <div class="box-text-premium">
+                    <div class="boxes-publicar box-text-premium">
                         <p>Be a premium member for add insignes and more content</p>
                     </div>
 
-                    <div class="box-btn-publicar">
+                    <div class="boxes-publicar box-btn-publicar">
                         <button id="btn-post-publicar">post</button>
                     </div>
 
@@ -196,159 +147,6 @@
            
             </section>
 
-
-
-
-
-
-            <h5>Events near for you</h5>
-            <section id="section-suggested-events">
-
-                <div class="box-container-carrousel-events">
-
-                    <div class="box-carrousel-event">
-                        <img src="../assets/img/peñol" alt="img-event">
-                        <div class="box-description-event-carrousel">
-                        <h4> <span >¡FREE! </span> | Entrance to <span>Confama Rionegro</span></h4>
-                        </div>
-                        <div class="box-mid-description">
-                        
-                        <div class="disantance-box">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <p class="distance-from-event"> 1h 25 from you!</p>
-                        </div>
-                        <div class="info-event">
-                            <p class="date-event">january 31th</p>
-                            <p class="hour-event">
-                            7:00 a.m to 6:00 pm.
-                            </p>
-                        </div>
-                        <div class="box-btn-parch">
-                        <button>parchar</button>
-                        </div>
-                        </div>
-                    </div>
-            
-                    <div class="box-carrousel-event">
-                    <img src="../assets/img/peñol" alt="img-event">
-                    <div class="box-description-event-carrousel">
-                        <h4> <span >¡FREE! </span> | Entrance to <span>Confama Rionegro</span></h4>
-                    </div>
-                    <div class="box-mid-description">
-                    
-                        <div class="disantance-box">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p class="distance-from-event"> 1h 25 from you!</p>
-                        </div>
-                        <div class="info-event">
-                        <p class="date-event">january 31th</p>
-                        <p class="hour-event">
-                            7:00 a.m to 6:00 pm.
-                        </p>
-                        </div>
-                    <div class="box-btn-parch">
-                        <button>parchar</button>
-                    </div>
-                    </div>
-                    </div>
-                    
-                    <div class="box-carrousel-event">
-                    <img src="../assets/img/peñol" alt="img-event">
-                    <div class="box-description-event-carrousel">
-                        <h4> <span >¡FREE! </span> | Entrance to <span>Confama Rionegro</span></h4>
-                    </div>
-                    <div class="box-mid-description">
-                    
-                        <div class="disantance-box">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p class="distance-from-event"> 1h 25 from you!</p>
-                        </div>
-                        <div class="info-event">
-                        <p class="date-event">january 31th</p>
-                        <p class="hour-event">
-                            7:00 a.m to 6:00 pm.
-                        </p>
-                        </div>
-                    <div class="box-btn-parch">
-                        <button>parchar</button>
-                    </div>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="box-container-carrousel-events">
-
-                    <div class="box-carrousel-event">
-                        <img src="../assets/img/peñol" alt="img-event">
-                        <div class="box-description-event-carrousel">
-                        <h4> <span >¡FREE! </span> | Entrance to <span>Confama Rionegro</span></h4>
-                        </div>
-                        <div class="box-mid-description">
-                        
-                        <div class="disantance-box">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <p class="distance-from-event"> 1h 25 from you!</p>
-                        </div>
-                        <div class="info-event">
-                            <p class="date-event">january 31th</p>
-                            <p class="hour-event">
-                            7:00 a.m to 6:00 pm.
-                            </p>
-                        </div>
-                        <div class="box-btn-parch">
-                        <button>parchar</button>
-                        </div>
-                        </div>
-                    </div>
-            
-                    <div class="box-carrousel-event">
-                    <img src="../assets/img/peñol" alt="img-event">
-                    <div class="box-description-event-carrousel">
-                        <h4> <span >¡FREE! </span> | Entrance to <span>Confama Rionegro</span></h4>
-                    </div>
-                    <div class="box-mid-description">
-                    
-                        <div class="disantance-box">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p class="distance-from-event"> 1h 25 from you!</p>
-                        </div>
-                        <div class="info-event">
-                        <p class="date-event">january 31th</p>
-                        <p class="hour-event">
-                            7:00 a.m to 6:00 pm.
-                        </p>
-                        </div>
-                    <div class="box-btn-parch">
-                        <button>parchar</button>
-                    </div>
-                    </div>
-                    </div>
-                    
-                    <div class="box-carrousel-event">
-                    <img src="../assets/img/peñol" alt="img-event">
-                    <div class="box-description-event-carrousel">
-                        <h4> <span >¡FREE! </span> | Entrance to <span>Confama Rionegro</span></h4>
-                    </div>
-                    <div class="box-mid-description">
-                    
-                        <div class="disantance-box">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p class="distance-from-event"> 1h 25 from you!</p>
-                        </div>
-                        <div class="info-event">
-                        <p class="date-event">january 31th</p>
-                        <p class="hour-event">
-                            7:00 a.m to 6:00 pm.
-                        </p>
-                        </div>
-                    <div class="box-btn-parch">
-                        <button>parchar</button>
-                    </div>
-                    </div>
-                    </div>
-                </div>
-
-            </section>
 
       
         <nav id="menu-bot">
