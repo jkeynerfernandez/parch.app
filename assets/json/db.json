@@ -85,19 +85,21 @@
       "id": "e95b",
       "creatorID": "53cc",
       "name": "Salida Bogota, Colombia",
+      "img":"https://es.investinbogota.org/wp-content/uploads/2021/11/bogota-turismo-de-negocios-suramerica.jpg",
       "description": "Salida a la base Maritima de rionegro, este mates 22 de enero",
       "category": "New challenge for today",
       "location": "parque luces",
       "day": "1/02/2024",
       "hour": "1400",
       "people_enrolled": "1299",
-      "price": "free",
+      "price": 1500000,
       "likes":0,
       "comments":0
     },
     {
       "id": "ecae",
-      "name": "Salida Postugal",
+      "name": "parchar en berrío",
+      "img":"https://images.mnstatic.com/e9/28/e928233eca4c847b081e5fd4c6f8279c.jpg",
       "creatorID": "53cc",
       "description": "Comida callejeta y salida pa Manrique",
       "category": "Traveling in the city",
@@ -112,6 +114,7 @@
     {
       "id": "4fed",
       "name": "Salida Cartacho",
+      "img":"https://cdn.forbes.com.mx/2014/09/Travelocity-Cartagena-Destacada.Galeria.jpg",
       "creatorID": "53cc",
       "description": "Comida callejeta y salida pa Manrique",
       "category": "Traveling in the city",
@@ -125,9 +128,10 @@
     },
     {
       "id": "4da7",
-      "name": "Salida Moscu en Roma",
+      "name": "Ruta Barbosa",
+      "img":"https://s1.wklcdn.com/image_57/1735358/52646561/34972486.400x300.jpg",
       "creatorID": "53cc",
-      "description": "Comida callejeta y salida pa Manrique",
+      "description": "Comida callejeta y salida pa Barbosa en cicla o trotando",
       "category": "Traveling in the city",
       "location": "medellin",
       "day": "2/02/2024",
@@ -140,6 +144,7 @@
     {
       "id": "c82c",
       "name": "Salida Moscu en Roma",
+      "img":"https://siteweboriginalh13.s3.amazonaws.com/wp-content/uploads/2022/08/DESFILE-AUTOS.jpg",
       "creatorID": "53cc",
       "description": "Comida callejeta y salida pa Manrique",
       "category": "Traveling in the city",
@@ -150,7 +155,53 @@
       "price": "cerveza por persona",
       "likes":0,
       "comments":0
+    },
+    {
+      "id": "ecae",
+      "name": "picnic en jardín botánico",
+      "img":"https://i.pinimg.com/originals/c8/c9/20/c8c920b34119fa99e890d040c2a54494.jpg",
+      "creatorID": "53cc",
+      "description": "Comida callejeta y salida pa Manrique",
+      "category": "Traveling in the city",
+      "location": "medellin",
+      "day": "1/02/2024",
+      "hour": "1400",
+      "people_enrolled": 0,
+      "price": "free",
+      "likes":0,
+      "comments":0
+    },
+    {
+      "id": "ecae",
+      "name": "Día de sol en la Uva",
+      "img":"https://www.grupo-epm.com/site/portals/17/Images/UVAS/Imaginaci%C3%B3n/uva_de_la_imaginacion_1.jpg",
+      "creatorID": "53cc",
+      "description": "Comida callejeta y salida pa Manrique",
+      "category": "Traveling in the city",
+      "location": "Bello",
+      "day": "1/02/2024",
+      "hour": "1400",
+      "people_enrolled": 0,
+      "price": "free",
+      "likes":0,
+      "comments":0
+    },
+    {
+      "id": "ecae",
+      "name": "Teatro",
+      "img":"https://www.eltiempo.com/files/image_1200_680/uploads/2017/08/03/59839cb0955c0.jpeg",
+      "creatorID": "53cc",
+      "description": "Comida callejeta y salida pa Manrique",
+      "category": "Traveling in the city",
+      "location": "Bello",
+      "day": "1/02/2024",
+      "hour": "1400",
+      "people_enrolled": 0,
+      "price": "free",
+      "likes":0,
+      "comments":0
     }
+
   ],
   "associates": [
     {
