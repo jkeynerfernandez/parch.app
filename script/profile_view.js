@@ -4,6 +4,7 @@ const userToken = getLocalStorage("userToken")
 document.addEventListener("DOMContentLoaded", Controler.init());
 const ProfileView = {
   init () {
+    this.userNickname = document.getElementById("user_nickname");
     this.parcheCounter = document.getElementById("parche_counter");
     this.postCounter = document.getElementById("post_counter");
     this.credibilityCounter = document.getElementById("credibility_counter");
@@ -16,8 +17,9 @@ const ProfileView = {
 
   render () {
     const userData = Controler.getUserData();
-    const {parche_counter, post_counter, credibility, level, parche_points, 
+    const {nickname, parche_counter, post_counter, credibility, level, parche_points, 
     progress_bar, next_level_points, rol_type} = userData;     
+    this.userNickname.innerText = `@${nickname}`;
     this.parcheCounter.innerText = parche_counter;
     this.postCounter.innerText = post_counter;
     this.credibilityCounter.innerText = credibility;
