@@ -117,127 +117,99 @@ border-radius: 50%;
 
 /*END HEADER NAV*/
 
+/********************************************************/
 /*START OPTIONS TOP*/
 
 #section-container-top-sections {
-width: 100%;
-display: flex;
-justify-content: space-evenly;
-align-items: start;
-margin: 10px;
-position: sticky;
-background-color: white;
-z-index: 3;
-margin-bottom: 15px;
-
-}
-
-.container-box-left-top-sections {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    background-color: white;
+    z-index: 3;
+    margin-top: 10px;
+  }
+  
+  .container-box-left-top-sections {
     width: 35%;
     display: flex;
-    border-right: black 1px solid;
-}
-
-.box-hamburger-menu {
+  }
+  
+  .box-hamburger-menu {
     display: flex;
     width: auto;
-    position: relative;
-
-}
-
-#checkbox-hamburger-menu{
-    position: absolute;
-    z-index: 99;
-    width: 50%;
-    height: 100%;
-    background-color: transparent;
-    border: 0;
-}
-
-.box-hamburger-menu i:hover{
-    cursor: pointer;
-
-}
-
-/* .box-hamburger-menu input:hover ~ .box-hamburger-menu input i{
-    background-color: red;
-    color: black;
-    z-index: 99;
-
-}
-
-.box-hamburger-menu i:hover + #checkbox-hamburger-menu {
-
-} */
-
-.box-hamburger-menu i {
+  }
+  
+  .box-hamburger-menu i {
     font-size: 35px;
     font-weight: 800;
-    z-index: 2;
     width: 100%;
-    position: relative;
     color: var(--main-pink-color);
-    background-color: white;
-}
-
-/* .box-hamburger-menu i:hover {
-    /* cursor: pointer;
-} */
-
-.text-hamburger-menu {
-margin-left: 5px;
-font-weight: 200;
-font-size: 12px;
-}
-
-.container-box-right-top-sections {
-width: 60%;
-position: relative;
-}
-
-.box-searcher {
-    width: 95%;
+  }
+  
+  .text-hamburger-menu {
+    margin-left: 5px;
+    font-weight: 200;
+    font-size: 12px;
+  }
+  
+  .container-box-right-top-sections {
+    width: 60%;
+    position: relative;
+  }
+  
+  .box-searcher {
     border: 1px solid #d7d7d7;
     height: 26px;
     border-radius: 3px;
-    width: 95%;
+    width: 90%;
     position: relative;
     display: flex;
     align-items: center;
     padding: 2px;
     position: relative;
     z-index: 99;
-}
-
-#input-buscar {
-    width: 100%;
+  }
+  
+  #input-buscar {
+    width: 99%;
     height: 100%;
     border: 0;
     position: absolute;
     background-color: white;
     z-index: 999;
     text-align: center;
-}
-   
-.box-searcher:hover {
+  }
+  
+  .box-searcher:hover {
     border: aqua 1.5px solid;
-}
-    
+  }
+  
+  
+  
+  /*START CHECKBOX BY*/
+  
 
-
-.box-searcher > i {
-position: absolute;
-left: 5px;
-}
-
-/*START CHECKBOX BY*/
-
-#input-buscar:focus-within + .box-search-for,.box-search-for:hover{
-    top: 25px;
-}
-
-
-.box-search-for{
+  #input-buscar:focus-within ~ .box-inputbuscar-suggestions{
+    display: block;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 2s;
+  }
+  
+  
+  .box-searcher > i {
+    position: absolute;
+    left: 5px;
+    z-index: 9999;
+  }
+  
+  #input-buscar:focus-within + .box-search-for,.box-search-for:hover{
+    top: 24px;
+  }
+  
+  
+  .box-search-for{
     width: 96%;
     height: 25px;
     position: absolute;
@@ -249,21 +221,68 @@ left: 5px;
     z-index: 1;
     transition-duration: 1s;
    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-}
-
-
-.box-search-for label{
+  
+  }
+  
+  
+  .box-search-for label{
     font-size: 12px;
     margin-right: 5px;
     color:blue;
-}
-
-.box-search-for input{
+  }
+  
+  .box-search-for input{
     margin-right: 10px;
-
-}
-
+  
+  }
+  
+  
+  
+      /* SUGGESTIONS SEARCHER */ 
+      
+  .box-inputbuscar-suggestions{
+    width: 96%;
+    max-height: 280px;
+    top: 42px;
+    position: absolute;
+    background-color:white;
+    padding: 10px;
+    z-index: 999 !important;
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    list-style: none;
+    margin-top: 5px;
+    border-left: gray 0.2px solid;
+    border-right: gray 0.2px solid;
+    border-bottom: gray 0.2px solid;
+  
+  }
+  
+  .box-inputbuscar-suggestions li{
+    color: black;
+    margin-top: 5px;
+    transition:cubic-bezier(0.215, 0.610, 0.355, 1);
+    transition-duration: 0.4s;
+  }
+  
+  .box-inputbuscar-suggestions li:hover{
+    color: blue;
+    font-size: 17px;
+    border: gray 1px solid;
+    cursor: pointer;
+    text-decoration: none;
+    transition:cubic-bezier(0.215, 0.610, 0.355, 1);
+    transition-duration: 0.2s;
+  }
+  
+          /* ENDSUGGESTIONS SEARCHER */ 
+  
+  /********************************************************/
+  
 
 /*END OPTIONS TOP*/
 
@@ -393,7 +412,7 @@ background-color: rgba(0, 0, 255, 0.041);
     width: 180px;
     width: 40%;
     height: 200px;
-    background-image: url(../imgs/peñol);
+    background-image: url(../assets/img/peñol);
     background-size: 100%;
     background-repeat: no-repeat;
     border-radius: 4px;
@@ -408,9 +427,10 @@ background-color: rgba(0, 0, 255, 0.041);
 
 
 .box-carrousel-event:hover{
-    background-image: url(../imgs/peñol);
-    background-size: 135%;
+    background-image: url(../assets/img/peñol);
+    background-size: 155%;
     z-index: 4;
+    cursor: pointer ;
 }
 
 .box-carrousel-event:hover >.bot-description-event p {
