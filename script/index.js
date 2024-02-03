@@ -58,115 +58,134 @@ let promesa = fetch("http://localhost:3000/services")
 
     if (day==systemDay && mounth==systemMounth && year==systemYear){
       if (hour>=systemHour){
-        // Crear el contenedor principal div.box-post-happening-example
-        const boxPostHappeningExample = document.createElement('div');
-        boxPostHappeningExample.classList.add('box-post-happening-example');// cuando se le agreguen todos los elementos, se envía al html
+         //its happenig RightNow////
+        // Crear el contenedor de ejemplo de publicación
+        let boxPostHappeningExample = document.createElement('div');
+        boxPostHappeningExample.classList.add('box-post-happening-example');
 
-        // Crear la imagen img.img-happening-post
-        const image = document.createElement('img');
-        image.classList.add('img-happening-post');
-        image.src = elemento.img;
-        image.alt = '';
-        //boxPostHappeningExample.appendChild(image)
+        // Crear la imagen
+        let img = document.createElement('img');
+        img.src = elemento.img;
+        img.alt = '';
 
-
-        // Crear el contenedor de información de la publicación div.box-container-post-info
-        const boxContainerPostInfo = document.createElement('div');
+        // Crear el contenedor de información de la publicación
+        let boxContainerPostInfo = document.createElement('div');
         boxContainerPostInfo.classList.add('box-container-post-info');
-        //boxPostHappeningExample.appendChild(boxContainerPostInfo)
 
-        // Crear la parte superior de la información de la publicación div.top-post-info
-        const topPostInfo = document.createElement('div');
+        // Crear la parte superior de la información de la publicación
+        let topPostInfo = document.createElement('div');
         topPostInfo.classList.add('top-post-info');
 
-        // Crear la parte izquierda de la información de la publicación div.box-left-post-info
-        const leftPostInfo = document.createElement('div');
-        leftPostInfo.classList.add('box-left-post-info');
+        // Crear la parte izquierda de la información de la publicación
+        // traer la base de datos del usuario  con IDcreator en la base de datos del evento 
+        let promesaUsuario= fetch(`http://localhost:3000/users/${elemento.creatorID}`)
+          .then(response =>{
+            return response.json()
+          })
+          .then(dataUsuario =>{
+            let boxLeftPostInfo = document.createElement('div');
+            boxLeftPostInfo.classList.add('box-left-post-info');
+    
+            let profileImg = document.createElement('img');
+            profileImg.src = dataUsuario.profile_photo;
+            profileImg.alt = 'Profile photo of owner event';
+    
+            let boxOwnerEventInfo = document.createElement('div');
+            boxOwnerEventInfo.classList.add('box-owner-event-info');
+    
+            let ownerUsername = document.createElement('h4');
+            ownerUsername.textContent = `@${dataUsuario.name}`;
+    
+            let followersCount = document.createElement('p');
+            followersCount.textContent = `${dataUsuario.follower_counter} followers`;
+    
+            boxOwnerEventInfo.appendChild(ownerUsername);
+            boxOwnerEventInfo.appendChild(followersCount);
+    
+            boxLeftPostInfo.appendChild(profileImg);
+            boxLeftPostInfo.appendChild(boxOwnerEventInfo);
+            // Agregar las partes de la información de la publicación al contenedor principal
+            topPostInfo.appendChild(boxLeftPostInfo);
+            topPostInfo.appendChild(boxMidPostInfo);
+            topPostInfo.appendChild(boxRightPostInfo);
+            boxPostHappeningExample.appendChild(boxLeftPostInfo)
 
-        // Crear la imagen del propietario del evento
-        const profileImage = document.createElement('img');
-        profileImage.src = './assets/img/profile_example1';
-        profileImage.alt = 'Profile photo of owner event';
+          })
+           
+           
+      
+       
 
-        // Crear el contenedor de información del propietario del evento div.box-owner-event-info
-        const ownerEventInfo = document.createElement('div');
-        ownerEventInfo.classList.add('box-owner-event-info');
+        // Crear la parte central de la información de la publicación
+        let boxMidPostInfo = document.createElement('div');
+        boxMidPostInfo.classList.add('box-mid-post-info');
 
-        // Crear el enlace del propietario del evento
-        const ownerLink = document.createElement('a');
-        ownerLink.textContent = '@DavidHalfamn19';
-
-        // Crear el párrafo de seguidores
-        const followersParagraph = document.createElement('p');
-        followersParagraph.textContent = '2.341 followers';
-
-        // Crear la parte central de la información de la publicación div.box-mid-post-info
-        const midPostInfo = document.createElement('div');
-        midPostInfo.classList.add('box-mid-post-info');
-
-        // Crear el icono de fa-solid fa-slash
-        const slashIcon = document.createElement('i');
+        let slashIcon = document.createElement('i');
         slashIcon.classList.add('fa-solid', 'fa-slash');
 
-        // Crear la parte derecha de la información de la publicación div.box-right-post-info
-        const rightPostInfo = document.createElement('div');
-        rightPostInfo.classList.add('box-right-post-info');
+        boxMidPostInfo.appendChild(slashIcon);
 
-        // Crear el contenedor de información del evento div.box-event-info
-        const eventInfo = document.createElement('div');
-        eventInfo.classList.add('box-event-info');
+        // Crear la parte derecha de la información de la publicación
+        let boxRightPostInfo = document.createElement('div');
+        boxRightPostInfo.classList.add('box-right-post-info');
 
-        // Crear el párrafo "Event"
-        const eventParagraph = document.createElement('p');
-        eventParagraph.textContent = 'Event';
+        let boxEventInfo = document.createElement('div');
+        boxEventInfo.classList.add('box-event-info');
 
-        // Crear el párrafo "Music"
-        const musicParagraph = document.createElement('p');
-        musicParagraph.textContent = 'Music';
+        let eventType = document.createElement('p');
+        eventType.textContent = 'Event';
 
-        // Crear los enlaces de hashtags
-        const musicHashtag = document.createElement('a');
-        musicHashtag.href = '#';
-        musicHashtag.textContent = '#music';
+        let category = document.createElement('p');
+        category.textContent = elemento.category;
 
-        const streetHashtag = document.createElement('a');
-        streetHashtag.href = '#';
-        streetHashtag.textContent = '#street';
+        let hashtags = document.createElement('span');
+        hashtags.textContent = '#music, #street, #atnight';
 
-        const atNightHashtag = document.createElement('a');
-        atNightHashtag.href = '#';
-        atNightHashtag.textContent = '#atnight';
+        boxEventInfo.appendChild(eventType);
+        boxEventInfo.appendChild(slashIcon.cloneNode(true));
+        boxEventInfo.appendChild(category);
+        boxEventInfo.appendChild(hashtags);
 
-        // Crear la descripción de la publicación div.bot-post-description
-        const postDescription = document.createElement('div');
-        postDescription.classList.add('bot-post-description');
+        boxRightPostInfo.appendChild(boxEventInfo);
 
-        // Crear el párrafo de la descripción
-        const descriptionParagraph = document.createElement('p');
-        descriptionParagraph.textContent = "Hey!!!, you have to come on here. There's a reggae band at the street, it just started.";
+       
 
-        // Crear el contenedor de reacciones de la publicación div.box-post-reactions
-        const reactionsContainer = document.createElement('div');
-        reactionsContainer.classList.add('box-post-reactions');
+        // Crear la descripción de la publicación
+        let botPostDescription = document.createElement('div');
+        botPostDescription.classList.add('bot-post-description');
 
-        // Crear los enlaces de reacciones
-        const likesLink = document.createElement('a');
+        let descriptionText = document.createElement('p');
+        descriptionText.textContent = elemento.description;
+
+        botPostDescription.appendChild(descriptionText);
+
+        // Crear las reacciones de la publicación
+        let boxPostReactions = document.createElement('div');
+        boxPostReactions.classList.add('box-post-reactions');
+
+        let likesLink = document.createElement('a');
         likesLink.href = '#';
-        likesLink.textContent = '123 likes';
+        likesLink.textContent = ` ${elemento.likes} likes`;//likes
 
-        const videosLink = document.createElement('a');
-        videosLink.href = '#';
-        videosLink.textContent = '3 videos';
 
-        const commentsLink = document.createElement('a');
+
+        let commentsLink = document.createElement('a');
         commentsLink.href = '#';
-        commentsLink.textContent = '8 comments';
+        commentsLink.textContent = ` ${elemento.comments} comments`;//comments
 
-        boxPostHappeningExample.appendChild(image);
+        boxPostReactions.appendChild(likesLink);
+        boxPostReactions.appendChild(commentsLink);
+
+        // Agregar todos los elementos al contenedor principal
+        
+
+        boxPostHappeningExample.appendChild(img);
         boxPostHappeningExample.appendChild(boxContainerPostInfo);
+        boxPostHappeningExample.appendChild(botPostDescription);
+        boxPostHappeningExample.appendChild(boxPostReactions);
 
+      // containerBoxPostHappening.appendChild(containerArrowsCarrousel);
         containerBoxPostHappening.appendChild(boxPostHappeningExample);
-
 
       }
 
@@ -175,7 +194,7 @@ let promesa = fetch("http://localhost:3000/services")
         if (day>=systemDay){
           if (hour>=systemHour) {
             //almost happening////
-            // Crear el elemento div principal
+                // Crear el elemento div principal
             const boxCarrouselEvent = document.createElement('div');
             boxCarrouselEvent.classList.add('box-carrousel-event');
 
