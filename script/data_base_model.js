@@ -122,6 +122,8 @@ class ServicesDataModel {
       hour : hour,
       people_enrolled : 0, // We have to determinate how many people is enrolled
       price : price,
+      likes: 0,
+      comments: 0,
     }
 
     const requestURL = `${SERVICES_END_POINT}`
