@@ -1,0 +1,295 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /*RESET BUTTONS*/
+  
+  button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+  }
+  
+  /*VARIABLES */
+  
+  :root {
+    --main-pink-color: #ff0984;
+    --main-bg-color: white;
+    --color-navs-bar: #f8f2f2;
+    --desparchado-status: rgb(3, 168, 66);
+    --green-text: rgb(59, 182, 59);
+  }
+  
+  /*VARIABLES */
+  
+  body {
+    width: auto;
+  }
+  
+  #ohparch-app {
+    margin: auto;
+    width: 400px;
+    height: 100vh;
+    border: black 8px double;
+    border-radius: 13%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+  }
+  
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--main-pink-color);
+    border-bottom: black 2px solid;
+    padding: 10px;
+    border-radius: 15% 15% 0% 0%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .box-logo {
+    width: 30%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .box-logo img {
+    width: 100%;
+  }
+  
+  .box-profile {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box-nickname {
+    width: 52%;
+    text-align: end;
+    font-size: 12px;
+    color: white;
+    margin-right: 5px;
+    text-align: center;
+  }
+  
+  .box-nickname p > i {
+    color: var(--desparchado-status);
+  }
+  
+  .box-profile-img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box-profile-img img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+  }
+  
+  /*END HEADER NAV*/
+
+
+
+  
+/* START MAIN PUBLICAR SECTON */ 
+
+
+#publicar-section{
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.329);
+    height: auto;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.create-post-tittle{
+    width: 30%;
+    color: black;
+    font-size: 15px;
+    text-align: center;
+    margin: auto;
+}
+
+.container-create-post{
+    width: 100%;
+    height: auto;
+}
+
+.box-top-create{
+    width: 100%;
+    display: flex;
+}
+
+.box-top-create img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+#user-nickname{
+    width: auto;
+    font-size: 12px;
+    margin-left: 5px;
+    position: relative;
+}
+
+.box-mid-top-bot{
+    width: auto;
+    display: flex;
+    justify-content: stretch;
+    gap: 5px;
+}
+
+.box-mid-top-bot button{
+background-color: rgb(122, 175, 255);
+color: blue;
+padding: 5px;
+font-size: 10px;
+border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* END MAIN PUBLICAR SECTON */ 
+  
+  /*BOT MENU - FIXED */
+  
+  #menu-bot {
+    width: 100%;
+    height: 80px;
+    background-color: var(--main-pink-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    bottom: 0;
+    z-index: 999;
+    position: sticky;
+    border-top: black 2px solid;
+  }
+  
+  .boxes-menu-bot {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .boxes-menu-bot i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    border: black 1px solid;
+  }
+  
+  .boxes-menu-bot span {
+    font-size: 10px;
+    font-weight: 300;
+    color: white;
+  }
+  
+  .box-publicar {
+    position: relative;
+    height: 100px;
+    height: 100px;
+    bottom: 10px;
+    margin: 0px 10px 0px 10px;
+  }
+  
+  .box-publicar i {
+    position: relative;
+    height: 90px;
+    font-size: 35px;
+    width: 90px;
+    display: flex;
+  
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .box-publicar span {
+    color: black;
+  }
+  
