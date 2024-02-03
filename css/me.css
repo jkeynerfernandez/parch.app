@@ -535,8 +535,7 @@ header {
   background-color: rgb(255, 238, 0);
 }
 
-.progress {
-  width: 100%;
+.progress-fill {
   background-color: #ff0984 !important;
 }
 

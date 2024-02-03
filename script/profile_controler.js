@@ -6,8 +6,8 @@ import { PointsCalculator, rolObject} from "./point_calculator.js";
 const DataModel = new UserDataModel;
 const ServiceModel = new ServicesDataModel;
 const Controler = {
-  async init (userToken) {
-    this.userToken = getLocalStorage(userToken);
+  async init () {
+    this.userToken = getLocalStorage("userToken");
     this.userData = await DataModel.getUserByID(this.userToken);
     const rolData = this.estadisticCalculation() 
     // extends userData with rol data object
@@ -35,5 +35,4 @@ const Controler = {
   }
 }
 
-// Controler.init()
 export {Controler}

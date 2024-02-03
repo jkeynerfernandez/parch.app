@@ -16,11 +16,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/me.css">
+  <script type="module" src="/script/profile_view.js" defer></script>
 </head>
 
 <body>
     <section id="ohparch-app">
-
         <header>
           <div class="box-logo">
             <img src="../assets/img/LOGO.png" alt="Logo OparcH!" />
@@ -28,7 +28,7 @@
       
           <div class="box-profile">
             <div class="box-nickname">
-              <h4>@KevinDazaR</h4>
+              <h4 id="user_nickname">@KevinDazaR</h4>
               <p>
                 <i class="fa-solid fa-circle"></i>
                 desparchado
@@ -49,7 +49,7 @@
             <div id="section-top-profile">
 
                 <div class="box-profile-photo">
-                    <img src="../imgs/profile_example1" alt="profile foto user">
+                    <img src="/assets/img/profile_example1" alt="profile foto user">
                 </div>
 
                 <div class="box-container-bot-rigth-profile">
@@ -63,7 +63,7 @@
                     <div class="box-container-top-rigth-profile">
 
                         <div class="boxes-counters box-parches">
-                            <span>15</span>
+                            <span id="parche_counter">15</span>
                             <a href="#">parches</a>
                         </div>
 
@@ -72,8 +72,7 @@
                         </span>
 
                         <div class="boxes-counters box-posts">
-                            <span>10
-                            </span>
+                            <span id="post_counter">10</span>
                             <a href="#">posts</a>
                         </div>
                         
@@ -82,8 +81,8 @@
                         </div>
 
                         <div class="boxes-counters box-credibility">
-                            <span>9.7/10</span>
-                            <a href="#">reliability</a>
+                            <span id="credibility_counter">9.7/10</span>
+                            <a href="#">Creliability</a>
                         </div>
 
                         <div class="separator-boxes-counters">
@@ -524,11 +523,11 @@
 
                         <div class="box-container-points">
                           <p>Parche points:</p>
-                          <p id="parche-points">4123</p>
+                          <p id="parche_points">4123</p>
                         </div>
                         
                         <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                          <div id="progress_bar" class="progress-bar bg-success" ></div>
+                          <div id="progress_bar" class="progress-bar progress-fill" ></div>
                         </div>
 
                         <div class="text-end">
@@ -550,7 +549,7 @@
                         <div class="box-container-insignes-all">
 
                           <a class="boxes-insigne">
-                            <img src="../imgs/insignia1.png" alt="insignia image">
+                            <img src="/assets/img/insignia1.png" alt="insignia image">
                             <p>Poster</p>
 
                             <div class="boxes-insigne-description">
@@ -559,7 +558,7 @@
                           </a>
 
                           <a class="boxes-insigne">
-                            <img src="../imgs/insignia2.png" alt="insignia image">
+                            <img src="/assets/img/insignia2.png" alt="insignia image">
                             <p>Traveler</p> 
 
                             <div class="boxes-insigne-description">
@@ -568,7 +567,7 @@
                           </a>
 
                           <a class="boxes-insigne">
-                            <img src="../imgs/insignia3.png" alt="insignia image">
+                            <img src="/assets/img/insignia3.png" alt="insignia image">
                             <p>Professional Guide</p>
 
                                      <div class="boxes-insigne-description">
@@ -577,7 +576,7 @@
                           </a>
 
                           <a class="boxes-insigne">
-                            <img src="../imgs/insignia4.png" alt="insignia image">
+                            <img src="/assets/img/insignia4.png" alt="insignia image">
                             <p>History triper</p>
 
                                      <div class="boxes-insigne-description">
@@ -586,7 +585,7 @@
                           </a>
 
                           <a class="boxes-insigne">
-                            <img src="../imgs/insignia5.png" alt="insignia image">
+                            <img src="/assets/img/insignia5.png" alt="insignia image">
                             <p>Forest ranger</p>
 
                                      <div class="boxes-insigne-description">
@@ -594,7 +593,7 @@
                             </div>
                           </a>
                           <a class="boxes-insigne">
-                            <img src="../imgs/insignia6.png" alt="insignia image">
+                            <img src="/assets/img/insignia6.png" alt="insignia image">
                             <p>Hiker</p>
 
                                      <div class="boxes-insigne-description">
@@ -603,7 +602,7 @@
                           </a>
 
                           <a class="boxes-insigne">
-                            <img src="../imgs/insignia7.png" alt="insignia image">
+                            <img src="/assets/img/insignia7.png" alt="insignia image">
                             <p>Personal Guide</p>
 
                                      <div class="boxes-insigne-description">
@@ -611,7 +610,7 @@
                             </div>
                           </a>
                           <a class="boxes-insigne">
-                            <img src="../imgs/insignia8.png" alt="insignia image">
+                            <img src="/assets/img/insignia8.png" alt="insignia image">
                             <p>Points hunter</p>
 
                                      <div class="boxes-insigne-description">
@@ -620,7 +619,7 @@
                           </a>
 
                           <a class="boxes-insigne">
-                            <img src="../imgs/insignia9.png" alt="insignia image">
+                            <img src="/assets/img/insignia9.png" alt="insignia image">
                             <p>Poster</p>
 
                                      <div class="boxes-insigne-description">
