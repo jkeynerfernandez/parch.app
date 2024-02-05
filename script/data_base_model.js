@@ -4,6 +4,7 @@ const END_POINT = "https://parchapp.onrender.com"
 const USERS_END_POINT = `${END_POINT}/users`;
 const SERVICES_END_POINT = `${END_POINT}/services`;
 const FOLLOW_END_POINT = `${END_POINT}/follow`;
+console.log("is callin the db")
 
 class UserDataModel {
   async getUserByID (userID) {
