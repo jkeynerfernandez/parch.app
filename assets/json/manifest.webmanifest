@@ -11,7 +11,7 @@
     "display": "standalone",
     "icons": [
         {
-            "src": "./assets/img/exampleImage.png",
+            "src": "/parch.app/assets/img/LOGO.png",
             "sizes": "512x512"
         }
     ]
