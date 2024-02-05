@@ -8,6 +8,7 @@
   <link rel="manifest" href="/parch.app/assets/json/manifest.webmanifest">
   <link rel="stylesheet" href="../css/login.css" />
   <script type="module" src="../script/login.js" defer></script>
+  <a href="../assets/img/LOGO.png"></a>
   <script type="module" src="../script/signup.js" defer></script>
   <!-- <script src="/script/login.js" defer></script> -->
 </head>
@@ -55,7 +56,7 @@
   <script>
     if('serviceWorker' in navigator) {
       console.log("it exist")
-            navigator.serviceWorker.register('/parch.app/script/sw.js', { scope: '/parch.app/' });
+      navigator.serviceWorker.register('/parch.app/script/sw.js', { scope: '/parch.app/' });
     }
   </script> 
 </body>
