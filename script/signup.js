@@ -29,7 +29,7 @@ const ControlerSignup = {
     const newUser = await UserData.addNewUser(newUserData);
     const userID = newUser.id;
     setLocalStorage('userToken', userID);
-    window.location.href = "/index.html";
+    window.location.href = "../index.html";
   },
 
   async checkEmailAddress (userEmailAddress) {
