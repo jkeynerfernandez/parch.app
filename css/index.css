@@ -62,11 +62,11 @@ body {
 
 /*Header con sesiòn logeada */
 
-header {
+/* header {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  background-color: var(--main-pink-color);
+  background-color: #ff0984;
   border-bottom: black 2px solid;
   padding: 10px;
   border-radius: 15% 15% 0% 0%;
@@ -74,7 +74,7 @@ header {
   top: 0;
   z-index: 999;
 
-}
+} */
 
 
 .box-logo {
@@ -134,7 +134,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: var(--main-pink-color);
+  background-color: #ff0984;
   border-bottom: black 2px solid;
   padding: 10px;
   border-radius: 15% 15% 0% 0%;
@@ -1356,22 +1356,34 @@ header {
 /*ANIMATION */
 
 
+/* START ANIMATION SCREEN */ 
+
 /* Config */
+
+
 :root {
   --sk-size: 200px;
-  --main-pink-color: #ff0984;
-
-;
-
-
-/* END ANIMATION SCREEN */ 
 
 }
 
 .loader-screen{
-    width: 50%;
+    width: 100%;
     height: 100%;
     margin: auto;
+    position: absolute;
+    top: 0;
+        /* display: flex; */
+    display: none;
+    z-index: 9999;
+    background-color:var(--yelow-fluo);
+}
+
+.sk-bounce{
+  width: 100%;
+  height: 50%;
+  margin: auto;
+  position: relative;
+  z-index: 9999;
 }
 
 
@@ -1379,8 +1391,7 @@ header {
     width: 300px;
     height: 200px;
     animation: logo 3s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955); 
-    position: relative;
-    z-index: 9999;
+    z-index: 999;
 }
 
 
@@ -1413,7 +1424,7 @@ header {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: var(--main-pink-color);
+  background-color: white;
   opacity: 0.6;
   position: absolute;
   top: 0;
