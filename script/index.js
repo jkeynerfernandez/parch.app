@@ -3,6 +3,10 @@ let boxContainerCarrouselEvents=document.getElementById("box-container-carrousel
 let containerBoxPostHappening =document.getElementById("container-box-post-happening")//contenedor para lo que está pasando ahora 
 let boxContainerFree= document.getElementById("box-container-free");
 
+let leftArrow = document.getElementById("left-arrow-index");
+let rightArrow = document.getElementById("right-arrow-index");
+let scrollStep = 300;//desplazamiento en pixeles
+
 let systemDay=1;
 let systemMounth=2;
 let systemYear=2024;
@@ -10,38 +14,11 @@ let systemYear=2024;
 let systemHour=1400;
 
 
+///////////funcion dee flechas/////////////////
 
 
 
-function sscrollLeft() {
-    console.log("algo");
-    let container = document.querySelector('.container-box-post-happening');
-    container.scrollBy({ left: -400, behavior: 'smooth' });
-}
-
-function scrollRight() {
-    console.log("algo 2");
-
-    let container = document.querySelector('.container-box-post-happening');
-    container.scrollBy({ left: 100, behavior: 'smooth' });
-}
-// Crear los elementos del contenedor de flechas del carrusel
-let containerArrowsCarrousel = document.createElement('div');
-containerArrowsCarrousel.classList.add('container-arrows-carrousel');
-
-// Crear el botón de flecha izquierda
-let leftArrow = document.createElement('button');
-leftArrow.id = 'left-arrow-index';
-
-// Crear el botón de flecha derecha
-let rightArrow = document.createElement('button');
-rightArrow.id = 'right-arrow-index';
-
-// Añadir los botones al contenedor de flechas
-containerArrowsCarrousel.appendChild(leftArrow);
-containerArrowsCarrousel.appendChild(rightArrow);
-
-containerBoxPostHappening.appendChild(containerArrowsCarrousel);
+///////////////////////////////////
  
 
  
@@ -91,9 +68,13 @@ let promesa = fetch("http://localhost:3000/services")
         let boxLeftPostInfo = document.createElement('div');
         boxLeftPostInfo.classList.add('box-left-post-info');
 
-        // Crear la imagen del perfil del autor de la publicación
+        let promesaUsusrio = fetch(`http://localhost:3000/users/${elemento.creatorID}`)
+        .then(response =>{
+          return response.json()
+        }).then (data => {
+             // Crear la imagen del perfil del autor de la publicación
         let profilePhoto = document.createElement('img');
-        profilePhoto.src = './assets/img/profile_example1';//Profile photo of owner event sacar con un fecht
+        profilePhoto.src = data.profile_photo;//Profile photo of owner event sacar con un fecht
         profilePhoto.alt = 'Profile photo of owner event';
 
         // Crear el contenedor para el nombre de usuario y número de seguidores
@@ -102,19 +83,22 @@ let promesa = fetch("http://localhost:3000/services")
 
         // Crear el enlace al perfil del autor de la publicación
         let usernameLink = document.createElement('a');
-        usernameLink.textContent = '@DavidHalfamn19';
+        usernameLink.textContent = `@${data.nickname}`;
         // Añadir el enlace al contenedor de información del autor de la publicación
         boxOwnerEventInfo.appendChild(usernameLink);
 
         // Crear el párrafo para el número de seguidores
         let followersParagraph = document.createElement('p');
-        followersParagraph.textContent = '2.341 followers';
+        followersParagraph.textContent = `${data.followerst} followers`;
         // Añadir el párrafo al contenedor de información del autor de la publicación
         boxOwnerEventInfo.appendChild(followersParagraph);
 
         // Añadir la imagen del perfil y el contenedor de información del autor al contenedor izquierdo
         boxLeftPostInfo.appendChild(profilePhoto);
         boxLeftPostInfo.appendChild(boxOwnerEventInfo);
+        })
+        
+     
         //______hasta aquí el fecht de  owner________________
 
         // Crear el contenedor para la barra separadora

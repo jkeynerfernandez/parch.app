@@ -93,14 +93,14 @@
       "hour": "1400",
       "people_enrolled": "1299",
       "price": 1500000,
-      "likes":0,
-      "comments":0
+      "likes":7,
+      "comments":8
     },
     {
       "id": "ecae",
       "name": "parchar en berrío",
       "img":"https://images.mnstatic.com/e9/28/e928233eca4c847b081e5fd4c6f8279c.jpg",
-      "creatorID": "53cc",
+      "creatorID": "3e15",
       "description": "batalla de rap conciencia",
       "category": "Traveling in the city",
       "location": "medellin",
@@ -108,8 +108,8 @@
       "hour": "1400",
       "people_enrolled": 0,
       "price": "cerveza por persona",
-      "likes":0,
-      "comments":0
+      "likes":17,
+      "comments":40
     },
     {
       "id": "4fed",
@@ -123,14 +123,14 @@
       "hour": "1600",
       "people_enrolled": 0,
       "price": "cerveza por persona",
-      "likes":0,
+      "likes":157,
       "comments":0
     },
     {
       "id": "4da7",
       "name": "Ruta Barbosa",
       "img":"https://s1.wklcdn.com/image_57/1735358/52646561/34972486.400x300.jpg",
-      "creatorID": "53cc",
+      "creatorID": "3e15",
       "description": "barras de proteina y salida pa Barbosa en cicla o trotando",
       "category": "Traveling in the city",
       "location": "medellin",
@@ -138,8 +138,8 @@
       "hour": "1400",
       "people_enrolled": 0,
       "price": "cerveza por persona",
-      "likes":0,
-      "comments":0
+      "likes":8,
+      "comments":1
     },
     {
       "id": "c82c",
@@ -153,14 +153,14 @@
       "hour": "1400",
       "people_enrolled": 0,
       "price": "cerveza por persona",
-      "likes":0,
-      "comments":0
+      "likes":100,
+      "comments":20
     },
     {
       "id": "ecae",
       "name": "picnic en jardín botánico",
       "img":"https://i.pinimg.com/originals/c8/c9/20/c8c920b34119fa99e890d040c2a54494.jpg",
-      "creatorID": "53cc",
+      "creatorID": "3e15",
       "description": "con show de guitarras incluido, evento para unificar comunidades",
       "category": "Traveling in the city",
       "location": "medellin",
@@ -168,8 +168,8 @@
       "hour": "1400",
       "people_enrolled": 0,
       "price": "free",
-      "likes":0,
-      "comments":0
+      "likes":70,
+      "comments":14
     },
     {
       "id": "ecae",
@@ -183,14 +183,14 @@
       "hour": "1400",
       "people_enrolled": 0,
       "price": "free",
-      "likes":0,
-      "comments":0
+      "likes":34,
+      "comments":1
     },
     {
       "id": "ecae",
       "name": "Teatro",
       "img":"https://www.eltiempo.com/files/image_1200_680/uploads/2017/08/03/59839cb0955c0.jpeg",
-      "creatorID": "53cc",
+      "creatorID": "3e15",
       "description": "Comedia de los riwicouders",
       "category": "Traveling in the city",
       "location": "Bello",
@@ -198,8 +198,8 @@
       "hour": "1400",
       "people_enrolled": 0,
       "price": "free",
-      "likes":0,
-      "comments":0
+      "likes":60,
+      "comments":10
     }
 
   ],
