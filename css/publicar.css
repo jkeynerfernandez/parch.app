@@ -126,44 +126,46 @@
 
 
 #publicar-section{
-    width: 100%;
-    background-color: rgba(128, 128, 128, 0.329);
-    height: auto;
-    padding: 10px;
-    margin-top: 40px;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.329);
+  height: auto;
+  padding: 10px;
+  margin-top: 40px;
 }
 
-.create-post-tittle{
-    width: 30%;
-    color: black;
-    font-size: 15px;
-    text-align: center;
-    margin: auto;
+
+#create-post-tittle{
+  width: 30%;
+  color: black;
+  font-size: 15px;  
+  font-weight: 400;
+  text-align: center;
+  margin: 10px auto;
 }
 
 .container-create-post{
-    width: 90%;
-    padding: 10px;
-    margin: 10px auto;
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
 }
 
 .box-top-create{
-    width: 100%;
-    display: flex;
-    position: relative;
+  width: 100%;
+  display: flex;
+  position: relative;
 }
 
 .box-top-create img{
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
 }
 
 #user-nickname{
-    width: auto;
-    font-size: 12px;
-    margin-left: 5px;
-    position: relative;
+  width: auto;
+  font-size: 12px;
+  margin-left: 5px;
+  position: relative;
 }
 
 .box-mid-top-bot{
@@ -191,6 +193,7 @@
   align-items: center;
   justify-content: center;
   gap: 3px;
+
 }
 
 #btn-share-whith-publicar:hover, #btn-share-type-publicar:hover, .btn-share-type-publicar:hover, #btn-share-tag-publicar:hover{
@@ -231,7 +234,7 @@
 }
 
 .box-mid-publicar a{
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: blueviolet;
 }
 
@@ -243,84 +246,304 @@
 }
 
 .boxes-publicar textarea{
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 100px;
-    max-height: 150px;
-    padding: 10px;
-    font-size: 12px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100px;
+  max-height: 150px;
+  padding: 10px;
+  font-size: 12px;
 }
 
 .box-cost-publicar h3{
-    font-size: 16px;
-    margin-bottom: 12px;
+  font-size: 16px;
+  margin-bottom: 12px;
 }
 
 .box-container-cost-inputs{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 
 #vol{
-    margin-top: 0px !important;
-    padding: 0 !important;
-    width: 60%;
+  margin-top: 0px !important;
+  padding: 0 !important;
+  width: 60%;
 }
 
 #outvol{
-    width: 10%;
-    float: right;
-    margin-left: 10px;
+  width: 10%;
+  float: right;
+  margin-left: 10px;
 }
 
 .box-container-cost-inputs select{
-    width: 20%;
+  width: 20%;
 }
 
 #label-free-checkbox-cost{
-    width: auto !important;
+  width: auto !important;
 }
 
 #free-checkbox-input{
-    width: auto;
-    margin-left: 5px;
+  width: auto;
+  margin-left: 5px;
+}
+
+.box-btn-publicar{
+  margin-top:20px;
 }
 
 #btn-post-publicar{
-    width: 30%;
-    margin: auto;
-    background-color: var(--blue-pastel);
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
+  width: 30%;
+  margin: auto;
+  background-color: var(--blue-pastel);
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
 
 }
 
 #btn-post-publicar:hover{
-    cursor: pointer;
-    color: var(--blue-dark);
-    background-color: white;
-    border: var(--blue-dark) 2px solid;
+  cursor: pointer;
+  color: var(--blue-dark);
+  background-color: white;
+  border: var(--blue-dark) 2px solid;
 }
 
 
 #btn-post-publicar:active{
-    width: 80%;
-    height: 40px;
-    background-color: var(--blue-dark);
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 80%;
+  height: 40px;
+  background-color: var(--blue-dark);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.boxes-publicar p{
+  font-size: 12px;
+  font-style: italic;
+  color: rgba(255, 0, 0, 0.405);
+  font-weight: 500;
+}
+
+
+    /* START POST AUDIENCE WINDOW */
+  
+.box-share-with-publicar-hidden{
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  position: relative;
+  top: 0px;
+  z-index: 777;
+}
+
+.post-audience-box{
+  width: 100%;
+  height: 60px;
+  background-color: #eee;
+  border-bottom: gray 1px solid;
+  border-radius: 0px 0px 5px 5px;
+  display: flex;
+  text-align: center;  
+  position: relative;
+  padding: 10px;
+}
+
+.post-audience-box h3{
+  font-size: 14px;
+  margin: auto;
+  width: 90%;
+  text-align: center;  
+}
+
+.post-audience-box i{
+  font-size: 14px;
+  margin: auto;
+  text-align: center;  
+  position: relative;
+  right: 3px;
+}
+
+.post-audience-box i:hover, .post-audience-box i:active{
+  font-size: 16px;
+  cursor: pointer;
+  color: blue;
+}
+
+.post-audience-content{
+  width: 100%;
+  padding: 10px;
+  height: auto;
+}
+
+.post-audience-content h4{
+  font-size: 16px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.post-audience-content p{
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.boxes-options-audience{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.left-boxes-potions{
+  width: 90%;
+  margin:10px 0px;
+  position: relative;
+}
+
+.left-boxes-potions label{
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.left-boxes-potions i{
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.left-boxes-potions p{
+  font-size: 12px;
+  left: 25px;
+  top: 12px;
+  font-style: italic;
+  font-weight: 300;
+  color: gray;
+  position: absolute;
+}
+
+.box-btn-done-audience{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  position: relative;
+}
+
+.box-btn-done-audience button{
+  width: 90%;
+  margin: auto;
+  height: 30px;
+  color: white;
+  background-color: var(--blue-pastel);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.box-btn-done-audience button:hover, .box-btn-done-audience button:active{
+  cursor: pointer;
+  text-align: center;
+  width: 95%;
+  font-size: 17px;
+  background-color: var(--blue-dark);
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+    /* END POST AUDIENCE WINDOW */
+
+          /*INSIGNES BOX*/
+
+.box-container-insignes-all {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.829);
+  position: relative;
+}
+
+
+.background-cover-color-insignes{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: black 1px solid;
+  padding: 10px;
+  background: rgb(255,244,145);
+  background: radial-gradient(circle, rgba(255,244,145,1) 0%, rgba(255,237,149,1) 52%, rgba(254,203,0,1) 100%);
+  position: relative;
+}
+
+
+
+.boxes-insigne {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+  height: 70px;
+  position: relative;
+}
+
+.boxes-insigne img {
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.347);
+  border-radius: 50%;
+  filter: grayscale(100%);
+
+}
+
+.boxes-insigne img:hover, .boxes-insigne img:active {
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: grayscale(0%);
+  cursor: pointer;
+
 }
 
 
 
 
+.boxes-insigne p {
+  font-size: 10px;
+  text-align: center;
+  text-decoration: none !important;
+  color: gray;
+}
+
+.boxes-insigne-description {
+  display: none;
+  width: 80px;
+  background-color: gray  ;
+  position: absolute;
+  border-radius: 4px;
+  height: auto;
+  padding: 3px;
+  top: 65px;
+  z-index: 888;
+}
+
+.boxes-insigne-description p {
+  font-size: 10px;
+  color:black !important;
+  margin: auto;
+  font-weight: 500;
+  text-align: center;
+}
+
+
+.boxes-insigne:hover > .boxes-insigne-description {
+  display: block;
+}
 
 
 
