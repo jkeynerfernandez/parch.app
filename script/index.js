@@ -15,26 +15,34 @@ let systemHour=1400;
 
 function sscrollLeft() {
     console.log("algo");
-    const container = document.querySelector('.container-box-post-happening');
+    let container = document.querySelector('.container-box-post-happening');
     container.scrollBy({ left: -400, behavior: 'smooth' });
 }
 
 function scrollRight() {
     console.log("algo 2");
 
-    const container = document.querySelector('.container-box-post-happening');
+    let container = document.querySelector('.container-box-post-happening');
     container.scrollBy({ left: 100, behavior: 'smooth' });
 }
+// Crear los elementos del contenedor de flechas del carrusel
+let containerArrowsCarrousel = document.createElement('div');
+containerArrowsCarrousel.classList.add('container-arrows-carrousel');
 
+// Crear el botón de flecha izquierda
+let leftArrow = document.createElement('button');
+leftArrow.id = 'left-arrow-index';
+
+// Crear el botón de flecha derecha
+let rightArrow = document.createElement('button');
+rightArrow.id = 'right-arrow-index';
+
+// Añadir los botones al contenedor de flechas
+containerArrowsCarrousel.appendChild(leftArrow);
+containerArrowsCarrousel.appendChild(rightArrow);
+
+containerBoxPostHappening.appendChild(containerArrowsCarrousel);
  
-
-let buttonLeft = document.createElement("button");
-    buttonLeft.classList.add("buttonPass");
-    buttonLeft.setAttribute("type","button");
-    buttonLeft.setAttribute("id","buttonLeft");
-    buttonLeft.setAttribute("onclick","sscrollLeft()");
-    buttonLeft.innerText="<"
-    containerBoxPostHappening.appendChild(buttonLeft);
 
  
 
@@ -58,134 +66,146 @@ let promesa = fetch("http://localhost:3000/services")
 
     if (day==systemDay && mounth==systemMounth && year==systemYear){
       if (hour>=systemHour){
-         //its happenig RightNow////
-        // Crear el contenedor de ejemplo de publicación
+        //contenedor de ejemplo de publicación
         let boxPostHappeningExample = document.createElement('div');
         boxPostHappeningExample.classList.add('box-post-happening-example');
 
-        // Crear la imagen
-        let img = document.createElement('img');
-        img.src = elemento.img;
-        img.alt = '';
+        // Crear la imagen de la publicación
+        let imgHappeningPost = document.createElement('img');
+        imgHappeningPost.classList.add('img-happening-post');
+        imgHappeningPost.src = elemento.img;
+        
+        // Añadir la imagen al contenedor de ejemplo de publicación
+        boxPostHappeningExample.appendChild(imgHappeningPost);
+        //_____________________________________________________________//
 
         // Crear el contenedor de información de la publicación
         let boxContainerPostInfo = document.createElement('div');
         boxContainerPostInfo.classList.add('box-container-post-info');
 
-        // Crear la parte superior de la información de la publicación
+        // Crear el contenedor de información del autor de la publicación
         let topPostInfo = document.createElement('div');
         topPostInfo.classList.add('top-post-info');
 
-        // Crear la parte izquierda de la información de la publicación
-        // traer la base de datos del usuario  con IDcreator en la base de datos del evento 
-        let promesaUsuario= fetch(`http://localhost:3000/users/${elemento.creatorID}`)
-          .then(response =>{
-            return response.json()
-          })
-          .then(dataUsuario =>{
-            let boxLeftPostInfo = document.createElement('div');
-            boxLeftPostInfo.classList.add('box-left-post-info');
-    
-            let profileImg = document.createElement('img');
-            profileImg.src = dataUsuario.profile_photo;
-            profileImg.alt = 'Profile photo of owner event';
-    
-            let boxOwnerEventInfo = document.createElement('div');
-            boxOwnerEventInfo.classList.add('box-owner-event-info');
-    
-            let ownerUsername = document.createElement('h4');
-            ownerUsername.textContent = `@${dataUsuario.name}`;
-    
-            let followersCount = document.createElement('p');
-            followersCount.textContent = `${dataUsuario.follower_counter} followers`;
-    
-            boxOwnerEventInfo.appendChild(ownerUsername);
-            boxOwnerEventInfo.appendChild(followersCount);
-    
-            boxLeftPostInfo.appendChild(profileImg);
-            boxLeftPostInfo.appendChild(boxOwnerEventInfo);
-            // Agregar las partes de la información de la publicación al contenedor principal
-            topPostInfo.appendChild(boxLeftPostInfo);
-            topPostInfo.appendChild(boxMidPostInfo);
-            topPostInfo.appendChild(boxRightPostInfo);
-            boxPostHappeningExample.appendChild(boxLeftPostInfo)
+        // Crear el contenedor para la información izquierda del autor de la publicación
+        let boxLeftPostInfo = document.createElement('div');
+        boxLeftPostInfo.classList.add('box-left-post-info');
 
-          })
-           
-           
-      
-       
+        // Crear la imagen del perfil del autor de la publicación
+        let profilePhoto = document.createElement('img');
+        profilePhoto.src = './assets/img/profile_example1';//Profile photo of owner event sacar con un fecht
+        profilePhoto.alt = 'Profile photo of owner event';
 
-        // Crear la parte central de la información de la publicación
+        // Crear el contenedor para el nombre de usuario y número de seguidores
+        let boxOwnerEventInfo = document.createElement('div');
+        boxOwnerEventInfo.classList.add('box-owner-event-info');
+
+        // Crear el enlace al perfil del autor de la publicación
+        let usernameLink = document.createElement('a');
+        usernameLink.textContent = '@DavidHalfamn19';
+        // Añadir el enlace al contenedor de información del autor de la publicación
+        boxOwnerEventInfo.appendChild(usernameLink);
+
+        // Crear el párrafo para el número de seguidores
+        let followersParagraph = document.createElement('p');
+        followersParagraph.textContent = '2.341 followers';
+        // Añadir el párrafo al contenedor de información del autor de la publicación
+        boxOwnerEventInfo.appendChild(followersParagraph);
+
+        // Añadir la imagen del perfil y el contenedor de información del autor al contenedor izquierdo
+        boxLeftPostInfo.appendChild(profilePhoto);
+        boxLeftPostInfo.appendChild(boxOwnerEventInfo);
+        //______hasta aquí el fecht de  owner________________
+
+        // Crear el contenedor para la barra separadora
         let boxMidPostInfo = document.createElement('div');
         boxMidPostInfo.classList.add('box-mid-post-info');
 
+        // Crear el icono de la barra separadora
         let slashIcon = document.createElement('i');
         slashIcon.classList.add('fa-solid', 'fa-slash');
 
-        boxMidPostInfo.appendChild(slashIcon);
+        
+        boxMidPostInfo.appendChild(slashIcon);// icono " / "
 
-        // Crear la parte derecha de la información de la publicación
+        // Crear el contenedor para la información derecha del autor de la publicación
         let boxRightPostInfo = document.createElement('div');
         boxRightPostInfo.classList.add('box-right-post-info');
 
+        // Crear el contenedor para la información del evento
         let boxEventInfo = document.createElement('div');
         boxEventInfo.classList.add('box-event-info');
+        //////////////////////////////////////////////////////////////
+        // Crear los elementos para las etiquetas del evento
+        let eventTag1 = document.createElement('p');
+        eventTag1.textContent = 'Event';
+        let eventTag2 = document.createElement('i');
+        eventTag2.classList.add('fa-solid', 'fa-slash');
+        let musicLink1 = document.createElement('a');
+        musicLink1.href = '#';
+        musicLink1.textContent = '#music';
+        let musicLink2 = document.createElement('a');
+        musicLink2.href = '#';
+        musicLink2.textContent = '#street';
+        let musicLink3 = document.createElement('a');
+        musicLink3.href = '#';
+        musicLink3.textContent = '#atnight';
 
-        let eventType = document.createElement('p');
-        eventType.textContent = 'Event';
+        // Añadir los elementos de etiquetas del evento al contenedor de información del evento
+        boxEventInfo.appendChild(eventTag1);
+        boxEventInfo.appendChild(eventTag2);
+        boxEventInfo.appendChild(musicLink1);
+        boxEventInfo.appendChild(musicLink2);
+        boxEventInfo.appendChild(musicLink3);
 
-        let category = document.createElement('p');
-        category.textContent = elemento.category;
-
-        let hashtags = document.createElement('span');
-        hashtags.textContent = '#music, #street, #atnight';
-
-        boxEventInfo.appendChild(eventType);
-        boxEventInfo.appendChild(slashIcon.cloneNode(true));
-        boxEventInfo.appendChild(category);
-        boxEventInfo.appendChild(hashtags);
-
+        // Añadir el contenedor de información del evento al contenedor de información derecha
         boxRightPostInfo.appendChild(boxEventInfo);
+        ////////////////////////////////////////////////////////////////////////////////////
 
-       
+        // OJO  Añadir los contenedores de información al contenedor de información de la publicación
+        topPostInfo.appendChild(boxLeftPostInfo);
+        topPostInfo.appendChild(boxMidPostInfo);
+        topPostInfo.appendChild(boxRightPostInfo);
+        //////////////////////////////////////////////////////////////
 
-        // Crear la descripción de la publicación
+        // Crear el contenedor de descripción de la publicación
         let botPostDescription = document.createElement('div');
         botPostDescription.classList.add('bot-post-description');
 
-        let descriptionText = document.createElement('p');
-        descriptionText.textContent = elemento.description;
+        // Crear el párrafo de descripción de la publicación
+        let descriptionParagraph = document.createElement('p');
+        descriptionParagraph.textContent = elemento.description;
 
-        botPostDescription.appendChild(descriptionText);
+        // Añadir el párrafo de descripción al contenedor de descripción
+        botPostDescription.appendChild(descriptionParagraph);
 
-        // Crear las reacciones de la publicación
+        // Añadir los contenedores de información al contenedor de información de la publicación
+        boxContainerPostInfo.appendChild(topPostInfo);
+        boxContainerPostInfo.appendChild(botPostDescription);
+
+        // Añadir el contenedor de información de la publicación al contenedor de ejemplo de publicación
+        boxPostHappeningExample.appendChild(boxContainerPostInfo);
+
+        // Crear el contenedor de reacciones de la publicación
         let boxPostReactions = document.createElement('div');
         boxPostReactions.classList.add('box-post-reactions');
 
+        // Agregar enlaces de reacciones
         let likesLink = document.createElement('a');
         likesLink.href = '#';
-        likesLink.textContent = ` ${elemento.likes} likes`;//likes
+        likesLink.textContent = `${elemento.likes} Likes`;
 
-
-
+       
         let commentsLink = document.createElement('a');
         commentsLink.href = '#';
-        commentsLink.textContent = ` ${elemento.comments} comments`;//comments
+        commentsLink.textContent = `${elemento.comments} Comments`;
 
+        // Agregar enlaces al contenedor de reacciones
         boxPostReactions.appendChild(likesLink);
         boxPostReactions.appendChild(commentsLink);
 
-        // Agregar todos los elementos al contenedor principal
-        
-
-        boxPostHappeningExample.appendChild(img);
-        boxPostHappeningExample.appendChild(boxContainerPostInfo);
-        boxPostHappeningExample.appendChild(botPostDescription);
-        boxPostHappeningExample.appendChild(boxPostReactions);
-
-      // containerBoxPostHappening.appendChild(containerArrowsCarrousel);
-        containerBoxPostHappening.appendChild(boxPostHappeningExample);
+        boxPostHappeningExample.appendChild(boxPostReactions)
+        containerBoxPostHappening.appendChild(boxPostHappeningExample)
 
       }
 
@@ -195,23 +215,23 @@ let promesa = fetch("http://localhost:3000/services")
           if (hour>=systemHour) {
             //almost happening////
                 // Crear el elemento div principal
-            const boxCarrouselEvent = document.createElement('div');
+            let boxCarrouselEvent = document.createElement('div');
             boxCarrouselEvent.classList.add('box-carrousel-event');
 
             // Crear la etiqueta img y configurar atributos src y alt
-            const img = document.createElement('img');
+            let img = document.createElement('img');
             img.src = elemento.img;
             img.alt = 'img-event';
 
             // Crear el div para la descripción del evento
-            const boxDescriptionEventCarrousel = document.createElement('div');
+            let boxDescriptionEventCarrousel = document.createElement('div');
             boxDescriptionEventCarrousel.classList.add('box-description-event-carrousel');
 
             // Crear el título h4 con spans y texto
-            const h4 = document.createElement('h4');
-            const span1 = document.createElement('span');
+            let h4 = document.createElement('h4');
+            let span1 = document.createElement('span');
             span1.innerText = elemento.location;
-            const span2 = document.createElement('span');
+            let span2 = document.createElement('span');
             span2.innerText = elemento.price;
             h4.appendChild(span1);
             h4.appendChild(document.createTextNode(' | Entrance to '));
@@ -221,19 +241,19 @@ let promesa = fetch("http://localhost:3000/services")
             boxDescriptionEventCarrousel.appendChild(h4);
 
             // Crear el div para la parte central de la descripción
-            const boxMidDescription = document.createElement('div');
+            let boxMidDescription = document.createElement('div');
             boxMidDescription.classList.add('box-mid-description');
 
             // Crear el div para la distancia al evento
-            const distanceBox = document.createElement('div');
+            let distanceBox = document.createElement('div');
             distanceBox.classList.add('disantance-box');
 
             // Crear el icono de ubicación
-            const locationDotIcon = document.createElement('i');
+            let locationDotIcon = document.createElement('i');
             locationDotIcon.classList.add('fa-solid', 'fa-location-dot');
 
             // Crear el párrafo para la distancia al evento
-            const distanceFromEvent = document.createElement('p');
+            let distanceFromEvent = document.createElement('p');
             distanceFromEvent.classList.add('distance-from-event');
             distanceFromEvent.innerText = `${elemento.location} from you!`;
 
@@ -242,16 +262,16 @@ let promesa = fetch("http://localhost:3000/services")
             distanceBox.appendChild(distanceFromEvent);
 
             // Crear el div para la información del evento
-            const infoEvent = document.createElement('div');
+            let infoEvent = document.createElement('div');
             infoEvent.classList.add('info-event');
 
             // Crear el párrafo para la fecha del evento
-            const dateEvent = document.createElement('p');
+            let dateEvent = document.createElement('p');
             dateEvent.classList.add('date-event');
             dateEvent.innerText = elemento.day;
 
             // Crear el párrafo para la hora del evento
-            const hourEvent = document.createElement('p');
+            let hourEvent = document.createElement('p');
             hourEvent.classList.add('hour-event');
             hourEvent.innerText = '7:00 a.m to 6:00 pm.';
 
@@ -260,11 +280,11 @@ let promesa = fetch("http://localhost:3000/services")
             infoEvent.appendChild(hourEvent);
 
             // Crear el div para el botón "parchar"
-            const boxBtnParch = document.createElement('div');
+            let boxBtnParch = document.createElement('div');
             boxBtnParch.classList.add('box-btn-parch');
 
             // Crear el botón "parchar"
-            const button = document.createElement('button');
+            let button = document.createElement('button');
             button.innerText = 'parchar';
 
             // Agregar el botón al div de botones
@@ -296,13 +316,7 @@ let promesa = fetch("http://localhost:3000/services")
         
     });
     
- let buttonRight = document.createElement("button");
- buttonRight.classList.add("buttonPass");
- buttonRight.setAttribute("type","button");
- buttonRight.setAttribute("id","buttonRight");
- buttonRight.setAttribute("onclick","scrollRight()")
- buttonRight.innerText=">"
- containerBoxPostHappening.appendChild(buttonRight);
+
 })
 //////////////////////FREE EVENTS /////////////7777//////
 
