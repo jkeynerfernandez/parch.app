@@ -1,5 +1,5 @@
 const labelsObject = [
-  {href: "/index.html", text: "home", classList: ["boxes-menu-bot", "box-home"]},
+  {href: "../index.html", text: "home", classList: ["boxes-menu-bot", "box-home"]},
   {href: "./explore.html", text: "explore", classList: ["boxes-menu-bot", "box-explore"]},
   {href: "./post.html", text: "POST", classList: ["boxes-menu-bot", "box-publicar"]},
   {href: "./mesages.html", text: "notifications", classList: ["boxes-menu-bot", "box-post"]},
