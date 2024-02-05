@@ -40,7 +40,7 @@ FORM_DATA.addEventListener('submit', async (e) => {
   console.log(FORM_DATA)
   if (isValidUser) {
     setLocalStorage('userToken', USER_ID);
-    window.location.href = "/index.html";
+    window.location.href = "../index.html";
   } else {
    console.log(isValidUser)
    invalidCredential()
