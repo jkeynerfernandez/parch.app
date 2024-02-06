@@ -1,6 +1,5 @@
 import { ServicesDataModel, UserDataModel, FollowDataModel } from "./data_base_model.js";
 import { setLocalStorage, getLocalStorage } from "./local_storage.js"
-import { removeUserByNameList, removeListDuplicates } from "./utilities.js"; 
 const UserModel = new UserDataModel()
 const FollowModel = new FollowDataModel()
 let waitToUpdateDB;
@@ -18,7 +17,9 @@ const FollowControler = {
     this.userID = currentUserData.id;
     this.suggestionID = suggestionProfileData.id;
     this.followStatus = await this.checkIfFollowing(this.userID, this.suggestionID);
+    console.log(this.followStatus)
     this.followID = await FollowModel.getFollowID(this.userID, this.suggestionID);
+    debugger
     this.followBTNRender(this.followStatus)
   },
 
@@ -77,20 +78,21 @@ const FollowControler = {
 const FollowViews = {
   init () {
     this.followBTN = document.getElementById("follow_button")
-    const data = document.getElementById('follow_button')
-    data.addEventListener('click', () => {
+    this.followBTN.addEventListener('click', () => {
       FollowControler.followControl()
     })
   },
 
   following () {
-    this.followBTN.classList.add("followBTN");
-    this.followBTN.classList.remove("unfollowBTN");
+    this.followBTN.classList.add("follow-btn");
+    this.followBTN.classList.remove("unfollow-btn");
+    this.followBTN.innerText = "unfollow";
   },
 
   unFollowing () {
-    this.followBTN.classList.add("unfollowBTN");
-    this.followBTN.classList.remove("followBTN");
+    this.followBTN.classList.add("unfollow-btn");
+    this.followBTN.classList.remove("follow-btn");
+    this.followBTN.innerText = "follow";
   }
 }
 FollowControler.init()

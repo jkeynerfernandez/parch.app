@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="./css/index.css" />
     <script type="module" src="./script/search_bar.js" defer></script>
     <script type="" src="./script/index.js" defer></script>
+
+    
+
   </head>
   <body>
     <!--TRIED02-->
@@ -111,6 +114,8 @@
 
             <div class="box-inputbuscar-suggestions">
               <!-- <li>@KevinDazaRsadas</li>
+            <div class="box-inputbuscar-suggestions">
+          <li>@KevinDazaRsadas</li>
           <li>@KevinDazaRsadas</li>
           <li>@KevinDazaRsadas</li>
           <li>@KevinDazaRsadas</li>
@@ -166,17 +171,18 @@
             <h3>almost <br />happening</h3>
           </div>
 
-          <div
-            id="box-container-carrousel-events"
-            class="box-container-carrousel-events"
-          >
-            <div class="container-arrows-carrousel">
-              <button id="left-arrow-index"></button>
-              <button id="right-arrow-index"></button>
-            </div>
-          </div>
-        </section>
-        <!---->
+
+      <div id = "box-container-carrousel-events"class="box-container-carrousel-events">
+        <div class="container-arrows-carrousel">
+          <button id="left-arrow-index"></button>
+          <button id="right-arrow-index"></button>
+        </div>
+
+      </div>
+      
+    </section>
+    <!---->
+
 
         <!--eventos con entrada Gratis -->
         <section id="section-more-recomendations">
@@ -289,28 +295,28 @@
           <span>notifications</span>
         </a>
 
-        <a href="./views/me.html" class="boxes-menu-bot box-me">
-          <i class="fa-solid fa-user"></i>
-          <span>me</span>
-        </a>
-      </nav>
+    <a href="./views/me.html" class="boxes-menu-bot box-me">
+      <i class="fa-solid fa-user"></i>
+      <span>me</span>
+    </a>
+  </nav>
 
-      <div class="loader-screen">
-        <div class="sk-bounce">
-          <img src="../assets/img/logo-con-slogan.png" alt="" />
-          <div class="sk-bounce-dot"></div>
-          <div class="sk-bounce-dot"></div>
-        </div>
-      </div>
-    </section>
-    <!-- Service worker for mobile aplication -->
-    <script>
-      if ("serviceWorker" in navigator) {
-        console.log("it exist");
-        navigator.serviceWorker.register("/parch.app/script/sw.js", {
-          scope: "/parch.app/",
-        });
-      }
-    </script>
-  </body>
+
+  <div class="loader-screen">
+    <div class="sk-bounce">
+        <img src="../assets/img/logo-con-slogan.png" alt="">
+      <div class="sk-bounce-dot"></div>
+      <div class="sk-bounce-dot"></div>
+    </div>
+  </div>
+
+</section>
+  <!-- Service worker for mobile aplication -->
+  <script>
+    if('serviceWorker' in navigator) {
+      console.log("it exist")
+            navigator.serviceWorker.register('/parch.app/script/sw.js', { scope: '/parch.app/' });
+    }
+  </script>
+</body>
 </html>

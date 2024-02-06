@@ -163,7 +163,7 @@ header {
   align-items: center;
 }
 
-.box-profile a {
+.box-profile a  {
   background-color: var(--yellow-pastel);
   padding: 10px;
   border-radius: 10px;
@@ -171,12 +171,21 @@ header {
   border: var(--green-flour) 1px solid;
 }
 
-.box-profile a:hover {
+.box-profile a:hover  {
   background-color: var(--blue-pastel);
   color: white;
-} */
+}
 
-/*END Header sin sesiòn logeada  NAV
+
+
+
+
+/*END Header sin sesiòn logeada  NAV*/
+
+
+
+
+
 
 /********************************************************/
 /*START OPTIONS TOP*/
@@ -286,7 +295,7 @@ header {
 .box-search-for label {
   font-size: 12px;
   margin-right: 5px;
-  color: blue;
+  color:  blue;
 }
 
 .box-search-for input {
@@ -296,11 +305,14 @@ header {
 /* SUGGESTIONS SEARCHER */
 
 .box-inputbuscar-suggestions {
+/* SUGGESTIONS SEARCHER */
+
+.box-inputbuscar-suggestions {
   width: 96%;
   max-height: 280px;
   top: 42px;
   position: absolute;
-  background-color: white;
+  background-color:  white;
   padding: 10px;
   z-index: 999 !important;
   display: none;
@@ -316,7 +328,7 @@ header {
   border-bottom: gray 0.2px solid;
 }
 
-.box-inputbuscar-suggestions li {
+.box-inputbuscar-suggestions li  {
   color: black;
   margin-top: 5px;
   transition: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -324,7 +336,7 @@ header {
 }
 
 .box-inputbuscar-suggestions li:hover,
-.box-inputbuscar-suggestions li:active {
+.box-inputbuscar-suggestions li:active  {
   color: blue;
   font-size: 17px;
   border: gray 1px solid;
@@ -531,7 +543,7 @@ header {
   background-repeat: no-repeat;
 }
 
-#right-arrow-index {
+#right-arrow-index  {
   background-image: url(../assets/img/orange-arrow.png);
   background-size: contain;
   background-repeat: no-repeat;
