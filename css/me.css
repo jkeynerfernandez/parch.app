@@ -31,13 +31,13 @@ button {
 
 :root {
   --main-pink-color: #ff0984;
-  --red-pink-color:#e50d5a;
-  --green-pastel:#31e061;
-  --green-flour:#0bf21c;
-  --blue-pastel:#1c73e7;
-  --blue-dark:#143da8;
-  --yelow-fluo:#f7e336;
-  --yellow-pastel:#ffde59;
+  --red-pink-color: #e50d5a;
+  --green-pastel: #31e061;
+  --green-flour: #0bf21c;
+  --blue-pastel: #1c73e7;
+  --blue-dark: #143da8;
+  --yelow-fluo: #f7e336;
+  --yellow-pastel: #ffde59;
   --main-bg-color: white;
   --color-navs-bar: #f8f2f2;
   --desparchado-status: rgb(3, 168, 66);
@@ -628,7 +628,7 @@ header {
   align-items: center;
   gap: 10px;
   bottom: 0;
-  z-index: 999; 
+  z-index: 999;
   position: sticky;
   border-top: black 2px solid;
 }
