@@ -1,11 +1,11 @@
 // this end point is working directly with the server so take care
-const END_POINT = "https://parchapp.onrender.com"
-// const END_POINT = "http://localhost:3000"
+// const END_POINT = "https://parchapp.onrender.com"
+const END_POINT = "http://localhost:3000"
 const USERS_END_POINT = `${END_POINT}/users`;
 const SERVICES_END_POINT = `${END_POINT}/services`;
 const FOLLOW_END_POINT = `${END_POINT}/follow`;
 console.log("is callin the db");
-
+const myreg = "holamundo"
 class UserDataModel {
   async getUserByID(userID) {
     const requestURL = `${USERS_END_POINT}/${userID}`;
@@ -22,6 +22,7 @@ class UserDataModel {
   }
 
   async getUserByNickname(userNickname) {
+    // const requestURL = `${USERS_END_POINT}?nickname_like=${userNickname}`;
     const requestURL = `${USERS_END_POINT}?nickname=${userNickname}`;
     const response = await fetch(requestURL);
     const user = await response.json();

@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "jest",
-    "dataServer": "npx json-server ./assets/json/db.json",
+    "dataServer": "npx json-server --watch ./assets/json/db.json",
     "server": "python3 -m http.server"
   },
   "keywords": [],
