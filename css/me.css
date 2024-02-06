@@ -265,7 +265,7 @@ header {
 }
 
 .follow-btn {
-  width: 52px;
+  width: 62px;
   background-color: blue;
   color: white;
   padding: 5px;
@@ -274,15 +274,15 @@ header {
 }
 
 .unfollow-btn {
+  width: 62px;
   background-color: white;
   color: blue;
-  width: auto;
   padding: 5px;
   border-radius: 5px;
   font-size: 11px;
 }
 
-.follow-btn:hover {
+/* .follow-btn:hover {
   background-color: rgb(10, 10, 214);
   color: white;
 }
@@ -291,7 +291,7 @@ header {
   background-color: var(--blue-dark);
   color: white;
   font-weight: 400;
-}
+} */
 
 #section-mid-profile {
   width: 95%;

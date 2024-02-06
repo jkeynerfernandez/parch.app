@@ -19,6 +19,7 @@ const FollowControler = {
     this.followStatus = await this.checkIfFollowing(this.userID, this.suggestionID);
     console.log(this.followStatus)
     this.followID = await FollowModel.getFollowID(this.userID, this.suggestionID);
+    debugger
     this.followBTNRender(this.followStatus)
   },
 
@@ -83,13 +84,15 @@ const FollowViews = {
   },
 
   following () {
-    this.followBTN.classList.add("followBTN");
-    this.followBTN.classList.remove("unfollowBTN");
+    this.followBTN.classList.add("follow-btn");
+    this.followBTN.classList.remove("unfollow-btn");
+    this.followBTN.innerText = "unfollow";
   },
 
   unFollowing () {
-    this.followBTN.classList.add("unfollowBTN");
-    this.followBTN.classList.remove("followBTN");
+    this.followBTN.classList.add("unfollow-btn");
+    this.followBTN.classList.remove("follow-btn");
+    this.followBTN.innerText = "follow";
   }
 }
 FollowControler.init()
