@@ -277,7 +277,6 @@ header {
   background-color: white;
   color: blue;
   width: auto;
-
   padding: 5px;
   border-radius: 5px;
   font-size: 11px;
@@ -290,6 +289,7 @@ header {
 
 .unfollow-btn:hover {
   background-color: var(--blue-dark);
+  color: white;
   font-weight: 400;
 }
 
