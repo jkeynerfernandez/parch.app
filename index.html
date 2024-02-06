@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />  
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OparcH! MAIN</title>
-    <link rel="manifest" href="/parch.app/assets/json/manifest.webmanifest">
-    <script src="./script/active_session.js"></script>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="manifest" href="/parch.app/assets/json/manifest.webmanifest" />
+    <!-- <script src="./script/active_session.js"></script> -->
+    <link rel="stylesheet" href="./css/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -14,88 +14,101 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
     <script type="module" src="./script/search_bar.js" defer></script>
     <script type="" src="./script/index.js" defer></script>
-
-    
-
   </head>
   <body>
-    <!--TRIED02-->
     <!--Los containers son los contedores de los boxes-->
     <!-- Las cajas son las contenedores de los elementos-->
-<section id="ohparch-app">
-
-  <!-- Header con sesiòn logeada -->
-  <!-- <header id="header-logged">
-    <div class="box-logo">
-      <img src="./assets/img/logo-sin-slogan.png" alt="Logo OparcH!" />
-    </div>
-
-    <div class="box-profile">
-      <div class="box-nickname">
-        <h4>@KevinDazaR</h4>
-        <p>
-          <i class="fa-solid fa-circle"></i>
-          desparchado
-      </p>
-      </div>
-
-      <div class="box-profile-img">
-        <img src="./assets/img/profile_example1" alt="profile image" />+
-      </div>
-    </div>
-  </header> -->
-
-    <!-- Header sin sesiòn logeada -->
-  <header id="header-not-logged">
-    <div class="box-logo">
-      <img src="./assets/img/logo-sin-slogan.png" alt="Logo OparcH!" />
-    </div>
-
-    <nav class="box-profile">
-      <a href="./views/login.html">join or log in</a>
-    </nav>
-
-
-  </header>
-
-
-  <section id="section-container-top-sections">
-    <div class="container-box-left-top-sections">
-      <nav class="box-hamburger-menu">
-        <i class="fa-solid fa-bars"></i>
-      </nav>
-
-      <h4 class="text-hamburger-menu">Explore and know...</h4>
-    </div>
-
-    <div class="container-box-right-top-sections">
-
-      <div class="box-searcher">
-          <!-- <div class="box-btn-img-searcher"> -->
-          <i class="fa-solid fa-magnifying-glass i-lupa-img"></i>
-          <input id="input-buscar" maxlength="20" type="text" placeholder="get into the parch..." class="input-buscar"/>
-          
-          <div class="box-search-for">
-
-            <label for="for-account">account</label>
-            <input id="for-account" type="checkbox" name="search-for" value="account">
-    
-            <label for="for-place">place</label>
-            <input id="for-place" type="checkbox" name="search-for" value="place">
-    
-            <label for="for-post">post</label>
-            <input id="for-post" type="checkbox" name="search-for" value="post">
-    
+    <section id="ohparch-app">
+      <!-- Header con sesiòn logeada -->
+      <header id="header-logged">
+        <div class="box-logo">
+          <img src="./assets/img/logo-sin-slogan.png" alt="Logo OparcH!" />
         </div>
 
-        <div class="box-inputbuscar-suggestions">
-          <!-- <li>@KevinDazaRsadas</li>
+        <div class="box-profile">
+          <div class="box-nickname">
+            <h4>@KevinDazaR</h4>
+            <p>
+              <i class="fa-solid fa-circle"></i>
+              desparchado
+            </p>
+          </div>
+
+          <div class="box-profile-img">
+            <img src="./assets/img/profile_example1" alt="profile image" />
+          </div>
+        </div>
+      </header>
+
+      <!-- Header sin sesiòn logeada -->
+      <!-- <header id="header-not-logged">
+        <div class="box-logo">
+          <img src="./assets/img/logo-sin-slogan.png" alt="Logo OparcH!" />
+        </div>
+
+        <nav class="box-profile">
+          <a href="./views/login.html">join or log in</a>
+        </nav>
+      </header> -->
+
+      <section id="section-container-top-sections">
+        <div class="container-box-left-top-sections">
+          <nav class="box-hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+          </nav>
+
+          <h4 class="text-hamburger-menu">Explore and know...</h4>
+        </div>
+
+        <div class="container-box-right-top-sections">
+          <div class="box-searcher">
+            <!-- <div class="box-btn-img-searcher"> -->
+            <i class="fa-solid fa-magnifying-glass i-lupa-img"></i>
+            <input
+              id="input-buscar"
+              maxlength="20"
+              type="text"
+              placeholder="get into the parch..."
+              class="input-buscar"
+            />
+
+            <div class="box-search-for">
+              <label for="for-account">account</label>
+              <input
+                id="for-account"
+                type="checkbox"
+                name="search-for"
+                value="account"
+              />
+
+              <label for="for-place">place</label>
+              <input
+                id="for-place"
+                type="checkbox"
+                name="search-for"
+                value="place"
+              />
+
+              <label for="for-post">post</label>
+              <input
+                id="for-post"
+                type="checkbox"
+                name="search-for"
+                value="post"
+              />
+            </div>
+
+            <div class="box-inputbuscar-suggestions">
+              <!-- <li>@KevinDazaRsadas</li>
           <li>@KevinDazaRsadas</li>
           <li>@KevinDazaRsadas</li>
           <li>@KevinDazaRsadas</li>
@@ -105,177 +118,197 @@
           <li>@KevinDazaRsadas</li>
           <li>@KevinDazaRsadas</li>
           <li>@KevinDazaRsadas</li> -->
+            </div>
+            <!-- </div> -->
+          </div>
         </div>
-      <!-- </div> -->
-      </div>
-    </div>
+      </section>
 
-  </section>
-  
-  <section id="user-actual-location">
-
-    <div class="box-actual-location">
-      <i class="fa-solid fa-location-dot"></i>
-      <p>You are located in Riwi, Medellín</p>
-    </div>
-    
-  </section>
-
-  <main id="main-content">
-
-
-    <!--pasando en el momento -->
-    <section id="section-container-content">
-
-      <div class="box-principal-title">
-        <h2>It's happening right now</h2>
-      </div>
-
-      <div id="container-box-post-happening" class="container-box-post-happening">
-        <div class="container-arrows-carrousel">
-          <button  class="scroll-button" id="left-arrow-index" onclick="scrollLeftNx()" ></button>
-          <button  class="scroll-button" id="right-arrow-index" onclick="scrollRightNx()" ></button>
+      <section id="user-actual-location">
+        <div class="box-actual-location">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>You are located in Riwi, Medellín</p>
         </div>
+      </section>
 
-      </div>
-      
-      
-    </section>
-    <!---->
+      <main id="main-content">
+        <!--pasando en el momento -->
+        <section id="section-container-content">
+          <div class="box-principal-title">
+            <h2>It's happening right now</h2>
+          </div>
 
+          <div
+            id="container-box-post-happening"
+            class="container-box-post-happening"
+          >
+            <div class="container-arrows-carrousel">
+              <button
+                class="scroll-button"
+                id="left-arrow-index"
+                onclick="scrollLeftNx()"
+              ></button>
+              <button
+                class="scroll-button"
+                id="right-arrow-index"
+                onclick="scrollRightNx()"
+              ></button>
+            </div>
+          </div>
+        </section>
+        <!---->
 
-    <!--está por pasar -->
-    <section id="section-almost-happening">
-      <div class="box-title-almost-happening"> <h3>almost <br>happening
-      </h3></div>
+        <!--está por pasar -->
+        <section id="section-almost-happening">
+          <div class="box-title-almost-happening">
+            <h3>almost <br />happening</h3>
+          </div>
 
+          <div
+            id="box-container-carrousel-events"
+            class="box-container-carrousel-events"
+          >
+            <div class="container-arrows-carrousel">
+              <button id="left-arrow-index"></button>
+              <button id="right-arrow-index"></button>
+            </div>
+          </div>
+        </section>
+        <!---->
 
-      <div id = "box-container-carrousel-events"class="box-container-carrousel-events">
-        <div class="container-arrows-carrousel">
-          <button id="left-arrow-index"></button>
-          <button id="right-arrow-index"></button>
+        <!--eventos con entrada Gratis -->
+        <section id="section-more-recomendations">
+          <h3>Free</h3>
+          <div id="box-container-free" class="box-container-free"></div>
+        </section>
+        <!---->
+
+        <section id="about-us">
+          <div class="box-separator-section-about-us">
+            <h4>Get ready to live incredible experiences.</h4>
+            <h4>
+              Welcome to <b>OhparcH!</b> , where fun is just a
+              <a href="#">click</a> away!
+            </h4>
+          </div>
+
+          <div class="box-tittle-about-us">
+            <h4>about us</h4>
+          </div>
+
+          <h5>
+            OparcH!
+            <span
+              >Your partner for discovering and sharing activities with
+              yours.</span
+            >
+          </h5>
+
+          <p>
+            Have you ever wondered what exciting activities are happening around
+            you?, so welcome to the platform designed to connect the community
+            and make every day a new adventure.
+          </p>
+
+          <h5>Our objective</h5>
+
+          <h6>Discover life near you!</h6>
+
+          <p>
+            OhparcH! It's more than an app, it's your gateway to a world of
+            local possibilities. From nature walks to club events, we offer you
+            a complete list of activities you can enjoy in your city. Whether
+            you're looking for something active, cultural, or just relaxing,
+            ParchApp has something for everyone.
+          </p>
+
+          <h6>How it works... Social and simple.</h6>
+
+          <p>
+            The magic of OhparcH! lies in its community focus. The users
+            themselves are the protagonists, constantly updating the status of
+            events, sharing their experiences and recommendations. Did you find
+            an amazing place to dance salsa on Friday nights? Or maybe you
+            discovered a book club in the park? Share it on ParchApp and make
+            others enjoy the experience too.
+          </p>
+
+          <h5>You need more?</h5>
+
+          <h6>Explore</h6>
+
+          <p>
+            Find exciting activities near you with ease. Real-Time Update: The
+            community updates the status of events to keep information fresh and
+            relevant.
+          </p>
+
+          <h6>We are full of options</h6>
+          <p>
+            From parches at night, in the day, art, music, sunny days, walks, to
+            sports and study, OhparcH! covers all areas of interest.
+          </p>
+
+          <h6>Interact and Meet New People</h6>
+          <p>
+            Interact and Meet New People: Comment, share and connect with people
+            who share your interests.
+          </p>
+
+          <h6>Join the OhparcH community</h6>
+          <p>
+            OhparcH!, is not just an application; It is a vibrant and constantly
+            growing community. Join us to discover new activities, make friends
+            and share experiences. Together, we are redefining the way we
+            explore and enjoy our city.
+          </p>
+
+          <footer id="footer-about-us"></footer>
+        </section>
+      </main>
+
+      <nav id="menu-bot">
+        <a href="index.html" class="boxes-menu-bot box-home">
+          <i class="fa-solid fa-house"></i>
+          <span>home</span>
+        </a>
+
+        <a href="./views/explore.html" class="boxes-menu-bot box-explore">
+          <i class="fa-solid fa-house"></i>
+          <span>explore</span>
+        </a>
+
+        <a href="./views/publicar.html" class="boxes-menu-bot box-publicar">
+          <i class="fa-solid fa-house"> <span>post</span></i>
+        </a>
+
+        <a href="./views/mesages.html" class="boxes-menu-bot box-post">
+          <i class="fa-solid fa-house"></i>
+          <span>notifications</span>
+        </a>
+
+        <a href="./views/me.html" class="boxes-menu-bot box-me">
+          <i class="fa-solid fa-user"></i>
+          <span>me</span>
+        </a>
+      </nav>
+
+      <div class="loader-screen">
+        <div class="sk-bounce">
+          <img src="../assets/img/logo-con-slogan.png" alt="" />
+          <div class="sk-bounce-dot"></div>
+          <div class="sk-bounce-dot"></div>
         </div>
-
-      </div>
-      
-    </section>
-    <!---->
-
-
-    <!--eventos con entrada Gratis -->
-    <section id="section-more-recomendations">
-      <h3>Free</h3>
-      <div id="box-container-free" class="box-container-free">
-          
-        
       </div>
     </section>
-    <!---->
-
-
-    <section id="about-us">
-
-      <div class="box-separator-section-about-us">
-        <h4>Get ready to live incredible experiences.
-        </h4>
-        <h4>
-          Welcome to <b>OhparcH!</b> , where fun is just a <a href="#">click</a> away!
-        </h4>
-      </div>
-
-      <div class="box-tittle-about-us">
-        <h4>about us</h4>
-      </div>
-
-      <h5>OparcH! <span>Your partner for discovering and sharing activities with yours.</span></h5>
-
-      <p>
-        Have you ever wondered what exciting activities are happening around you?, so welcome to the platform designed to connect the community and make every day a new adventure.</p>
-
-      <h5>Our objective</h5>
-
-      <h6>Discover life near you!
-      </h6>
-
-      <p>
-        OhparcH! It's more than an app, it's your gateway to a world of local possibilities. From nature walks to club events, we offer you a complete list of activities you can enjoy in your city. Whether you're looking for something active, cultural, or just relaxing, ParchApp has something for everyone.
-      </p>
-
-      <h6>How it works... Social and simple.</h6>
-
-      <p>The magic of OhparcH! lies in its community focus. The users themselves are the protagonists, constantly updating the status of events, sharing their experiences and recommendations. Did you find an amazing place to dance salsa on Friday nights? Or maybe you discovered a book club in the park? Share it on ParchApp and make others enjoy the experience too.</p>
-
-      <h5>You need more?</h5>
-
-      <h6>Explore</h6>
-
-      <p>Find exciting activities near you with ease.
-        Real-Time Update: The community updates the status of events to keep information fresh and relevant.
-      </p>
-
-      <h6> We are full of options
-      </h6>
-      <p>From parches at night, in the day, art, music, sunny days, walks, to sports and study, OhparcH! covers all areas of interest.</p>
-
-      <h6>Interact and Meet New People</h6>
-      <p>Interact and Meet New People: Comment, share and connect with people who share your interests.</p>
-
-      <h6>Join the OhparcH community</h6>
-      <p>OhparcH!, is not just an application; It is a vibrant and constantly growing community. Join us to discover new activities, make friends and share experiences. Together, we are redefining the way we explore and enjoy our city.</p>
-
-      <footer id="footer-about-us">
-        
-      </footer>
-
-    </section>
-
-
-  </main>
-
-  <nav id="menu-bot">
-
-    <a href="index.html" class="boxes-menu-bot box-home">
-      <i class="fa-solid fa-house"></i>
-      <span>home</span>
-    </a>
-
-    <a href="./views/explore.html" class="boxes-menu-bot box-explore">
-      <i class="fa-solid fa-house"></i>
-      <span>explore</span>
-    </a>
-
-    <a href="./views/publicar.html" class="boxes-menu-bot box-publicar">
-      <i class="fa-solid fa-house"> <span>post</span></i>
-    </a>
-
-
-    <a href="./views/mesages.html" class="boxes-menu-bot box-post">
-      <i class="fa-solid fa-house"></i>
-      <span>notifications</span>
-    </a>
-
-    <a href="./views/me.html" class="boxes-menu-bot box-me">
-      <i class="fa-solid fa-user"></i>
-      <span>me</span>
-    </a>
-  </nav>
-
-
-  <div class="loader-screen">
-    <div class="sk-bounce">
-        <img src="../assets/img/logo-con-slogan.png" alt="">
-      <div class="sk-bounce-dot"></div>
-      <div class="sk-bounce-dot"></div>
-    </div>
-  </div>
-
-</section>
-  <!-- Service worker for mobile aplication -->
-  <script>
-    if('serviceWorker' in navigator) {
-      console.log("it exist")
-            navigator.serviceWorker.register('/parch.app/script/sw.js', { scope: '/parch.app/' });
-    }
-  </script>
-</body>
+    <!-- Service worker for mobile aplication -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        console.log("it exist");
+        navigator.serviceWorker.register("/parch.app/script/sw.js", {
+          scope: "/parch.app/",
+        });
+      }
+    </script>
+  </body>
 </html>

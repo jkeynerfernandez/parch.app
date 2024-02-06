@@ -31,13 +31,13 @@ button {
 
 :root {
   --main-pink-color: #ff0984;
-  --red-pink-color:#e50d5a;
-  --green-pastel:#31e061;
-  --green-flour:#0bf21c;
-  --blue-pastel:#1c73e7;
-  --blue-dark:#143da8;
-  --yelow-fluo:#f7e336;
-  --yellow-pastel:#ffde59;
+  --red-pink-color: #e50d5a;
+  --green-pastel: #31e061;
+  --green-flour: #0bf21c;
+  --blue-pastel: #1c73e7;
+  --blue-dark: #143da8;
+  --yelow-fluo: #f7e336;
+  --yellow-pastel: #ffde59;
   --main-bg-color: white;
   --color-navs-bar: #f8f2f2;
   --desparchado-status: rgb(3, 168, 66);
@@ -264,18 +264,33 @@ header {
   left: 110px;
 }
 
-.box-follow button {
+.follow-btn {
   width: 52px;
-  background-color: white;
-  color: blue;
+  background-color: blue;
+  color: white;
   padding: 5px;
   border-radius: 5px;
   font-size: 11px;
 }
 
-.box-follow button:hover {
-  background-color: blue;
+.unfollow-btn {
+  background-color: white;
+  color: blue;
+  width: auto;
+
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 11px;
+}
+
+.follow-btn:hover {
+  background-color: rgb(10, 10, 214);
   color: white;
+}
+
+.unfollow-btn:hover {
+  background-color: var(--blue-dark);
+  font-weight: 400;
 }
 
 #section-mid-profile {
@@ -628,7 +643,7 @@ header {
   align-items: center;
   gap: 10px;
   bottom: 0;
-  z-index: 999; 
+  z-index: 999;
   position: sticky;
   border-top: black 2px solid;
 }
