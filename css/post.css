@@ -28,13 +28,13 @@ button {
 
 :root {
   --main-pink-color: #ff0984;
-  --red-pink-color:#e50d5a;
-  --green-pastel:#31e061;
-  --green-flour:#0bf21c;
-  --blue-pastel:#1c73e7;
-  --blue-dark:#143da8;
-  --yelow-fluo:#f7e336;
-  --yellow-pastel:#ffde59;
+  --red-pink-color: #e50d5a;
+  --green-pastel: #31e061;
+  --green-flour: #0bf21c;
+  --blue-pastel: #1c73e7;
+  --blue-dark: #143da8;
+  --yelow-fluo: #f7e336;
+  --yellow-pastel: #ffde59;
   --main-bg-color: white;
   --color-navs-bar: #f8f2f2;
   --desparchado-status: rgb(3, 168, 66);
@@ -86,6 +86,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#log-out {
+  width: 100%;
+  font-size: 12px;
+  color: var(--yelow-fluo);
+  text-decoration: underline;
 }
 
 .box-nickname {
@@ -187,11 +194,9 @@ header {
   border: aqua 1.5px solid;
 }
 
-
-
 /*START CHECKBOX BY*/
 
-#input-buscar:focus-within ~ .box-inputbuscar-suggestions{
+#input-buscar:focus-within ~ .box-inputbuscar-suggestions {
   display: block;
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -203,12 +208,12 @@ header {
   z-index: 9999;
 }
 
-#input-buscar:focus-within + .box-search-for,.box-search-for:hover{
+#input-buscar:focus-within + .box-search-for,
+.box-search-for:hover {
   top: 24px;
 }
 
-
-.box-search-for{
+.box-search-for {
   width: 96%;
   height: 25px;
   position: absolute;
@@ -219,32 +224,27 @@ header {
   top: 0px;
   z-index: 1;
   transition-duration: 1s;
- transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-
-.box-search-for label{
+.box-search-for label {
   font-size: 12px;
   margin-right: 5px;
-  color:blue;
+  color: blue;
 }
 
-.box-search-for input{
+.box-search-for input {
   margin-right: 10px;
-
 }
 
+/* SUGGESTIONS SEARCHER */
 
-
-    /* SUGGESTIONS SEARCHER */ 
-    
-.box-inputbuscar-suggestions{
+.box-inputbuscar-suggestions {
   width: 96%;
   max-height: 280px;
   top: 42px;
   position: absolute;
-  background-color:white;
+  background-color: white;
   padding: 10px;
   z-index: 999 !important;
   display: none;
@@ -258,37 +258,34 @@ header {
   border-left: gray 0.2px solid;
   border-right: gray 0.2px solid;
   border-bottom: gray 0.2px solid;
-
 }
 
-.box-inputbuscar-suggestions li{
+.box-inputbuscar-suggestions li {
   color: black;
   margin-top: 5px;
-  transition:cubic-bezier(0.215, 0.610, 0.355, 1);
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-duration: 0.4s;
 }
 
-.box-inputbuscar-suggestions li:hover{
+.box-inputbuscar-suggestions li:hover {
   color: blue;
   font-size: 17px;
   border: gray 1px solid;
   cursor: pointer;
   text-decoration: none;
-  transition:cubic-bezier(0.215, 0.610, 0.355, 1);
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-duration: 0.2s;
 }
 
-        /* ENDSUGGESTIONS SEARCHER */ 
+/* ENDSUGGESTIONS SEARCHER */
 
 /********************************************************/
-
-
 
 /* MAIN - EVENT */
 
 #post-section-info {
   width: 100%;
-height: auto;
+  height: auto;
   padding-bottom: 20px;
   background-color: var(--main-pink-color);
   padding-top: 20px;
@@ -472,7 +469,8 @@ height: auto;
   color: blue;
 }
 
-#nickname-post:hover, #nickname-post:active {
+#nickname-post:hover,
+#nickname-post:active {
   cursor: pointer;
   border-radius: 5px;
   background-color: rgba(0, 0, 255, 0.041);
@@ -573,7 +571,8 @@ height: auto;
   color: blue;
 }
 
-.box-bot-event-type a:hover, .box-bot-event-type a:active {
+.box-bot-event-type a:hover,
+.box-bot-event-type a:active {
   text-decoration: underline;
   cursor: pointer;
   border-radius: 5px;
@@ -638,7 +637,8 @@ height: auto;
   font-size: 14px;
 }
 
-.box-container-insignes i:hover, .box-container-insignes i:active {
+.box-container-insignes i:hover,
+.box-container-insignes i:active {
   border: #ff0984 1px solid;
   color: #ff0984;
   background-color: white;
@@ -675,13 +675,11 @@ height: auto;
   font-style: italic;
 }
 
-#price-event b{
+#price-event b {
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
-  }
-  
-  
+}
 
 #views-event {
   font-size: 14px;
@@ -707,7 +705,8 @@ height: auto;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.box-container-actions-event i:hover, .box-container-actions-event i:active {
+.box-container-actions-event i:hover,
+.box-container-actions-event i:active {
   cursor: pointer;
   background-color: rgb(235 51 144);
   color: white;
@@ -730,7 +729,8 @@ height: auto;
   border-radius: 3px;
 }
 
-.box-btn-parch button:hover, .box-btn-parch button:active{
+.box-btn-parch button:hover,
+.box-btn-parch button:active {
   cursor: pointer;
   background-color: var(--main-pink-color);
   color: white;
@@ -738,14 +738,6 @@ height: auto;
 }
 
 /* END MAIN - EVENT */
-
-
-
-
-
-
-
-
 
 /*BOT MENU - FIXED */
 
@@ -770,7 +762,6 @@ height: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 .boxes-menu-bot i {
@@ -790,16 +781,15 @@ height: auto;
   color: white;
 }
 
-
-.box-publicar{
+.box-publicar {
   position: relative;
   height: 100px;
   height: 100px;
   bottom: 10px;
-  margin: 0px 10px 0px 10px ;
+  margin: 0px 10px 0px 10px;
 }
 
-.box-publicar i{
+.box-publicar i {
   position: relative;
   height: 90px;
   font-size: 35px;
@@ -810,6 +800,6 @@ height: auto;
   gap: 10px;
 }
 
-.box-publicar span{
-color: black;
+.box-publicar span {
+  color: black;
 }

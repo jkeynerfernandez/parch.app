@@ -28,13 +28,13 @@ button {
 
 :root {
   --main-pink-color: #ff0984;
-  --red-pink-color:#e50d5a;
-  --green-pastel:#31e061;
-  --green-flour:#0bf21c;
-  --blue-pastel:#1c73e7;
-  --blue-dark:#143da8;
-  --yelow-fluo:#f7e336;
-  --yellow-pastel:#ffde59;
+  --red-pink-color: #e50d5a;
+  --green-pastel: #31e061;
+  --green-flour: #0bf21c;
+  --blue-pastel: #1c73e7;
+  --blue-dark: #143da8;
+  --yelow-fluo: #f7e336;
+  --yellow-pastel: #ffde59;
   --main-bg-color: white;
   --color-navs-bar: #f8f2f2;
   --desparchado-status: rgb(3, 168, 66);
@@ -86,6 +86,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#log-out {
+  width: 100%;
+  font-size: 12px;
+  color: var(--yelow-fluo);
+  text-decoration: underline;
 }
 
 .box-nickname {
@@ -187,11 +194,9 @@ header {
   border: aqua 1.5px solid;
 }
 
-
-
 /*START CHECKBOX BY*/
 
-#input-buscar:focus-within ~ .box-inputbuscar-suggestions{
+#input-buscar:focus-within ~ .box-inputbuscar-suggestions {
   display: block;
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -204,12 +209,12 @@ header {
   z-index: 9999;
 }
 
-#input-buscar:focus-within + .box-search-for,.box-search-for:hover{
+#input-buscar:focus-within + .box-search-for,
+.box-search-for:hover {
   top: 24px;
 }
 
-
-.box-search-for{
+.box-search-for {
   width: 96%;
   height: 25px;
   position: absolute;
@@ -220,32 +225,27 @@ header {
   top: 0px;
   z-index: 1;
   transition-duration: 1s;
- transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-
-.box-search-for label{
+.box-search-for label {
   font-size: 12px;
   margin-right: 5px;
-  color:blue;
+  color: blue;
 }
 
-.box-search-for input{
+.box-search-for input {
   margin-right: 10px;
-
 }
 
+/* SUGGESTIONS SEARCHER */
 
-
-    /* SUGGESTIONS SEARCHER */ 
-    
-.box-inputbuscar-suggestions{
+.box-inputbuscar-suggestions {
   width: 96%;
   max-height: 280px;
   top: 42px;
   position: absolute;
-  background-color:white;
+  background-color: white;
   padding: 10px;
   z-index: 999 !important;
   display: none;
@@ -259,30 +259,28 @@ header {
   border-left: gray 0.2px solid;
   border-right: gray 0.2px solid;
   border-bottom: gray 0.2px solid;
-
 }
 
-.box-inputbuscar-suggestions li{
+.box-inputbuscar-suggestions li {
   color: black;
   margin-top: 5px;
-  transition:cubic-bezier(0.215, 0.610, 0.355, 1);
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-duration: 0.4s;
 }
 
-.box-inputbuscar-suggestions li:hover{
+.box-inputbuscar-suggestions li:hover {
   color: blue;
   font-size: 17px;
   border: gray 1px solid;
   cursor: pointer;
   text-decoration: none;
-  transition:cubic-bezier(0.215, 0.610, 0.355, 1);
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-duration: 0.2s;
 }
 
-        /* ENDSUGGESTIONS SEARCHER */ 
+/* ENDSUGGESTIONS SEARCHER */
 
 /********************************************************/
-
 
 /* START MAIN - MESSAGE*/
 
@@ -315,6 +313,8 @@ header {
   border-radius: 4px;
   display: flex;
   margin: 15px auto;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .message-box:active {
