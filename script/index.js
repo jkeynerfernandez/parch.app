@@ -1,3 +1,27 @@
+//importar datos de usuario 
+//import { getLocalStorage, setLocalStorage } from "./local_storage.js";
+//let UserLog= getLocalStorage("userToken")//trae el user id
+//console.log(UserLog)
+
+//llamar usuario 
+
+// let promesaInicion = fetch(`https://parchapp.onrender.com/users/${UserLog}`)//https://parchapp.onrender.com/services
+// .then(response =>{
+//     return response.json()
+// }).then(data =>{
+
+// let boxNickName= document.getElementById("box-nickname");
+// boxNickName.innerHTML = 
+// `<h4>@${data.name}</h4>
+// <p>
+//   <i class="fa-solid fa-circle"></i>
+//   desparchado
+// </p>`
+// });
+
+//________________________
+
+
 let sectionContainerContent= document.getElementById("section-container-content");
 let boxContainerCarrouselEvents=document.getElementById("box-container-carrousel-events");
 let containerBoxPostHappening =document.getElementById("container-box-post-happening")//contenedor para lo que está pasando ahora 
@@ -24,7 +48,7 @@ let systemHour=1400;
  
 
 
-let promesa = fetch("http://localhost:3000/services")
+let promesa = fetch("https://parchapp.onrender.com/services")//https://parchapp.onrender.com/services
 .then(response =>{
     return response.json()
 }).then(data =>{
@@ -47,13 +71,18 @@ let promesa = fetch("http://localhost:3000/services")
         let boxPostHappeningExample = document.createElement('div');
         boxPostHappeningExample.classList.add('box-post-happening-example');
 
-        // Crear la imagen de la publicación
-        let imgHappeningPost = document.createElement('img');
+        // Crear la imagen de la publicaciónt
+        let referencePotsInfo = document.createElement("a");
+        referencePotsInfo.href="./views/post.html"
+
+        let imgHappeningPost = document.createElement("img");
         imgHappeningPost.classList.add('img-happening-post');
         imgHappeningPost.src = elemento.img;
         
         // Añadir la imagen al contenedor de ejemplo de publicación
-        boxPostHappeningExample.appendChild(imgHappeningPost);
+      
+        referencePotsInfo.appendChild(imgHappeningPost);
+        boxPostHappeningExample.appendChild(referencePotsInfo);
         //_____________________________________________________________//
 
         // Crear el contenedor de información de la publicación
@@ -68,7 +97,7 @@ let promesa = fetch("http://localhost:3000/services")
         let boxLeftPostInfo = document.createElement('div');
         boxLeftPostInfo.classList.add('box-left-post-info');
 
-        let promesaUsusrio = fetch(`http://localhost:3000/users/${elemento.creatorID}`)
+        let promesaUsusrio = fetch(`https://parchapp.onrender.com/users/${elemento.creatorID}`)
         .then(response =>{
           return response.json()
         }).then (data => {
@@ -304,7 +333,7 @@ let promesa = fetch("http://localhost:3000/services")
 })
 //////////////////////FREE EVENTS /////////////7777//////
 
-let promesaFree = fetch("http://localhost:3000/services")
+let promesaFree = fetch("https://parchapp.onrender.com/services")
 .then(response =>{
   return response.json()
 })

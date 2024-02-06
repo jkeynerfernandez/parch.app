@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="/script/bottom_nav.js" defer></script>
+   
+    <script type="module" src="../script/publicar.js" defer></script>
   </head>
   </head>
   <body>
@@ -88,9 +90,15 @@
                   </div>
 
                   <div class="boxes-publicar box-place-publicar">
+                    <label for="place-input">Category:</label>
+                    <span>choose a category for the post</span>
+                    <input id="category-event" type="text" max="30" min="1" placeholder="Ejm: musica">
+                 </div>
+
+                  <div class="boxes-publicar box-place-publicar">
                       <label for="place-input">Place:</label>
                       <span>choose a place for the post</span>
-                      <input type="text" max="30" min="1" placeholder="Ejm: Jardìn Botànico">
+                      <input id="place-publicar" type="text" max="30" min="1" placeholder="Ejm: Jardìn Botànico">
                   </div>
 
                   <div class="boxes-publicar box-day-hour-publicar">
@@ -236,7 +244,7 @@
 
 
                   <div class="boxes-publicar box-btn-publicar">
-                      <button id="btn-post-publicar">post</button>
+                      <button id="btn-post-publicar" type="button" >post</button>
                   </div>
 
                 </div>
