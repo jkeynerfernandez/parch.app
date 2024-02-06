@@ -3,6 +3,22 @@
   --background-color : blue;
 }
 
+
+:root {
+  --main-pink-color: #ff0984;
+  --red-pink-color:#e50d5a;
+  --green-pastel:#31e061;
+  --green-flour:#0bf21c;
+  --blue-pastel:#1c73e7;
+  --blue-dark:#143da8;
+  --yelow-fluo:#f7e336;
+  --yellow-pastel:#ffde59;
+  --main-bg-color: white;
+  --color-navs-bar: #f8f2f2;
+  --desparchado-status: rgb(3, 168, 66);
+  --green-text: rgb(59, 182, 59);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -37,13 +53,8 @@ button {
 body {
   width: 100%;
   height: 100vh;
-  background: rgb(40, 36, 107);
-  background: linear-gradient(
-    90deg,
-    rgb(45, 42, 104) 0%,
-    rgb(46, 46, 148) 47%,
-    rgb(40, 40, 139) 98%
-  );
+  background: rgb(255,9,132);
+  background: linear-gradient(90deg, rgba(255, 9, 132, 0.516) #ff0984, rgba(229,13,90,1) 50%, rgba(255,9,132,1) 100%);
   display: flex;
   justify-content: center;
   align-content: center;
@@ -53,19 +64,32 @@ body {
   width: 420px;
   height: 600px;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  background: rgba(15, 11, 94, 0.329);
+  background: rgb(255,222,89);
+  background: linear-gradient(90deg, rgba(255,222,89,1) 0%, rgba(255,226,51,1) 48%, rgba(247,227,54,1) 100%);
+  border-radius: 35px;
   position: relative;
   overflow: hidden;
+  gap: 20px;
 }
+
+#credential-container img{
+  width: 300px;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.box-container-login{
+  width: 100%;
+  height: auto;
+}
+
 
 /*---------- login seccion ----------*/
 #label_login {
@@ -166,11 +190,17 @@ body {
   background-color: rgb(40, 209, 110);
   border: 0px solid white;
   color: white;
+  margin-top: 10px;
 }
 
-#signup_form button:hover {
+#signup_form button:hover, #signup_form button:active {
   cursor: pointer;
   background-color: rgb(39, 173, 95);
+  width: 60%;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 1s;
+  color: black;
+  border: #0bf21c 2px solid;
 }
 
 .signup_form-box:hover {
@@ -185,7 +215,7 @@ body {
 /* CHECKBOX */
 
 .checkbox_agree{
-  width: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
 }
@@ -199,6 +229,55 @@ body {
   font-size: 1rem;
 }
 
+.checkbox_agree a {
+  text-decoration: underline;
+  margin-left: 2px;
+}
+
+
+.box-singup-google{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.box-singup-google img{
+  width: 50px !important;
+  height: 50px !important;
+  position: relative; 
+  background-color: white;
+  border-radius: 50%;
+  z-index: 888;
+  bottom: 6px;
+  right: -18px;
+}
+
+.box-singup-google a{
+  width: 152px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color:var(--blue-pastel);
+  border: 0px solid white;
+  color: white;
+  margin-top: 10px;
+  position: relative;
+  right: 24px;
+  font-size: 15px;
+}
+
+.box-singup-google a:hover >   .box-singup-google img{
+  right: 0px;
+}
+
+.box-singup-google img:hover, .box-singup-google a:active{
+  right: 14px;
+  cursor: pointer;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 1s;
+}
 
 
 
