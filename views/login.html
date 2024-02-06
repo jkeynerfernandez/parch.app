@@ -15,13 +15,18 @@
 <body>
   <section id="credential-container">
     <!-- Login -->
-    <label id="label_login" for="login_form">Login</label>
-    <form action="" id="login_form">
-      <input id="login_email" type="email" placeholder="examplemail@email.com" required />
-      <input id="login_password" type="password" placeholder="password" required />
-      <div id="invalid_login" class="valid-feedback">Incorrect email or password</div>
-      <button type="submit" id="button-login">Login</button>
-    </form>
+    <img src="../assets/img/logo-con-slogan.png" alt="">
+
+    <div class="box-container-login">
+      <label id="label_login" for="login_form">Login</label>
+      <form action="" id="login_form">
+        <input id="login_email" type="email" placeholder="examplemail@email.com" required />
+        <input id="login_password" type="password" placeholder="password" required />
+        <div id="invalid_login" class="valid-feedback">Incorrect email or password</div>
+        <button type="submit" id="button-login">Login</button>
+      </form>
+    </div>
+
 
     <!-- Sign up -->
     <div class="signup_form-box" id="signup-form-box">
@@ -41,11 +46,16 @@
 
         <div class="checkbox_agree">
           <input id="signup_checkbox" type="checkbox" value="agree_terms">
-          <label for="signup_checkbox">I agree with terms and conditions</label>
+          <label for="signup_checkbox">I agree with 
+            <a href="#">terms and conditions</a>
+          </label>
         </div>
-        <div>
-          <div>Signup with google</div>
+
+        <div class="box-singup-google">
+          <img src="../assets/img/google-logo.png" alt="">
+          <a href="#">Sign up with google</a>
         </div>
+
         <button type="submit" id="button-singUp">Sign Up</button>
       </form>
     </div>
