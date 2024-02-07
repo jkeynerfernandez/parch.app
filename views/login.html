@@ -15,7 +15,7 @@
   <body>
     <section id="credential-container">
       <!-- Login -->
-      <img src="../assets/img/logo-con-slogan.png" alt="" />
+      <img src="../assets/img/logo-sin-slogan.png" alt="" />
 
       <div class="box-container-login">
         <label id="label_login" for="login_form">Login</label>
@@ -86,6 +86,13 @@
         </form>
       </div>
     </section>
+    <div id="loader-screen" onclick="cerrarLoader()">
+      <div class="sk-bounce">
+        <img src="../assets/img/PURPLE-LOGO.png  " alt="" />
+        <div class="sk-bounce-dot"></div>
+        <div class="sk-bounce-dot"></div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -98,7 +105,13 @@
         navigator.serviceWorker.register("/parch.app/script/sw.js", {
           scope: "/parch.app/",
         });
-      }
+      } 
+
+      setTimeout(      function cerrarLoader(){
+        document.getElementById('loader-screen').style.display="none"
+      },2000)
+
+
     </script>
   </body>
 </html>

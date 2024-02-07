@@ -18,7 +18,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script src="../script/bottom_nav.js" defer></script>
+    <script src="/script/explore.js"></script>
+    <!-- <script src="../script/bottom_nav.js" defer></script> -->
   </head>
   <body>
     <!--Los containers son los contedores de los boxes-->
@@ -26,7 +27,7 @@
     <section id="ohparch-app">
       <header id="header-logged">
         <div class="box-logo">
-          <img src="../assets/img/logo-sin-slogan.png" alt="Logo OparcH!" />
+          <img src="../assets/img/logo-con-slogan.png" alt="Logo OparcH!" />
         </div>
 
         <div class="box-profile">
@@ -47,7 +48,7 @@
 
       <section id="section-container-top-sections">
         <div class="container-box-left-top-sections">
-          <nav class="box-hamburger-menu">
+          <nav class="box-hamburger-menu" onclick="desplegarMenu()" ondblclick="esconderMenu()">
             <i class="fa-solid fa-bars"></i>
             <!-- <input id="checkbox-hamburger-menu" type="checkbox"> -->
           </nav>
@@ -100,7 +101,7 @@
 
       <main id="content-explorer">
         <div id="box-container-search-for">
-          <div class="box-left-side">
+          <div id="box-left-side">
             <span id="filter-for">Filter for</span>
 
             <div class="box-for-date">
@@ -278,7 +279,7 @@
         </div>
 
         <!-- CON DESCRIPCIÒN Y INCLUDE -->
-        <div class="container-boxes-event">
+        <div id="container-boxes-event">
           <div class="box-carrousel-event">
             <!-- <div class="img-event-content"></div> -->
             <!-- <img src="../imgs/peñol" alt="img-event"> -->
@@ -401,7 +402,32 @@
         </div>
       </main>
 
-      <nav id="menu-bot"></nav>
+      <nav id="menu-bot">
+        <a href="../index.html" class="boxes-menu-bot box-home">
+          <img src="../assets/img/home.png" alt="">
+          <span>home</span>
+        </a>
+
+        <a href="../views/explore.html" class="boxes-menu-bot box-explore">
+          <img src="../assets/img/explore.png" alt="">
+          <span>explore</span>
+        </a>
+
+        <a id="post-box" href="../views/publicar.html" class="boxes-menu-bot box-publicar">
+          <img id="post-img" src="../assets/img/post.png" alt="">
+          <span>post</span></i>
+        </a>
+
+        <a href="../views/mesages.html" class="boxes-menu-bot box-post">
+          <img src="../assets/img/notifications.png" alt="">
+          <span>notifications</span>
+        </a>
+
+        <a href="../views/me.html" class="boxes-menu-bot box-me">
+          <img src="../assets/img/me.png" alt="">
+          <span>me</span>
+        </a>
+      </nav>
     </section>
   </body>
 </html>
