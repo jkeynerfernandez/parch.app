@@ -1,0 +1,77 @@
+/* Config */
+:root {
+  --sk-size: 200px;
+  --main-pink-color: #ff0984;
+
+;
+
+
+/* END ANIMATION SCREEN */ 
+
+}
+
+.loader-screen{
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+
+
+.loader-screen img{
+    width: 300px;
+    height: 200px;
+    animation: logo 3s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955); 
+    position: relative;
+    z-index: 9999;
+}
+
+
+@keyframes logo {
+    0%, 100% {
+      transform: scale(0);
+    } 
+    35%, 55% {
+      transform: scale(1); 
+    } 
+    65%, 85% {
+        transform: scale(2); 
+      } 
+    85%, 100% {
+        transform: scale(0); 
+      } 
+  }
+  
+
+.sk-bounce {
+  width: var(--sk-size);
+  height: var(--sk-size);
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+}
+
+.sk-bounce-dot {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--main-pink-color);
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  animation: sk-bounce 2s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955); 
+}
+
+.sk-bounce-dot:nth-child(2) { animation-delay: -1.0s; }
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+  } 45%, 55% {
+    transform: scale(1); 
+  } 
+}
+
+
+
+/* END ANIMATION SCREEN */ 

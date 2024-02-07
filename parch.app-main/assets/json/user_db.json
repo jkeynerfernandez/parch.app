@@ -1,0 +1,91 @@
+{
+  "users": [
+    {
+      "name": "Jose Luis Montero",
+      "id_name": "@joseLuis21",
+      "email": "exampleUser@email.com",
+      "password": "mySecurePassword",
+      "profile_photo": "joseLuis21_image.jpg",
+      "about": "Le gusta los viajes a publitos, como la piedra del penol y las motocicletas",
+      "status": "desparchado",
+      "post_counter": 3,
+      "parche_counter": 7,
+      "credibility": 9.7,
+      "parche_points": 772,
+      "follower_counter": 2100,
+      "following": 120,
+      "last_login": "21/04/2024",
+      "account_created": "01/09/2020",
+      "birthday": "10/12/2001",
+      "badges": [
+        "commentor",
+        "traveler",
+        "landscaper"
+      ],
+      "level": "Guide",
+      "enrolled_events": [
+        "200102020301",
+        "302112032"
+      ],
+      "id": "4543"
+    },
+    {
+      "name": "Pedro Jose MAria Maldonado",
+      "id_name": "@joseLuis21",
+      "email": "tutututututututuuttu@email.com",
+      "password": "mySecurePassword",
+      "profile_photo": "joseLuis21_image.jpg",
+      "about": "Le gusta los viajes a publitos, como la piedra del penol y las motocicletas",
+      "status": "desparchado",
+      "post_counter": 3,
+      "parche_counter": 7,
+      "credibility": 9.7,
+      "parche_points": 772,
+      "follower_counter": 2100,
+      "following": 120,
+      "last_login": "21/04/2024",
+      "account_created": "01/09/2020",
+      "birthday": "10/12/2001",
+      "badges": [
+        "commentor",
+        "traveler",
+        "landscaper"
+      ],
+      "level": "Guide",
+      "enrolled_events": [
+        "200102020301",
+        "302112032"
+      ],
+      "id": "debb"
+    },
+    {
+      "id": "debb",
+      "name": "Luis Mario",
+      "id_name": "@joseLuis21",
+      "email": "yoyoyoyoyoyoyoyoyooy@email.com",
+      "password": "mySecurePassword",
+      "profile_photo": "joseLuis21_image.jpg",
+      "about": "Le gusta los viajes a publitos, como la piedra del penol y las motocicletas",
+      "status": "desparchado",
+      "post_counter": 3,
+      "parche_counter": 7,
+      "credibility": 9.7,
+      "parche_points": 772,
+      "follower_counter": 2100,
+      "following": 120,
+      "last_login": "21/04/2024",
+      "account_created": "01/09/2020",
+      "birthday": "10/12/2001",
+      "badges": [
+        "commentor",
+        "traveler",
+        "landscaper"
+      ],
+      "level": "Guide",
+      "enrolled_events": [
+        "200102020301",
+        "302112032"
+      ]
+    }
+  ]
+}

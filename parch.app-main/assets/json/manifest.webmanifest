@@ -1,0 +1,18 @@
+{
+    "lang": "en-us",
+    "name": "parchAppA",
+    "short_name": "parchApp",
+    "description": "A basic temperature converter application that can convert to and from Celsius, Kelvin, and Fahrenheit",
+    "start_url": "/parch.app/",
+    "scope": "/parch.app/",
+    "background_color": "#2f3d58",
+    "theme_color": "#2f3d58",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/parch.app/assets/img/LOGO.png",
+            "sizes": "512x512"
+        }
+    ]
+}
