@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OparcH! MAIN</title>
+    <title>parchÁpp! MAIN</title>
     <link rel="manifest" href="/parch.app/assets/json/manifest.webmanifest" />
-    <script src="./script/active_session.js"></script>
+    <!-- <script src="./script/active_session.js"></script> -->
     <link rel="stylesheet" href="./css/index.css" />
     <link
       rel="stylesheet"
@@ -32,7 +32,7 @@
       <!-- Header con sesiòn logeada -->
       <header id="header-logged">
         <div class="box-logo">
-          <img src="./assets/img/logo-sin-slogan.png" alt="Logo OparcH!" />
+          <img src="./assets/img/logo-con-slogan.png" alt="Logo parchÁpp!" />
         </div>
 
         <div class="box-profile">
@@ -54,7 +54,7 @@
       <!-- Header sin sesiòn logeada -->
       <!-- <header id="header-not-logged">
         <div class="box-logo">
-          <img src="./assets/img/logo-sin-slogan.png" alt="Logo OparcH!" />
+          <img src="./assets/img/logo-sin-slogan.png" alt="Logo parchÁpp!" />
         </div>
 
         <nav class="box-profile">
@@ -189,7 +189,7 @@
           <div class="box-separator-section-about-us">
             <h4>Get ready to live incredible experiences.</h4>
             <h4>
-              Welcome to <b>OhparcH!</b> , where fun is just a
+              Welcome to <b>parchÁpp</b> , where fun is just a
               <a href="#">click</a> away!
             </h4>
           </div>
@@ -199,7 +199,7 @@
           </div>
 
           <h5>
-            OparcH!
+            parchÁpp!
             <span
               >Your partner for discovering and sharing activities with
               yours.</span
@@ -217,7 +217,7 @@
           <h6>Discover life near you!</h6>
 
           <p>
-            OhparcH! It's more than an app, it's your gateway to a world of
+            parchÁpp It's more than an app, it's your gateway to a world of
             local possibilities. From nature walks to club events, we offer you
             a complete list of activities you can enjoy in your city. Whether
             you're looking for something active, cultural, or just relaxing,
@@ -227,7 +227,7 @@
           <h6>How it works... Social and simple.</h6>
 
           <p>
-            The magic of OhparcH! lies in its community focus. The users
+            The magic of parchÁpp lies in its community focus. The users
             themselves are the protagonists, constantly updating the status of
             events, sharing their experiences and recommendations. Did you find
             an amazing place to dance salsa on Friday nights? Or maybe you
@@ -248,7 +248,7 @@
           <h6>We are full of options</h6>
           <p>
             From parches at night, in the day, art, music, sunny days, walks, to
-            sports and study, OhparcH! covers all areas of interest.
+            sports and study, parchÁpp covers all areas of interest.
           </p>
 
           <h6>Interact and Meet New People</h6>
@@ -259,7 +259,7 @@
 
           <h6>Join the OhparcH community</h6>
           <p>
-            OhparcH!, is not just an application; It is a vibrant and constantly
+            parchÁpp, is not just an application; It is a vibrant and constantly
             growing community. Join us to discover new activities, make friends
             and share experiences. Together, we are redefining the way we
             explore and enjoy our city.
@@ -271,33 +271,34 @@
 
       <nav id="menu-bot">
         <a href="index.html" class="boxes-menu-bot box-home">
-          <i class="fa-solid fa-house"></i>
+          <img src="assets/img/home.png" alt="">
           <span>home</span>
         </a>
 
         <a href="./views/explore.html" class="boxes-menu-bot box-explore">
-          <i class="fa-solid fa-house"></i>
+          <img src="assets/img/explore.png" alt="">
           <span>explore</span>
         </a>
 
-        <a href="./views/publicar.html" class="boxes-menu-bot box-publicar">
-          <i class="fa-solid fa-house"> <span>post</span></i>
+        <a id="post-box" href="./views/publicar.html" class="boxes-menu-bot box-publicar">
+          <img id="post-img" src="assets/img/post.png" alt="">
+          <span>post</span></i>
         </a>
 
         <a href="./views/mesages.html" class="boxes-menu-bot box-post">
-          <i class="fa-solid fa-house"></i>
+          <img src="assets/img/notifications.png" alt="">
           <span>notifications</span>
         </a>
 
         <a href="./views/me.html" class="boxes-menu-bot box-me">
-          <i class="fa-solid fa-user"></i>
+          <img src="assets/img/me.png" alt="">
           <span>me</span>
         </a>
       </nav>
 
-      <div class="loader-screen">
+      <div id="loader-screen">
         <div class="sk-bounce">
-          <img src="../assets/img/logo-con-slogan.png" alt="" />
+          <img src="../assets/img/PURPLE-LOGO.png  " alt="" />
           <div class="sk-bounce-dot"></div>
           <div class="sk-bounce-dot"></div>
         </div>
@@ -311,6 +312,12 @@
           scope: "/parch.app/",
         });
       }
+
+      setTimeout(      function cerrarLoader(){
+        document.getElementById('loader-screen').style.display="none"
+      },2000)
+
+
     </script>
   </body>
 </html>
