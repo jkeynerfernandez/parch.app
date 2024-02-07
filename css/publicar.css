@@ -139,12 +139,12 @@ header {
 /* START MAIN PUBLICAR SECTON */ 
 
 
-#publicar-section{
+#section-publicar{
   width: 100%;
-  background-color: rgba(128, 128, 128, 0.329);
   height: auto;
   padding: 10px;
-  margin-top: 40px;
+  display: block;
+  margin-top: 0px;
 }
 
 
@@ -348,13 +348,13 @@ header {
 
 
     /* START POST AUDIENCE WINDOW */
-  
-.box-share-with-publicar-hidden{
+
+#box-share-with-publicar-hidden{
   width: 100%;
   height: 100vh;
+  display: none;
   background-color: white;
   position: relative;
-  top: 0px;
   z-index: 777;
 }
 
@@ -608,68 +608,180 @@ header {
 
 /* END MAIN PUBLICAR SECTON */ 
   
-  /*BOT MENU - FIXED */
-  
-  #menu-bot {
-    width: 100%;
-    height: 80px;
-    background-color: var(--main-pink-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    bottom: 0;
-    z-index: 999;
-    position: sticky;
-    border-top: black 2px solid;
+/*BOT MENU - FIXED */
+
+#menu-bot {
+  width: 100%;
+  height: 80px;
+  background-color: var(--main-pink-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  bottom: 0;
+  z-index: 999;
+  position: sticky;
+  border-top: black 2px solid;
+}
+
+.boxes-menu-bot {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxes-menu-bot img {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color:var(--main-pink-color) ;
+}
+
+.boxes-menu-bot span {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--yelow-fluo) !important;
+}
+
+.box-publicar {
+  position: relative;
+  height: 100px;
+  height: 100px;
+  bottom: 10px;
+  margin: 0px 10px 0px 10px;
+}
+
+.box-publicar i {
+  position: relative;
+  height: 90px;
+  font-size: 35px;
+  width: 90px;
+  display: flex;
+
+  flex-direction: column;
+  gap: 10px;
+}
+
+.box-publicar span {
+  color: black;
+}
+
+#post-box{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: black 1px solid;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+#post-box span{
+color: var(--main-pink-color) !important;
+}
+
+#post-img{
+  width: 60px;
+  height:60px;
+  background-color: #f8f2f200 !important;
+}
+
+/*ANIMATION */
+
+/* START ANIMATION SCREEN */
+
+/* Config */
+
+:root {
+  --sk-size: 200px;
+}
+
+#loader-screen {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  /* display: flex; */
+  display: flex;
+  z-index: 9999;
+  opacity: 1;
+  background-color: #f7e336;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.sk-bounce {
+  width: 100%;
+  height: 50%;
+  margin: auto;
+  position: relative;
+  z-index: 9999;
+}
+
+.loader-screen img {
+  width: 300px;
+  height: 200px;
+  animation: logo 3s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  z-index: 999;
+}
+
+@keyframes logo {
+  0%,
+  100% {
+    transform: scale(0);
   }
-  
-  .boxes-menu-bot {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  35%,
+  55% {
+    transform: scale(1);
   }
-  
-  .boxes-menu-bot i {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    border-radius: 50%;
-    border: black 1px solid;
+  65%,
+  85% {
+    transform: scale(2);
   }
-  
-  .boxes-menu-bot span {
-    font-size: 10px;
-    font-weight: 300;
-    color: white;
+  85%,
+  100% {
+    transform: scale(0);
   }
-  
-  .box-publicar {
-    position: relative;
-    height: 100px;
-    height: 100px;
-    bottom: 10px;
-    margin: 0px 10px 0px 10px;
+}
+
+.sk-bounce {
+  width: var(--sk-size);
+  height: var(--sk-size);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.sk-bounce-dot {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  animation: sk-bounce 2s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.sk-bounce-dot:nth-child(2) {
+  animation-delay: -1s;
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
   }
-  
-  .box-publicar i {
-    position: relative;
-    height: 90px;
-    font-size: 35px;
-    width: 90px;
-    display: flex;
-  
-    flex-direction: column;
-    gap: 10px;
+  45%,
+  55% {
+    transform: scale(1);
   }
-  
-  .box-publicar span {
-    color: black;
-  }
-  
+}
+
+/* END ANIMATION SCREEN */

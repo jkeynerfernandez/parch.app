@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="../script/bottom_nav.js" defer></script>
+    <!-- <script src="../script/bottom_nav.js" defer></script> -->
     <script type="module" src="../script/publicar.js" defer></script>
   </head>
 
@@ -42,7 +42,7 @@
           </div>
         </header>
 
-           <section id="section-publicar">
+          <section id="section-publicar">
               <h3 id="create-post-tittle">create Post</h3>
               
               <div class="container-create-post">
@@ -53,7 +53,7 @@
 
                       <div class="box-mid-top-bot">
 
-                          <button id="btn-share-whith-publicar" class="btn-publicar-options">
+                          <button id="btn-share-whith-publicar" class="btn-publicar-options" onclick="showFriendsWindows()">
                               <i class="fa-solid faLS-user-groupmio"></i> 
                               Friends
                               <i class="fa-solid fa-caret-down"></i>
@@ -248,79 +248,131 @@
                 </div>
               
               </div>
-           
-              <div class="box-share-with-publicar-hidden">
+        
+          </section>
+
+            <div id="box-share-with-publicar-hidden">
                               
-                <div class="post-audience-box">
-                  <h3>Post Audience</h3>
-                  <i class="fa-solid fa-x"></i>
-                </div>
-
-                <div class="post-audience-content">
-                  <h4>Who can see this post?</h4>
-                  <p>Your post may show up in Feed, on your profile and in search results.</p>
-                  <br>
-
-                  <p>Your default audience is set to <b>Public</b>, but you can change the audience of tis specific post.</p>
-
-                  <h4>Choose audience</h4>
-
-                  <div class="boxes-options-audience">
-                    
-                    <div class="left-boxes-potions">
-                      <i class="fa-solid fa-earth-americas"></i>
-                      <label for="public-option-audience">Public</label>
-                      <p>Anyone on or off ParchApp</p>
-        
-                    </div>
-
-                    <input type="radio" id="public-option-audience" name="options-audience" checked>
-                  </div>
-
-                  <div class="boxes-options-audience">
-                    
-                    <div class="left-boxes-potions">
-                      <i class="fa-solid fa-user-group"></i>
-                      <label for="followers-option-audience">Followers</label>
-                      <p>All your followers on ParchApp, can see this post</p>
-        
-                    </div>
-                    
-                    <input type="radio" id="followers-option-audience" name="options-audience">
-
-                  </div>
-
-                  <div class="boxes-options-audience">
-
-                    <div class="left-boxes-potions">
-                      <i class="fa-solid fa-user-lock"></i>
-                      <label for="onlyme-option-audience"> Only me</label>
-                      <p>Onyle me</p>
-        
-                    </div>
-                    
-                    <input type="radio" id="onlyme-option-audience" name="options-audience">
-
-                  </div>
-
-                  <div class="box-btn-done-audience">
-                    <button>Done</button>
-                  </div>
-
-          </div>
-
+              <div class="post-audience-box">
+                <h3>Post Audience</h3>
+                <i class="fa-solid fa-x" id="equix-button" onclick="cerrarButton()"></i>
               </div>
 
-            </section>
+              <div class="post-audience-content">
+                <h4>Who can see this post?</h4>
+                <p>Your post may show up in Feed, on your profile and in search results.</p>
+                <br>
+
+                <p>Your default audience is set to <b>Public</b>, but you can change the audience of tis specific post.</p>
+
+                <h4>Choose audience</h4>
+
+                <div class="boxes-options-audience">
+                  
+                  <div class="left-boxes-potions">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <label for="public-option-audience">Public</label>
+                    <p>Anyone on or off ParchApp</p>
+      
+                  </div>
+
+                  <input type="radio" id="public-option-audience" name="options-audience" checked>
+                </div>
+
+                <div class="boxes-options-audience">
+                  
+                  <div class="left-boxes-potions">
+                    <i class="fa-solid fa-user-group"></i>
+                    <label for="followers-option-audience">Followers</label>
+                    <p>All your followers on ParchApp, can see this post</p>
+      
+                  </div>
+                  
+                  <input type="radio" id="followers-option-audience" name="options-audience">
+
+                </div>
+
+                <div class="boxes-options-audience">
+
+                  <div class="left-boxes-potions">
+                    <i class="fa-solid fa-user-lock"></i>
+                    <label for="onlyme-option-audience"> Only me</label>
+                    <p>Onyle me</p>
+      
+                  </div>
+                  
+                  <input type="radio" id="onlyme-option-audience" name="options-audience">
+
+                </div>
+
+                <div class="box-btn-done-audience">
+                  <button>Done</button>
+                </div>
+
+        </div>
+
+            </div>
 
 
       
-        <nav id="menu-bot">
-        </nav>
+            <nav id="menu-bot">
+              <a href="../index.html" class="boxes-menu-bot box-home">
+                <img src="../assets/img/home.png" alt="">
+                <span>home</span>
+              </a>
       
+              <a href="../views/explore.html" class="boxes-menu-bot box-explore">
+                <img src="../assets/img/explore.png" alt="">
+                <span>explore</span>
+              </a>
+      
+              <a id="post-box" href="../views/publicar.html" class="boxes-menu-bot box-publicar">
+                <img id="post-img" src="../assets/img/post.png" alt="">
+                <span>post</span></i>
+              </a>
+      
+              <a href="../views/mesages.html" class="boxes-menu-bot box-post">
+                <img src="../assets/img/notifications.png" alt="">
+                <span>notifications</span>
+              </a>
+      
+              <a href="../views/me.html" class="boxes-menu-bot box-me">
+                <img src="../assets/img/me.png" alt="">
+                <span>me</span>
+              </a>
+          </nav>
+          
+          <div id="loader-screen" onclick="cerrarLoader()">
+            <div class="sk-bounce">
+              <img src="../assets/img/PURPLE-LOGO.png  " alt="" />
+              <div class="sk-bounce-dot"></div>
+              <div class="sk-bounce-dot"></div>
+            </div>
+          </div>
     </section>
       
+    <script>
 
+      setTimeout(function opacarLoader(){
+        document.getElementById('loader-screen').style.opacity="0.4"
+      },800)
+
+      setTimeout(function cerrarLoader(){
+        document.getElementById('loader-screen').style.display="none";
+      },1200)
+
+      function showFriendsWindows(){
+        document.getElementById('box-share-with-publicar-hidden').style.display="block";
+        document.getElementById("section-publicar").style.display="none";
+
+      }
+
+      function cerrarButton(){
+        document.getElementById('box-share-with-publicar-hidden').style.display="none";
+        document.getElementById("section-publicar").style.display="block";
+      }
+
+    </script>
     </div>
 </body>
 </html>

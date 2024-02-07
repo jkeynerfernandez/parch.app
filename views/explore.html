@@ -19,12 +19,13 @@
       rel="stylesheet"
     />
     <script src="/script/explore.js"></script>
-    <script src="../script/bottom_nav.js" defer></script>
+    <!-- <script src="../script/bottom_nav.js" defer></script> -->
   </head>
   <body>
     <!--Los containers son los contedores de los boxes-->
     <!-- Las cajas son las contenedores de los elementos-->
     <section id="ohparch-app">
+
       <header id="header-logged">
         <div class="box-logo">
           <img src="../assets/img/logo-con-slogan.png" alt="Logo OparcH!" />
@@ -402,7 +403,59 @@
         </div>
       </main>
 
-      <nav id="menu-bot"></nav>
+      <nav id="menu-bot">
+        <a href="../index.html" class="boxes-menu-bot box-home">
+          <img src="../assets/img/home.png" alt="">
+          <span>home</span>
+        </a>
+
+        <a href="../views/explore.html" class="boxes-menu-bot box-explore">
+          <img src="../assets/img/explore.png" alt="">
+          <span>explore</span>
+        </a>
+
+        <a id="post-box" href="../views/publicar.html" class="boxes-menu-bot box-publicar">
+          <img id="post-img" src="../assets/img/post.png" alt="">
+          <span>post</span></i>
+        </a>
+
+        <a href="../views/mesages.html" class="boxes-menu-bot box-post">
+          <img src="../assets/img/notifications.png" alt="">
+          <span>notifications</span>
+        </a>
+
+        <a href="../views/me.html" class="boxes-menu-bot box-me">
+          <img src="../assets/img/me.png" alt="">
+          <span>me</span>
+        </a>
+      </nav>
+
+      <div id="loader-screen" onclick="cerrarLoader()">
+        <div class="sk-bounce">
+          <img src="../assets/img/PURPLE-LOGO.png  " alt="" />
+          <div class="sk-bounce-dot"></div>
+          <div class="sk-bounce-dot"></div>
+        </div>
+      </div>
     </section>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        console.log("it exist");
+        navigator.serviceWorker.register("/parch.app/script/sw.js", {
+          scope: "/parch.app/",
+        });
+      } 
+
+      setTimeout(function opacarLoader(){
+          document.getElementById('loader-screen').style.opacity="0.4"
+        },800)
+
+        setTimeout(function cerrarLoader(){
+          document.getElementById('loader-screen').style.display="none";
+        },1200)
+
+
+    </script>
   </body>
 </html>

@@ -57,7 +57,7 @@ body {
   height: 100vh;
   /* background: rgb(255,222,89);
   background: linear-gradient(90deg, rgba(255,222,89,1) 0%, rgba(255,226,51,1) 48%, rgba(247,227,54,1) 100%); */
-  background-color: #e8f500;
+  background-color: #f7e336;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -316,3 +316,98 @@ background-color: white;
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
+
+/*ANIMATION */
+
+/* START ANIMATION SCREEN */
+
+/* Config */
+
+:root {
+  --sk-size: 200px;
+}
+
+#loader-screen {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  /* display: flex; */
+  display: flex;
+  z-index: 9999;
+  opacity: 1;
+  background-color: #f7e336;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.sk-bounce {
+  width: 100%;
+  height: 50%;
+  margin: auto;
+  position: relative;
+  z-index: 9999;
+}
+
+.loader-screen img {
+  width: 300px;
+  height: 200px;
+  animation: logo 3s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  z-index: 999;
+}
+
+@keyframes logo {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  35%,
+  55% {
+    transform: scale(1);
+  }
+  65%,
+  85% {
+    transform: scale(2);
+  }
+  85%,
+  100% {
+    transform: scale(0);
+  }
+}
+
+.sk-bounce {
+  width: var(--sk-size);
+  height: var(--sk-size);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.sk-bounce-dot {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  animation: sk-bounce 2s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.sk-bounce-dot:nth-child(2) {
+  animation-delay: -1s;
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  45%,
+  55% {
+    transform: scale(1);
+  }
+}
+
+/* END ANIMATION SCREEN */

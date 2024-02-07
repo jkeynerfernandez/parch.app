@@ -296,9 +296,9 @@
         </a>
       </nav>
 
-      <div class="loader-screen">
+      <div id="loader-screen">
         <div class="sk-bounce">
-          <img src="assets/img/PURPLE-LOGO.png  " alt="" />
+          <img src="../assets/img/PURPLE-LOGO.png  " alt="" />
           <div class="sk-bounce-dot"></div>
           <div class="sk-bounce-dot"></div>
         </div>
@@ -312,6 +312,16 @@
           scope: "/parch.app/",
         });
       }
+
+      setTimeout(function opacarLoader(){
+          document.getElementById('loader-screen').style.opacity="0.4"
+        },800)
+
+        setTimeout(function cerrarLoader(){
+          document.getElementById('loader-screen').style.display="none";
+        },1200)
+
+
     </script>
   </body>
 </html>
