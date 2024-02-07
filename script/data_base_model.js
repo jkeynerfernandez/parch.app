@@ -1,6 +1,6 @@
 // this end point is working directly with the server so take care
-// const END_POINT = "https://parchapp.onrender.com"
-const END_POINT = "http://localhost:3000"
+const END_POINT = "https://parchapp.onrender.com"
+// const END_POINT = "http://localhost:3000"
 const USERS_END_POINT = `${END_POINT}/users`;
 const SERVICES_END_POINT = `${END_POINT}/services`;
 const FOLLOW_END_POINT = `${END_POINT}/follow`;
